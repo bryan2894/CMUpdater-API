@@ -1,523 +1,840 @@
 ====================
-     07-04-2016
+     07-22-2016
 ====================
 
-
-   * device/samsung/celox/
-f423b7e celox: move init to msm8660-common
 
    * device/samsung/msm8660-common/
-f8c34b8 msm8660: Improve Boot Time
-4851aac init: cleanup
-bdcfd0f init: merge init.target.rc from celox
-915488a msm8660-common: Include stdlib for nfc.msm8660
-79935ef msm8660: build NFC HAL and firmware
-e300805 msm8660-common: Add buildable libpn544_fw
-79200f3 msm8660: add nfc hal, modified from tuna
-
-   * hardware/qcom/display-caf/msm8996/
-0bbc949 sdm/hwc: Silence logspam
-
-   * kernel/samsung/msm8660-common/
-9d848d5 net: validate the range we feed to iov_iter_init() in sys_sendto/sys_recvfrom
-b5db3d1 HID: hiddev: validate num_values for HIDIOCGUSAGES, HIDIOCSUSAGES commands
-2cb6f1c2 KEYS: potential uninitialized variable
-1ed5bbc mnt: Fail collect_mounts when applied to unmounted mounts
-
-   * vendor/samsung/celox/
-5db96cd celox: use opensource NFC HAL and firmware
-
-====================
-     07-03-2016
-====================
-
-
-   * frameworks/base/
-70dd4a2 SystemUI: Restrict persistent USB drive notifications to USB disks
-396b4c2 BT: Set persiste Bluetooth State during enable timeout case
-34040d0 Add absent sim info to locked screen text
-528b0dd Encapsulate the unbindService with try catch block
-f689b2e Bluetooth: Access mediaplayerlist in synchronized way
-169748b WifiDisplayController: Fix p2p disconnect before rtsp teardown completes
-a873111 Wifi: Make maximum selective channel scans and interval configurable
-47ea7c7 combo bug when location reported by providers do not come with extras
-914b672 Ignore IMS type APN when notify data connection
-6fcfa2e Remove TONE_SUPERVISORY_CH
-4d75d9e MSIM: Restrict data activity change to listeners with matching subId
-52f0f91 Add config to show HD icon on EVS codec.
-
-   * frameworks/opt/telephony/
-9f4f4be Subscription updater: don't post messages on events in BroadcastReceiver
-3b24907 TelephonyProvider: Add CDMA call forwarding/waiting function
-c49c744 dct: Sync with upstream
-8ea51be MSIM: Send FINISH request on flex map START fail
-3e12eb4 Set additional info for LaunchBrowser error case.
-83ffc48 Telephony: Reduce back to back same APN activation delay.
-4cc7ede Fix emergency ims pdn setup issue
-09ca1bb Fix ims pdn issue on non dds sub on iwlan
-4a6e7c5 Fix to resolve data call issue for sim hot swap case
-a9d7209 Notify disconnect on phone dispose
-e93e6b5 Use EVS codec for HD if carrier supports it.
-a8208a5 Fix Dds switch issue for wifi and IWLAN scenarios
-b6d95be Fix to avoid unnecessary PS attach.
-fea40e5 Fix ims pdn request issue
-cbaa8d3 Parse the record number from byte to int
-ce2ca07 Finer grained character boundaries in computing SMS fragment lengths
-b3571da MSIM: Use SIM specific subId for setMccMnc
-8b477da IMS: Fix phone app crash at setOutgoingCallerIdDisplay().
-0f88ef6 Fix DDS switch issues for CDMA and IWLAN scenarios.
-7e64272 Add the slot id when broadcasting card state to STK app.
-0dbab41 Fix default data reset issue on device powerup
-1e4c0b0 Send shutdown command to modem
-8b4ba43 Telephony: CDMA: allow MT SMS when in ECBM
-eec0d61 IMS: Exit ECBM before dialing a pending non-emergency MO call
-28678cf IMS: Fix null pointer exception for call forwarding
-35b357b Setup data on new APNs only when APN changes
-31cadbe MSIM: Fix ECBM dialog issue in G+C
-fe0a2f2 Do not set "gsm.operator.idpstring" per phoneId
-2a2094e Telephony: Config values for other languages
-200c495 Revert "updateSpnDisplay: When PLMN values are same for before & after SIM loading in."
-9a69cad Check subid when querying network selection
-3139447 FR29338: Read SIM Contacts from EF-ADN if EF-PBR read failed.
-07d7e45 Fix ADN records loading removing EFEXT1 dependency.
-f567219 Add channel 60 Cellboradcast support.
-a80e16f gsmsst: Protect against "null" string literals
-
-   * vendor/cm/
-869a04f UFS: support UFS IO-sched setting.
-
-====================
-     07-02-2016
-====================
-
-
-   * frameworks/base/
-0456759d Remove use of '_' variable name
-
-   * frameworks/opt/telephony/
-44396d8 Remove identifier that causes warnings under OpenJDK 8 compiler
-
-   * hardware/qcom/audio-caf/msm8937/
-d0f2009 Merge tag 'LA.UM.5.3.1-01010-89xx.0' into HEAD
+61efd75 msm8660: update for proprietary ril
 
    * hardware/qcom/audio-caf/msm8996/
-bfad1f3 audio: Fix complilation warnings under Clang
-
-   * hardware/qcom/media-caf/msm8937/
-e0a2ec2 Merge tag 'LA.UM.5.3.1-01010-89xx.0' into HEAD
-
-   * packages/apps/Messaging/
-e063271 Remove identifier that causes warnings under OpenJDK 8 compiler
-
-   * packages/providers/TelephonyProvider/
-057cbb3 TelephonyProvider: Add CDMA call forwarding/waiting function
-615e785 Merge regional apns to telephony db
-2ab318f Fix Mms failures due to wrong numeric
-09632e8 [CellBroadcast Alerts] : Enable CMAS Test alerts
-1752a04 [TelephonyProvider]: Add Channel 60 support
-
-   * packages/screensavers/Basic/
-43c7edb Avoid potential NPE when tearing down LLS
-
-   * vendor/cmsdk/
-d4bc9d3 cmsdk: Update README.
-b62a455 cmsdk: Create brokerablecmsystemservice concept.
-551b377 cmsdk: Factor CMSystemServiceHelper to common.
-
-====================
-     07-01-2016
-====================
-
-
-   * bionic/
-0a143d0 libc: Fix invalid offset warning with Clang
-
-   * cts/
-f76218b merge in marshmallow-cts-release history after reset to marshmallow-cts-dev
-
-   * external/wpa_supplicant_8/
-782ab88 wpa_supplicant: Cross-branch compilation fixes
-e402373 wpa_supplicant_conf: Let devices provide their own template
-2f0f965 Fix dependencies
-cf3f808 eap_proxy: Fix compilation warning
-6bbb9c8 wpa_supplicant: Force the p2p channels to reuse frequencies used by STA
-a46cc71 eap: Don't force reassociation when getting the identity and handshakes are in progress
+58f49e4 audio: Fix flac offload not working
 
    * hudson/
-dc159e2 Revert "hudson: Temporary disable Z00T"
+984342f hudson: Add OnePlus 3
 
-   * packages/apps/CellBroadcastReceiver/
-2126a2f Use of SubId inplace of SlotId in CellBroadcastReceiver
-9d5aa27 Add Msim support for Service State intent in CB receiver
-7a76013 Regional: Support Channel 60 switch in CellBroadcast
-1389da5 Fix duplicate detection for ETWS primary and secondary notifications.
-
-   * packages/apps/Dialer/
-8e281d6 Added permission READ_PRIVILEGED_PHONE_STATE.
-
-   * packages/apps/InCallUI/
-cde32f3 IMS-VT: Fix for auto fullscreen issue during UI rotation.
-5a7ea94 Fix display 'null' for geocoder location
-5227cbd Add rtl support to GlowPadView
-f71be91 Fix to incall screen for incoming call
-
-   * packages/apps/Settings/
-69e6746 Telephony(MSIM): Fix ANR on SIM deactivation
-f79f08e Fix to enable data for non-dds sub.
-b3906b4 IMS: Set Wifi calling preference to Wifi preferred by default
-0dbd029 Wi-Fi: Do not display the not scanned saved networks forever
-403f50c Don't start auto scan if screen recovers from frozen state
-d0f59be Fix mcc-mnc population issue in apn editor
-7975c8e Update OperatorInfo in Simstatus settings for correct subid
-6b63386 Grey out PIN1 enable/disable option when SUB is not ready
-d7d6c6d Bluetooth : Handle SQL memory situation during OPP.
-
-   * packages/apps/SoundRecorder/
-c8b4cf4 Add Bluetooth sound recording
-
-   * packages/apps/Stk/
-f983c8e Do not go Fullscreen in StkInputAcvtivity.
-e1ec2cc Fix the notification cancel during SIM refresh.
-dec7400 MSIM: Add MSIM support for language selection event.
-6dd1eb9 Send slotId in message for OP_STOP_TONE
-7757426 Add intent to send STK app name
-
-   * packages/services/Telecomm/
-a154eed DO NOT MERGE - Restrict ability to add call based on device provision status
-50c5860 Fix to prevent NPE
-a5ee9a7 Remove TONE_SUPERVISORY_CH
-95a3e66 Fix a bug where conference call does not automatically resume.
-bce16cb Fix disabled merge button on conference failure.
-51fed81 Fix sound output from headset when switching speaker to BT
-
-   * packages/services/Telephony/
-f1826d8 Fix updating FDN using uri without subId issue
-8ff8c84 Mms: Fix SMS is not sent in ECBM unless click send again
-865ab32 Add "FDN service is not available" toast message
-d34b5c3 SEEK: Change security check for getAtrUsingSubId
-9bfe715 IMS-VT: Conf: Propagate call extras to UI.
-95d94df Set APM mode property for RIL to access.
-
-   * system/core/
-dd08664 healthd: Support new PD and USB Type C types
-d68de66 Copy the ETB dumps and maps file to /data/core
-00c551e Don't use global variable in libnetutils.
-
-   * vendor/cmsdk/
-50571ba Apply active profile if user enables system profiles
+   * vendor/cm/
+df0ba3a Gello artifact v26
 
 ====================
-     06-30-2016
+     07-21-2016
 ====================
 
-
-   * device/samsung/qcom-common/
-a13222f Automatic translation import
-
-   * external/wpa_supplicant_8/
-94b7293 eap_peer: Make the QMI EAP proxy a standalone lib
-e2a4ce0 Revert "p2p: Add p2p_no_group_iface flag to p2p conf file"
 
    * frameworks/base/
-e045a77 Automatic translation import
-ef8760f Revert "Revert "Only show keyguard panel if on lockscreen + no activity on top""
-c767669 WindowAnimator : Check KEYGUARD_PANEL when deciding to show/hide window
-d4c6db9 PhoneWindowManager : Check CM_SETUP_WIZARD_COMPLETED for isUserSetupComplete
+d8d4e7c PackageManager: make protected-broadcasts permission aware
+1c93b57 SysUI: Add first time use lock screen hints
+eee0f89 Automatic translation import
 
-   * hardware/cyanogen/
-ce0c9b1 cmhw: Whitespace cleanup
+   * hardware/ti/wlan/
+cf2fc75 wlan:(backport) Fix scan timestamps to android expectations
+
+   * hudson/
+f500031 Disable quark
+
+   * packages/apps/CMBugReport/
+f66a086 Automatic translation import
+931ba3f Fix build
+e1ce69f Update iconography.
 
    * packages/apps/CMFileManager/
-377e629 Automatic translation import
+a12e80f Automatic translation import
 
-   * packages/apps/CMUpdater/
-eb23557 Automatic translation import
-
-   * packages/apps/CarrierConfig/
-ad2308f feijao: Set voicemail's notification persistent.
-
-   * packages/apps/CellBroadcastReceiver/
-9dd2dfc Automatic translation import
-
-   * packages/apps/Contacts/
-6ecb91a Contacts metrics: corrected parsed timestamp values
-04561ba Contacts metrics: flip contacts merge order since they have dependency
-c6eb605 Send count stats with DIRECTORY_SEARCH events
-0ae5fd2 Automatic translation import
+   * packages/apps/DeskClock/
+551b1c6 Automatic translation import
 
    * packages/apps/Dialer/
-bb8a083 Automatic translation import
+9faff19 Automatic translation import
 
    * packages/apps/Gello/
-2c40f6b Gello: nuke unused/broken localized search engines
-00f154b Automatic translation import
-
-   * packages/apps/InCallUI/
-254289a Automatic translation import
-
-   * packages/apps/LockClock/
-23e004d Automatic translation import
+3bae403 Automatic translation import
 
    * packages/apps/Messaging/
-ba969ce Automatic translation import
-
-   * packages/apps/PhoneCommon/
-cbd20e8 Automatic translation import
+fd5a2be Automatic translation import
 
    * packages/apps/Settings/
-e40a0c5 fingerpint: Allow devices to configure sensor location
-58cdd74 Automatic translation import
-8de7e17 settings: wifi: Default to numeric keyboard for static IP items
-7534d77 Settings: Set root access options appropriately
-57ca3ae Fix untranslatable
+09cb318 Automatic translation import
 
    * packages/apps/SetupWizard/
-20037b7 Automatic translation import
+653d79c Automatic translation import
 
-   * packages/apps/Snap/
-f5c6dd5 Snap: Fix name for OnePlus 3 resolution
-0ef0a63 Automatic translation import
+   * packages/apps/Trebuchet/
+8840385 Automatic translation import
 
-   * packages/apps/SoundRecorder/
-02cf1e2 Automatic translation import
+   * packages/apps/TvSettings/
+77127a0 Automatic translation import
 
-   * packages/apps/WallpaperPicker/
-4909ba2 Automatic translation import
-
-   * packages/inputmethods/LatinIME/
-da10ff6 Automatic translation import
-
-   * packages/providers/DataUsageProvider/
-02bc367 Automatic translation import
-
-   * packages/providers/TelephonyProvider/
-01a0a16 Fix apn restore issue for multi-sim
-
-   * packages/services/Telephony/
-d2f1215 Automatic translation import
-
-   * vendor/cmsdk/
-052af0a Automatic translation import
+   * vendor/cm/
+52f3680 cm: Remove stray echo from extract_utils
+60ef86d cm: Underp dumping of 64-bit only libraries
 
 ====================
-     06-29-2016
+     07-20-2016
 ====================
 
+
+   * cts/
+9f2e0be Merge "DO NOT MERGE: bump cts to 6.0R9" into marshmallow-cts-release
+d26da32 DO NOT MERGE: bump cts to 6.0R9
+
+   * device/generic/arm64/
+a8520b5 arm64: Dummy out the kernel output folder
+7b70011 arm64: add cm.mk
 
    * device/qcom/common/
-3d10066 power: add support for PowerHAL in Feero
+8485af0 releasetool: Add support for partition specific *.img
 
-   * device/qcom/sepolicy/
-427b02e wcnss: Fix annoying warning when ptt looks for its log dir
+   * device/samsung/msm8660-common/
+8bd85f6 msm8660: sensor updates
 
-   * frameworks/base/
-51d2d19 KeyguardSecurityViewFlipper : Fix sim unlock height overlap
-545dc46 Disable proximity check on power key properly
+   * frameworks/native/
+d67b177 SF: Fix NULL pointer dereferencing in dumpDrawCycle()
+a887c19 SF: Add support for all flips of panel mount
+c91bafb DO NOT MERGE: dumpstate: execute procrank using su
+179bd77 SF: more DispSync improvements.
+95cda3b SF: use first sample timestamp as reference.
 
-   * hardware/qcom/wlan-caf/
-b5ecb1d wifi-hal: Only try LOWI once
+   * hardware/cyanogen/
+bb0293f cmhw: Add ColorBalance impl for the LiveDisplay native interface
 
-   * hudson/
-2680b26 Ship Galaxy Tab S2 (WiFi)
-
-   * packages/apps/FMRadio/
-480142b Keep main activity when recording is cancelled
-3c0c276 Handle recording without using MediaRecorder
-a7db4dc Fix stuck recording ui when recording is aborted
-
-   * packages/apps/Gello/
-9aaaede Add Encrypted Google search engine
+   * packages/apps/Dialer/
+24a2f15 Bump metrics version and fix swapped events
 
    * packages/apps/Messaging/
-ea62dca Messaging: Use textutils to match against SIP scheme.
+ed5e13b Messaging : Fix blacklist sync
+
+   * packages/apps/Settings/
+a186b70 settings: Add support for color balance in LiveDisplay
+
+   * vendor/cm/
+374d138 cm: Configure mmcblk1 IO on sys.io.scheduler prop
+
+   * vendor/cmsdk/
+86cae92 livedisplay: Add support for direct color balance control
+
+   * vendor/samsung/celox/
+801d635 celox: add back proprietary ril
 
 ====================
-     06-28-2016
+     07-19-2016
+====================
+
+
+   * device/samsung/msm8660-common/
+253318d msm8660: don't strip dex for non-user builds
+
+   * frameworks/base/
+445be8c AudioDucking : Check session playback state
+6fd5a73 Automatic translation import
+5251eb8 Automatic translation import
+
+   * frameworks/native/
+a5761b1 sf: Fix blending mode for legacy BSP
+
+   * hardware/cyanogen/
+61477df cmhw: Catch 'em all in UniqueDeviceId
+
+   * hardware/samsung/
+43a5d87 DisplayModeControl: Add null check to setMode()
+
+   * hardware/ti/wlan/
+0d6fc9d wl12xx_sdio: Use pdata power callback if defined (needed before probe)
+
+   * hudson/
+6b05b78 Properly designate Wi-Fi variants
+
+   * packages/apps/CMBugReport/
+269550f Automatic translation import
+
+   * packages/apps/CMFileManager/
+dd5f2c9 Automatic translation import
+
+   * packages/apps/Contacts/
+579cbaf Automatic translation import
+
+   * packages/apps/ContactsCommon/
+60677dc Finish BlockContactActivity on dialog closed
+7a882c5 Automatic translation import
+
+   * packages/apps/DeskClock/
+4880abe Automatic translation import
+5c71158 Automatic translation import
+
+   * packages/apps/Dialer/
+0dbdbbe Automatic translation import
+482e818 Automatic translation import
+
+   * packages/apps/InCallUI/
+be7092d Automatic translation import
+
+   * packages/apps/Messaging/
+6eced0a Stop quick messages from Russian numbers showing multiple conversations.
+96c2d20 Automatic translation import
+
+   * packages/apps/Profiles/
+c054bef Merge "Automatic translation import" into cm-13.0
+
+   * packages/apps/Settings/
+99948df Automatic translation import
+
+   * packages/apps/SetupWizard/
+7158d4d Automatic translation import
+
+   * packages/apps/Snap/
+13d7301 Automatic translation import
+e89e22e Automatic translation import
+6849076 Snap: Fix incorrect default ISO values parameter
+bd63e9d Snap: Always allow 100% JPEG quality to be set
+
+   * packages/apps/Trebuchet/
+e5a4a3f Automatic translation import
+00d6f71 Automatic translation import
+
+   * packages/services/Telephony/
+afe6a19 Telephony: reset persisted user nw mode on network factory reset
+
+   * system/bt/
+95b17c4 Bluetooth: fix stuttering audio
+
+====================
+     07-18-2016
+====================
+
+
+   * build/
+58f6354 add dirty and novo
+
+   * device/qcom/common/
+5113c19 power: 8996: Fix only sending the first pair out of every perf profile
+
+   * frameworks/av/
+a5ec354 audiopolicy: Constrain session events to music streams
+
+   * frameworks/base/
+de7ee4c Fix random crash in libhwui
+
+   * frameworks/opt/hardware/
+40bc2f3 cmhw: Add ColorBalance stubs
+
+   * frameworks/opt/telephony/
+4b479de DctController: fix mismerge with getTopPriorityRequestPhoneId()
+
+   * system/bt/
+ab5b13b bta: check if sdp db buffer exists before free
+
+   * vendor/cm/
+a9322a2 APN: Add Inland Cellular APNs
+4e2aaab cm: Add generic tools for extract-files / setup-makefiles scripts
+
+   * vendor/cmsdk/
+25d7081 cmsdk: Correct the useSegmentedBatteryLed details
+
+====================
+     07-17-2016
 ====================
 
 
    * bionic/
-02972e7 Do not depend on host bits to get the right size to write.
-2a016b8 cortex-a9: Fix reference to __memcpy_base_aligned.
+4e64650 Move tzdata scripts from bionic to external/icu
 
-   * frameworks/base/
-33e91d3 fw: GlobalActions: Always dismiss any existing dialog
-
-   * hudson/
-f295684 Revert "Disable aries"
-d4ccae2 Revert "Disable otterx and n1 too"
-64229bf Disable otterx and n1 too
-
-   * packages/apps/CMFileManager/
-65db040 FileManager : Update to use toybox ls
-
-   * packages/apps/Settings/
-50af72b Settings : Add country code to blacklist entry dialog
-
-   * packages/providers/ThemesProvider/
-37c4dd0 Cleanup icon preview generation code
-
-====================
-     06-27-2016
-====================
-
-
-   * device/qcom/common/
-229eb1a perf: Wrap v3 opcodes with ifdefs
-
-   * frameworks/base/
-c93e778 SystemServer: Do not start Atlas Service on lowram devices.
-
-   * frameworks/opt/telephony/
-9122c16 Ims: remove use of old nonexistant qti constant
-8e0b6ee IMS-VT: Remove unused QTI_IMS_CALL_RAT_EXTRA_KEY extra.
-9e3df8a IMS: Encrypted Calling Extras Key Definition
-079b0b5 IMS: Interface change for VOPS and SSAC
-bee587b IMS: Explicit call transfer feature
-
-   * hudson/
-f78e0f2 Disable aries
-
-   * packages/apps/CMFileManager/
-95c92cb Fix crash when long press directory
-
-   * vendor/cm/
-1bc4b31 Remove APN pinternet.interkom.de from MCC 262/MNC 02
-
-   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-e630607 Don't remove today from the forecast
-
-   * vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
-56154d0 Don't remove today from the forecast
-
-====================
-     06-26-2016
-====================
-
-
-   * device/qcom/common/
-8fe35cc power: msm8996: Support boost and perf profile hints
-
-   * frameworks/opt/telephony/
-90501cb Subscription updater: don't turn data off if we've never set a deafult
-
-   * packages/apps/Bluetooth/
-4924f59 Revert "Revert "Ensure synchronized access of JNI callback object""
-
-   * vendor/cmsdk/
-e1c502d LLS: Allow default enabled events to be overlaid
-
-====================
-     06-25-2016
-====================
-
-
-   * cts/
-8a3f20b Merge "DO NOT MERGE: disable libskia test." into marshmallow-cts-release
-f9c17e5 DO NOT MERGE: disable libskia test.
-9716730 Merge "DO NOT MERGE: disable libskia test." into marshmallow-cts-dev
-f4433c1 DO NOT MERGE: disable libskia test.
-3a87160 Merge "DO NOT MERGE Update TextViewTest to use KeyEventUtil for KeyEvents" into marshmallow-cts-dev
-
-   * frameworks/base/
-9cf937f SystemUI: Add margin in qs_tile_top between instruction text and add button
-
-   * frameworks/opt/net/wifi/
-a0ac5e1 Reduce the link de-bounce time to 4 from earlier 7 seconds
-012e76c Wifi: Clear scan caches while loading configured networks
-80dfbc2 wifi: Use isGbkString() to check if SSID is GBK encoded
-bb5d2c2 Wifi: Update Frequency before broadcasting intent
-045ddba Wifi: send an explicit ENABLE_NETWORK with "no-connect"
-c17a63e Wifi: Unblacklist the BSSIDs, if driver roams to the same again.
-f995ef7 Wifi : Add null check before accessing ScanDetailCache
-c06efae Wifi: Add NULL check before processing gscan results
-faada83 P2P: p2p flush on a group remove event.
-cbe286e wificonfig: store the scan cache for saved wifi configuration
-e97c943 Don't create ScanDetailCache if entry absent in mScanDetailCaches
-22b3c71 Wifi: Update WifiController state if Wifi turn On fails
-6c7911a Wifi: Clear lastConnectAttemptTimestamp variable on a Wifi turn off
-
-   * hardware/qcom/wlan-caf/
-0d2f41b Wifi-HAL: Remove CLANG Warnings and errors
-c2297ee Revert "Opt out of clang till issues are fixed"
-4f6277b Wifi-Hal: NAN feature enhancements
-89f9c6d Wifi-HAL: Remove NAN_2.0 references
-
-   * hardware/ril-caf/
-eb67a6f ril-caf: Fix build when using prebuilt libril
-
-   * packages/apps/FMRadio/
-387bb91 Remove false log warnings
-a1649aa Fix exponential content observer registration
-
-   * packages/apps/Settings/
-923b2a1 Make sure LiveDisplay toggle default values are correct.
-86c8b5e UI: Ensure "use for" options displayed when in landscape orientation
-
-   * vendor/cm/
-f180705 T810: Build by T_I, based on T815 build of RaymanFX, added product name
-
-   * vendor/cmsdk/
-131de78 Themes: Provide 100% test coverage for themes
-
-====================
-     06-24-2016
-====================
-
-
-   * cts/
-057b418 Merge changes from topic 'backport-selinux-test' into marshmallow-cts-dev
-0624a71 Merge "Detect if file system is already encrypted by other means." into marshmallow-cts-dev
-65540be Merge "Fix TaskswitchingDeviceTest." into marshmallow-cts-dev
-
-   * frameworks/base/
-d442df6 wifi: Enable WiFi IpReachabilityMonitor by default
-
-   * frameworks/opt/net/wifi/
-88db18e wifi: Bring back mIsWiFiIpReachabilityEnabled check
-
-   * packages/apps/CMFileManager/
-70addac Fix no icon for 3GP files
-faa6c46 Assign application/octet-stream to unknown file extensions
-92ac0ff Remove send/send multiple if intent doesn't resolve to any activity
-
-====================
-     06-23-2016
-====================
-
-
-   * cmu-api/
-a35dba6 celox: 06-22-16
-
-   * cts/
-a578fc5 Detect if file system is already encrypted by other means.
-7df61f5 Merge "Improve resiliency of message parser in the case that events are missing" into marshmallow-cts-dev
-
-   * device/qcom/sepolicy/
-2805e63 file_contexts: Adding context to block devices
-
-   * external/chromium-webview/
-3f0ac07 webview: Update to 51.0.2704.106
-
-   * frameworks/opt/net/wifi/
-6d15b6e hotspot: Add a fallback to model-name for SSID
+   * external/icu/
+3212c40 icu: Fix Kurdish Arabic locale detection
+f4bb19e icu: Add Asturian ICU files
+63fe352 Add a documentation file for tools
+9be3323 Extract ICU .dat / .jar file generation code
+8113823 Move tzdata scripts from bionic to external/icu
 
    * hardware/qcom/audio-caf/msm8960/
-fb47c68 hal: Don't make missing CSD init/deinit functions fatal
-a4fb123 hal: Detect additional baseband properties
+a1225ab Revert "hal: Add support for AUDIO_DEVICE_OUT_LINE"
 
-   * hudson/
-bb43569 Ship Galaxy Tab S2 (LTE)
+   * hardware/ti/wlan/
+2a8637c wl12xx: Ignore auto-generated net/wireless/regdb.c
+
+   * packages/apps/Profiles/
+dea368a Automatic translation import
+
+   * packages/services/Telephony/
+348453c Automatic translation import
+
+====================
+     07-16-2016
+====================
+
+
+   * hardware/ril-caf/
+24443ad ril: Fix kw banned functions
+bc30017 libril: Fix KW issues
+8d51a54 ril: SAP_DISCONNECT response length will be zero
+
+   * packages/apps/CMBugReport/
+235cd98 Automatic translation import
+
+   * packages/apps/Contacts/
+fa7e2b3 Automatic translation import
+
+   * packages/apps/ContactsCommon/
+3faa6f0 Automatic translation import
+
+   * packages/apps/DeskClock/
+62ffd0e Automatic translation import
+
+   * packages/apps/Dialer/
+8b0be3f Automatic translation import
+
+   * packages/apps/InCallUI/
+30d72ed Automatic translation import
+
+   * packages/apps/Messaging/
+e3e5b99 Messaging: fix cursor not close explicitly
+
+   * packages/apps/Profiles/
+a8d02f7 Automatic translation import
+
+   * packages/apps/Settings/
+3f8fc27 Automatic translation import
+
+   * packages/apps/SetupWizard/
+8bc74d5 Automatic translation import
+
+   * packages/apps/Trebuchet/
+c9d7958 Automatic translation import
+
+   * packages/apps/TvSettings/
+80d495e Automatic translation import
+
+   * packages/providers/ContactsProvider/
+bbb930d Automatic translation import
+
+   * packages/providers/DataUsageProvider/
+61bb801 Automatic translation import
+
+   * packages/providers/TelephonyProvider/
+d62a920 Automatic translation import
+
+   * packages/screensavers/PhotoTable/
+f98f663 Automatic translation import
+
+   * packages/wallpapers/PhotoPhase/
+c0df0e1 Automatic translation import
+
+====================
+     07-15-2016
+====================
+
+
+   * art/
+7592c94 add missing include
+
+   * build/
+06e0452 Add LOCAL_AIDL_FLAGS
+
+   * device/qcom/common/
+ac2ef6c power: 8937: All in with mpctl v3
+85f0d13 power: 8937: Split from msm8952
+589ebd5 power: msm8937 also uses mpctl3
+
+   * device/qcom/sepolicy/
+b646753 sepolicy: msm8909: Remove duplicate boot/recovery/cache lines
+
+   * frameworks/base/
+80dc204 Automatic translation import
+edd2da9 AIDL: Add option to generate No-Op methods
+
+   * frameworks/native/
+839f0dd system_server BINDER_TYPE_FD driver ashmem accessors
+d70043e system_server BINDER_TYPE_FD sockets using ashmem accessors
+e481771 Parcel: file descriptor leak
+0c5f3af sf: Make sure HWC_BLENDING_NONE is set for opaque layer
+
+   * hardware/qcom/audio-caf/msm8996/
+6ace223 audio: Fix more compilation warnings when building with Clang
+
+   * hardware/qcom/display-caf/msm8937/
+e435cea Don't build lights module if vendor supplies it
+
+   * hardware/samsung/
+ffcfb9f Unbreak AdvancedDisplay
+
+   * packages/apps/AudioFX/
+016be36 Automatic translation import
+
+   * packages/apps/Browser/
+de4fa4a Automatic translation import
 
    * packages/apps/CMFileManager/
-994dd34 Navigate to path when launched from folder shortcut
+a458fc2 Automatic translation import
+
+   * packages/apps/Contacts/
+604c2d0 Contacts : fix quick contacts card invite entry
+
+   * packages/apps/DeskClock/
+54ec6d1 Fix translatability of power on alarm strings
+
+   * packages/apps/Eleven/
+16c100d Automatic translation import
 
    * packages/apps/Gello/
-92772af Missing search engines Fix Gello options dialog crash when system language is Russian
+fba5fea Automatic translation import
 
-   * system/bt/
-2e63e65 bt: Don't use CLOCK_BOOTTIME where CLOCK_MONOTONIC was expected
+   * packages/apps/InCallUI/
+0ed646a Automatic translation import
+
+   * packages/apps/Messaging/
+cce9f27 Automatic translation import
+
+   * packages/apps/Nfc/
+018ec89 Nfc: read extra properties of Mifare Classic
+
+   * packages/apps/Settings/
+c867a7e Automatic translation import
+bd61d64 Settings: Don't enable proximity on wake by default
+
+   * packages/apps/SetupWizard/
+b31e14b Replaced last panel with ModGuide panel.
+
+   * packages/apps/Snap/
+ee21895 Automatic translation import
+
+   * packages/apps/Trebuchet/
+b1f2d43 Automatic translation import
+
+   * packages/providers/WeatherProvider/
+0c1576f Automatic translation import
+
+   * packages/services/Telephony/
+f587043 Automatic translation import
+
+   * system/core/
+53bf234 libcutils: abort for invalid fd
+70a8c7a libcutils: ashmem print error message for invalid fd
+2895e11 libcutils: ashmem check fd validity
+b619152 libcutils: ashmem fortify and comply with Android coding standard
 
    * vendor/cm/
-a8984b3 Add SM-T810 and SM-T815
+bf4a4b4 cm: minor IMS APN update
+
+   * vendor/cmsdk/
+c85073f Automatic translation import
+147522b Instruct AIDL to generate NoOp inner class
+
+====================
+     07-14-2016
+====================
+
+
+   * device/qcom/common/
+8726f0c qcom-common: Add QC releasetools and recovery extensions
+
+   * frameworks/opt/telephony/
+658eea8 GsmSS: Use per-slot resources for carrier-bound options
+
+   * hardware/qcom/audio/default/
+20bb5b4 audio: always send calibration
+
+   * hardware/samsung/
+1112238 Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver/
+248b0a9 Automatic translation import
+
+   * packages/apps/Contacts/
+1e847a2 Automatic translation import
+
+   * packages/apps/Dialer/
+e14b107 Automatic translation import
+09d4f15 Automatic translation import
+8749ab3 Automatic translation import
+
+   * packages/apps/Messaging/
+0b4bbc6 Automatic translation import
+
+   * packages/apps/Settings/
+a6e25ba Automatic translation import
+ecee3cf Automatic translation import
+779b0ae Automatic translation import
+
+   * packages/apps/SetupWizard/
+7c1cf5a MobileData: Don't let wait-for-radio trample wait-for-data
+3ebea2f ChooseDataSim: Use the extra data from the intent to validate the sub
+
+   * packages/apps/Snap/
+82254d7 Automatic translation import
+
+   * packages/apps/SoundRecorder/
+82fad26 Automatic translation import
+
+   * packages/apps/Trebuchet/
+0121133 Automatic translation import
+2a6dab8 Automatic translation import
+
+   * packages/services/Telephony/
+cebf7d7 Automatic translation import
+
+   * vendor/cm/
+cddc169 Revert "cm: add selective based spn (2/2)"
+
+====================
+     07-13-2016
+====================
+
+
+   * device/qcom/sepolicy/
+b697711 perfd: add permissions to read/write proc/<PID> of appdomain
+e46016c wcnss: Fix I40eeb6895f1c5550813bf8b4182e33f9a4dc5dfd
+
+   * frameworks/base/
+df41276 pm: Fix lock insanity with ActivityManager
+fc8a6d8 keyguard: Set FLAG_SHOW_WALLPAPER when shwowing media
+881e858 SystemUI: Themes are translatable
+
+   * frameworks/opt/net/wifi/
+4b47385 p2p: Add a fallback to model-name for wifi direct
+
+   * hardware/samsung/
+dada87f Automatic translation import
+e480d89 power: Add double tap to wake support
+66c10c2 AdvancedDisplay: Fix build error
+
+   * packages/apps/CellBroadcastReceiver/
+b90e231 Automatic translation import
+
+   * packages/apps/Contacts/
+d88e116 Automatic translation import
+
+   * packages/apps/Messaging/
+90c8adf Automatic translation import
+
+   * packages/apps/Snap/
+188c35d Automatic translation import
+
+   * packages/apps/SoundRecorder/
+236950f Automatic translation import
+
+   * packages/services/Telephony/
+59a0b01 Automatic translation import
+
+====================
+     07-12-2016
+====================
+
+
+   * device/qcom/common/
+b80081c Remove libinit_msm
+
+   * frameworks/base/
+1d9d590 SettingsProvider: fix data_enabled default lookup
+
+   * hardware/samsung/
+3ecf3c4 power: Fix compilation failure
+2879c69 power: Fix I/O business parameter setting
+3360b09 power: Add support for auto power modes
+
+   * packages/apps/Contacts/
+6aebf68 [2/4] Add cancel callback for BlockContactDialog
+
+   * packages/apps/ContactsCommon/
+b9ecf21 [1/4] Add cancel callback for BlockContactDialog
+
+   * packages/apps/Dialer/
+442722e [3/4] Add cancel callback for BlockContactDialog
+
+   * packages/apps/InCallUI/
+5d62f58 [4/4] Add cancel callback for BlockContactDialogCallbacks
+8e57153 Don't search LookupProvider for emergency calls
+
+   * packages/apps/Settings/
+5eb6beb Settings: Always set ramp-up time value during bindView
+
+   * packages/apps/Snap/
+14264df Snap: Tighten openLegacy() try-catch block
+
+   * packages/apps/Trebuchet/
+79936da Automatic translation import
+
+   * system/extras/
+0d598af ext4_utils: Fix warning when compiling C++ code
+
+====================
+     07-11-2016
+====================
+
+
+   * build/
+d6a079f build: Use the password manager for the verity key if possible
+
+   * frameworks/base/
+d553490 Automatic translation import
+e263f7f pm: Avoid filtering out protected components in implicit queries.
+
+   * packages/apps/CMFileManager/
+fc89b23 Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver/
+ce041cf Automatic translation import
+
+   * packages/apps/Dialer/
+c24b68c Bump version code and name
+19afeb9 Dialer: Add option to open dialpad at start
+9a5d69a Remove hard dependency on proprietary smartsearch lib
+
+   * packages/apps/Gello/
+36aff52 Automatic translation import
+
+   * packages/apps/Settings/
+de44f43 Automatic translation import
+
+   * packages/apps/SetupWizard/
+07c44c4 Automatic translation import
+
+   * packages/apps/Snap/
+3f9223e Automatic translation import
+
+   * packages/apps/SoundRecorder/
+f780c6f Automatic translation import
+
+   * packages/apps/ThemeChooser/
+ea7e6b9 Automatic translation import
+
+   * packages/apps/Trebuchet/
+5bcc39e Automatic translation import
+
+   * packages/apps/TvSettings/
+375e251 Automatic translation import
+
+   * packages/services/Telecomm/
+8624016 Automatic translation import
+
+   * packages/services/Telephony/
+3700f9b Automatic translation import
+
+   * system/extras/
+cae0f79 verity: Split the signer arguments correctly
+
+====================
+     07-10-2016
+====================
+
+
+   * hardware/qcom/audio-caf/msm8916/
+41acd92 Merge remote-tracking branch 'caf/LA.BR.1.2.6_rb1.15' into cm-13.0-caf-8916
+
+   * hardware/qcom/display-caf/msm8916/
+c3dffc0 Merge remote-tracking branch 'caf/LA.BR.1.2.6_rb1.15' into cm-13.0-caf-m8916
+
+   * hardware/qcom/media-caf/msm8916/
+b6fceab Merge remote-tracking branch 'caf/LA.BR.1.2.6_rb1.15' into cm-13.0-caf-8916
+
+   * hardware/samsung/
+8a13740 cmhw: Add DisplayModeControl support
+
+   * system/core/
+5b537bb healthd: Check if battery device exists instead of charger drivers before setting fake properties.
+
+====================
+     07-09-2016
+====================
+
+
+   * device/qcom/common/
+fdca960 power: Don't send obsolete DISPLAY_OFF opcode
+97f2320 power: Use ARRAY_SIZE macro where possible
+
+   * hardware/qcom/audio-caf/msm8960/
+f56c2d5 hal: Remove listen calibration from 8960 hal
+
+   * hudson/
+8707726 Move Galaxy Nexus (maguro, toro, toroplus) to cm-13.0
+
+   * packages/apps/Settings/
+4e9b18b Settings: Add adaptive display mode desc. strings
+
+   * vendor/cm/
+6cce279 cleanup vodafone germany apns
+
+====================
+     07-08-2016
+====================
+
+
+   * frameworks/av/
+940b28b Enforce permission for accessing fm tuner
+
+   * frameworks/base/
+12fdd7f Keyguard: Don't circular reveal a non-visible view
+68eda06 SystemUI: add themes dynamic tiles icon
+d145bd5 Avoid NPE in printspooler when changing language
+
+   * frameworks/opt/net/wifi/
+95acd46 wifi: fixup hotspot disconnect on subscriber change
+1fcc0dd wifi: don't disable AP on sub change if it's the same sub
+886ac42 wifi: disable access point on subscription change
+
+   * packages/apps/SetupWizard/
+10a58d2 SetupWizard: Handle ActivityNotFoundException in LoadingFragment
+
+   * packages/apps/WallpaperPicker/
+3cd562d Only ask for storage perms when needed
+
+====================
+     07-07-2016
+====================
+
+
+   * android/
+37236c9 default.xml: cm: Update to 6.0.1_r52
+
+   * build/
+edb9509 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * dalvik/
+c27cc46 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/boringssl/
+9eeaa8c Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/libavc/
+a76695a Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/sepolicy/
+0d2bc43 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * external/wpa_supplicant_8/
+3d3b2ea Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * frameworks/av/
+1e7c9d2 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * frameworks/base/
+b6bddad Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD Ticket: CYNGNOS-3020
+
+   * frameworks/native/
+cf27ee8 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/broadcom/wlan/
+6915649 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/cyanogen/
+e61dfdc cmhw: Add VibratorHW implementation
+
+   * hardware/libhardware/
+65ea8ef Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * hardware/qcom/audio-caf/msm8916/
+9c523d2 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8952/
+dc4a1f6 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8960/
+43f190b DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8974/
+8c1ea0f DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8994/
+4fdc941 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio-caf/msm8996/
+20a81a5 DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/audio/default/
+c6f3e59 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * packages/apps/Bluetooth/
+80bd5e6 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * packages/apps/Contacts/
+a586a52 Contacts metrics: corrected process interval
+
+   * packages/apps/Messaging/
+e45eb2f Messaging app crashes after a few MMS
+
+   * packages/apps/Nfc/
+f7ea48e Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * packages/apps/Settings/
+d3a1dfe Break out Bluetooth device icon from dashboard reference.
+7536d60 InstalledAppDetails: fix refreshing storage summary after force stop
+
+   * packages/apps/SoundRecorder/
+77399f4 SoundRecorder: onConfigurationChanged dismiss popupmenu
+d0c02a3 Revert "SoundRecorder: onConfigurationChanged dismiss popupmenu"
+
+   * packages/apps/Trebuchet/
+4c2c136 Trebuchet hook to export workspace - hidden behind *#*#INFO#*#* wall
+
+   * system/bt/
+f1eada5 Fix call to enable(bool) which changed as part of 049eae4ff84fbbdbc4b0068cb2a217f9f0460bf4
+8c6a7c5 Merge remote-tracking branch 'remotes/android-6.0.1_r52' into HEAD
+
+   * vendor/cm/
+f1c5ab8 Adapt to 6.0.1_r52 backup whitelist
+2d2eb9a init: Add VibratorHW sysfs permissions
+
+====================
+     07-06-2016
+====================
+
+
+   * frameworks/base/
+2ab71c1 SystemUI: fix qstile page reset timeout
+
+   * packages/apps/CellBroadcastReceiver/
+b76e794 Automatic translation import
+
+   * packages/apps/Dialer/
+dfa4d5f Automatic translation import
+
+   * packages/apps/Profiles/
+5972fba Automatic translation import
+
+   * packages/apps/Screencast/
+95cdd6a Automatic translation import
+
+   * packages/apps/Settings/
+91c66f1 Automatic translation import
+
+   * packages/apps/Snap/
+aca0818 Automatic translation import
+
+   * packages/apps/SoundRecorder/
+a955d4c Automatic translation import
+
+   * packages/services/Telephony/
+9ceb4c8 Automatic translation import
+
+   * system/core/
+5d90c85 healthd: Write to blink file to fix LED
+
+   * vendor/cmsdk/
+1a2589b Automatic translation import
+
+====================
+     07-05-2016
+====================
+
+
+   * external/stagefright-plugins/
+4f5545a stagefright-plugins: Clean up warnings for invalid format strings
+be0ec90 stagefright-plugins: Stop using AVPicture
+
+   * frameworks/base/
+94c32d8 SystemConfig: allow app-link to be set to any possible state
+fcd88f4 am: clear protected apps from recents
+95ae413 Automatic translation import
+0cabc1d media:Modify the display of system default ringtone when it is none.
+
+   * packages/apps/Dialer/
+9a01de3 Set content intent to final button intent
+
+   * packages/apps/Settings/
+d4287ef Prevent orientation changes from destroying/recreating security settings
+e64a234 Settings: Disable sim switch if subscription isn't valid
+c556094 Settings: Don't set the icon for sim activation / deactivation dialog
+
+   * packages/services/Telephony/
+f72be63 Automatic translation import
+c64967f Telephony: Handle PIN locked sim slot swapping between boots.
+
+   * vendor/cm/
+a04941c cm: overlay: enable otg notification
 
