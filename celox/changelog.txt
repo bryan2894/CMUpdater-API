@@ -1,245 +1,645 @@
 ====================
-     07-28-2016
-====================
-
-
-   * device/samsung/msm8660-common/
-bf3c327 msm8660: Migrate selective-spn from common repo to device tree
-1e28054 MSM8660RIL: restore code needed for proprietary ril
-
-   * device/samsung/qcom-common/
-da0d9bb Automatic translation import
-
-   * frameworks/base/
-0af8596 mountservice: Shut down volumes before restarting framework
-0942a4a Automatic translation import
-
-   * packages/apps/Camera2/
-6d11621 Automatic translation import
-
-   * packages/apps/Dialer/
-5848ab6 Automatic translation import
-
-   * packages/apps/Eleven/
-a6f204a Merge "Eleven: fix possible NPE" into cm-13.0
-
-   * packages/apps/Settings/
-39a3d54 Add SIM status string for localizing voice/data strings
-581f936 Automatic translation import
-29d679a Settings: Fix possible crash
-
-   * packages/apps/SetupWizard/
-aafff03 Automatic translation import
-
-   * packages/apps/SoundRecorder/
-3a37d06 Automatic translation import
-
-   * packages/services/Telephony/
-c3a8096 NetworkSelection: Cleanup
-ed75876 NetworkSelection: Fix for setting shortcut
-75915ed NetworkSelection: Fix double display of radio technology
-
-   * system/vold/
-89599b6 vold: Allow reset after shutdown
-
-   * vendor/cm/
-441752f sepolicy: Allow media_rw write to fix camcorder denials
-
-   * vendor/cmsdk/
-8a3e6d3 Automatic translation import
-
-====================
-     07-27-2016
-====================
-
-
-   * external/sepolicy/
-908ba00 sepolicy: Add policy for sdcardfs and configfs
-
-   * frameworks/base/
-6c497b4 Automatic translation import
-87fd250 Improve the scan process
-
-   * hardware/qcom/audio-caf/msm8916/
-2040c84 policy_hal: Fix build with Clang
-
-   * packages/apps/CMFileManager/
-3d80dd5 Automatic translation import
-
-   * packages/apps/Settings/
-9176a64 Settings: Improve vibrator intensity dialog layout
-4aab309 Automatic translation import
-
-   * vendor/cm/
-73709d3 Add missing truphone APNs
-6905134 sepolicy: Revert custom sdcardfs policy in favor of AOSP
-
-   * vendor/cmsdk/
-7001c63 Automatic translation import
-
-====================
-     07-26-2016
-====================
-
-
-   * frameworks/base/
-75c8449 Factory reset: Wipe media by default
-5d7b76e Automatic translation import
-5468e81 SystemUI : Initialize state linked volume
-e522739 Automatic translation import
-
-   * hardware/qcom/audio-caf/msm8960/
-f7451db hal: Add legacy EDID channel retrieval
-
-   * packages/apps/CellBroadcastReceiver/
-18b192a Automatic translation import
-
-   * packages/apps/DeskClock/
-f17d6ef Timer: Do not rotate Alert timer
-
-   * packages/apps/Gello/
-39cb31b Automatic translation import
-
-   * packages/apps/Messaging/
-e4d05e7 Underp build
-fd22349 Themes: Expose new hard coded colors for themes
-
-   * packages/apps/Settings/
-6045564 Settings: Always set text value in color temperature
-64d3181 Automatic translation import
-
-   * packages/apps/SetupWizard/
-739026a Automatic translation import
-
-   * packages/apps/SoundRecorder/
-42655b0 Automatic translation import
-
-   * packages/services/CMAudioService/
-b3cbad8 CMAudioService: initial brokered port from cmsdk
-
-   * packages/services/Telephony/
-ce2ac52 Automatic translation import
-
-   * system/core/
-1576854 sdcard: Pass the umask to sdcardfs correctly
-
-   * vendor/cm/
-522c421 sepolicy: A few more denials
-4a24ffe sepolicy: More policy for sdcardfs
-cdb0ea6 cm: include CMAudioService in builds
-
-   * vendor/cmsdk/
-f42db22 Automatic translation import
-16f0226 ThemeService:Component id is being changed for multiple entries in mixnmatch.
-
-====================
-     07-25-2016
+     08-12-2016
 ====================
 
 
    * android/
-6e16801 manifests: add CMAudioService
-
-   * frameworks/base/
-b4600cd SystemUI: don't automatically disable compass tile
-
-   * frameworks/native/
-8cafa37 surfaceflinger: Fix the fix of the opaque check fix
-
-   * hardware/qcom/display-caf/msm8996/
-c823234 libmemtrack: Update the parsing of flags field
-5277cf2 sdm: Handle spurious wakeup from pthread_cond_wait
-1a7387c hwc: Initialize pipe type to kPipeTypeUnused
-
-   * hardware/qcom/media-caf/msm8996/
-bd19a47 Merge tag 'LA.HB.1.3.2-19600-8x96.0' of git://codeaurora.org/platform/hardware/qcom/media into cm-13.0
-
-   * packages/apps/CMBugReport/
-9a4968e Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-5186532 Automatic translation import
-
-   * packages/apps/DeskClock/
-21af6a7 Automatic translation import
-
-   * packages/apps/Dialer/
-d95a138 Automatic translation import
-
-   * packages/apps/Gello/
-df2d427 Automatic translation import
-
-   * packages/apps/Screencast/
-f419e0c Automatic translation import
-
-   * packages/apps/Settings/
-6e7b8ba Automatic translation import
-
-   * packages/apps/SetupWizard/
-af36bfb Automatic translation import
-
-   * packages/apps/Trebuchet/
-662dd19 Automatic translation import
-
-   * vendor/cm/
-005d47e Movistar [ES] APN updates
-
-   * vendor/cmsdk/
-705716f cmsdk: Broker out CMAudioService
-
-====================
-     07-24-2016
-====================
-
-
-   * hudson/
-07edc08 Revert "Disable quark"
-
-   * packages/apps/Gello/
-08562d2 Themes: Expose and separate hard coded colors for themes
-
-   * packages/services/Telephony/
-89b872f Telephony: Fix voicemail preference issue
-
-   * system/core/
-7f9b2ce sdcard: Fix sdcardFS check
-d63e675 sdcard: Add support for sdcardfs!
-
-   * vendor/cm/
-d4a0f0a sepolicy: Add rule to allow sdcardfs to read package list
-ba87877 sepolicy: Add sdcardfs support
-6fed2cf sepolicy: Allow batterymanager and batteryproperties services to be found
-
-====================
-     07-23-2016
-====================
-
-
-   * cmu-api/
-62b5888 celox: 07-22-16
+7618380 Add HexoLibre to manifest!
 
    * device/qcom/common/
-9e40a0e power: Simplify soc_id checks
+1a2515c power-8916: Simplify missed soc_id check in 9e40a0e
 
-   * device/samsung/msm8660-common/
-61efd75 msm8660: update for proprietary ril
-
-   * frameworks/base/
-1af5e7f SysUI: Show hints if showing keyguard and provisioned
-2c050b3 Automatic translation import
-
-   * packages/apps/CMBugReport/
-cc8c112 Automatic translation import
-
-   * packages/apps/LockClock/
-fdc1069 Automatic translation import
+   * kernel/samsung/msm8660-common/
+4e27ebf Revert "lowmemorykiller: Compact memory when killing processes"
 
    * packages/apps/Settings/
-b4dcc0d Automatic translation import
+b4bac98 Settings:Fix mImsi null cause ApnSettings crash
+6817e26 Settings: remove wifi hotspot timeout when hotspot settings are removed
+3afcbcf Settings: Show only one tab on PrivacyGuard direct access
+830a846 Settings: Root appops access in developer settings
+
+   * packages/apps/Snap/
+2de3dc2 Revert "SnapdragonCamera: Use MDP composition instead of GPU"
+
+   * packages/services/CMAudioService/
+2087f64 CMAudioService: sign with private keys if available
+1127d85 CMAudioService: add icons
+
+   * packages/services/LiveLockScreenService/
+675cedc LiveLockscreenService: add icons
+
+   * packages/services/ThemeManagerService/
+1e9e7cd ThemeManager: add icon
+
+   * packages/themes/HexoLibre/
+ecccbb5 Remove extra metadata
+1c82089 hexolibre: Fix strings
+f61ab04 VIVA LA HEXOLIBRE!
+
+   * vendor/cm/
+31125bc cm: Build HexoLibre as part of common_full
+
+   * vendor/cmsdk/
+da1776a cmsdk: allow MANAGE_AUDIO_SESSIONS to be whitelisted
+
+====================
+     08-11-2016
+====================
+
+
+   * build/
+df03dd1 build: Allow all possible JDK editions by default
+
+   * frameworks/av/
+8d41a10 mediascanner: Accept .opus file extension.
+
+   * frameworks/base/
+59350ea [2/2] base: cm custom boot dexopt UI
 
    * packages/apps/SetupWizard/
-ad287f7 Automatic translation import
+8331602 If the device has FRP, prompt the user to set up a lockscreen
 
-   * packages/apps/ThemeChooser/
-8c2033e Automatic translation import
+   * packages/apps/Snap/
+e095785 Snap: Support 9.6 MP 16:9 picture resolution
+2b5331e Snap: Remove storage menu if no external storage available
+
+   * vendor/cmsdk/
+6e5ab27 [1/2] cmsdk: cm custom boot dexopt UI
+
+====================
+     08-10-2016
+====================
+
+
+   * frameworks/av/
+2071f20 stagefright: Remove the HAL3 limitation from the video reference clock selection
+
+   * frameworks/base/
+32265ae pm: resolver: Don't hold the lock when calling into the resolver
+4910bb1 IconPackHelper:Use un-tinted iconback when no defaultSwatchcolor is specified
+
+   * packages/apps/Settings/
+d47d2e4 Settings: Animate pin/pattern fragment only if available
+
+   * vendor/cm/
+0e9838e contributors: update Galaxy Nexus maintainers
+8e9bf1c cm: Update Xperia Blue contributor
+
+   * vendor/cmsdk/
+db640a9 livedisplay: Float-to-string conversions considered harmful
+c0dd46d Introduce a hysteresis for outdoor condition determination.
+
+====================
+     08-09-2016
+====================
+
+
+   * build/
+cbecec6 Revert "build: Allow building with Oracle JDK 8"
+
+   * device/samsung/qcom-common/
+045b6c9 qcom: Remove obsolete USE_OPENGL_RENDERER
+
+   * external/wpa_supplicant_8/
+a08fd9e wpa_supplicant: Remove unnecessary QMI linkage
+
+   * frameworks/base/
+740c202 Automatic translation import
+66c02c8 framework: extend provision check to SEARCH intents
+
+   * hardware/cyanogen/
+ec15025 cmhw: Add support for picture adjustment via LiveDisplay native API
+
+   * packages/apps/Messaging/
+84d9f82 Clear avatar media cache on theme change
+
+   * packages/apps/Settings/
+e6a3394 Automatic translation import
+
+   * vendor/cm/
+eac8616 sepolicy: Move new QCOM-specific policy to the right place
+
+   * vendor/cmsdk/
+d62a53f Automatic translation import
+87590f0 cmsdk/livedisplay: Add support for picture adjustment
+
+====================
+     08-08-2016
+====================
+
+
+   * build/
+a097018 build: Allow building with Oracle JDK 8
+
+   * packages/apps/CMBugReport/
+94bf2d9 Automatic translation import
+
+   * packages/apps/CMFileManager/
+eef4e32 Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver/
+b7fdfd5 Automatic translation import
+
+   * packages/apps/Contacts/
+6063f78 Automatic translation import
+
+   * packages/apps/DeskClock/
+0505c81 Automatic translation import
+
+   * packages/apps/Dialer/
+863163b Automatic translation import
+
+   * packages/apps/Gello/
+1772b98 Automatic translation import
+
+   * packages/apps/Screencast/
+fff111e Automatic translation import
+
+   * packages/apps/SetupWizard/
+3dce293 Automatic translation import
+
+   * packages/apps/Snap/
+c5ce733 Automatic translation import
+
+   * packages/apps/SoundRecorder/
+946fee3 Automatic translation import
+
+   * packages/services/CMAudioService/
+8ce29f0 Automatic translation import
+
+   * packages/services/Telephony/
+86fd10b Automatic translation import
+
+   * packages/services/ThemeManagerService/
+cdfcad6 Automatic translation import
+
+   * vendor/cm/
+dfcd472 sepolicy: Additional policy for LiveDisplay
+
+====================
+     08-07-2016
+====================
+
+
+====================
+     08-06-2016
+====================
+
+
+   * device/qcom/sepolicy/
+d805fbc sepolicy: Re-add legacy IOP rules
+
+   * frameworks/base/
+583e76d Revert "Adding back pdf_printer_media_sizes for values-zh-rCN to accomodate mediasize_default"
+a92b91d fw: enforce android.permission.PREVENT_SYSTEM_KEYS in system server
+
+   * frameworks/native/
+3b418d6 Fixed stylus eraser being rejected by palm rejection
+
+   * frameworks/opt/hardware/
+c11abf0 cmhw: Add PictureAdjustment stubs - take deux
+91cb338 Revert "cmhw: Add PictureAdjustment stubs"
+
+   * hardware/qcom/audio-caf/msm8916/
+087d27d hal: Fix compilation with verbose debugging enabled
+
+   * packages/apps/CMFileManager/
+5d690dd Add ape file mimetype
+
+   * packages/apps/Messaging/
+3aaac3a Use app settings for conversation settings if no custom set
+
+   * packages/apps/Settings/
+228f65e Revert "Settings: Add screen color settings"
+c094d11 livedisplay: Add picture adjustment settings
+
+   * vendor/cm/
+a995059 Allow maintenance versions to be ignored
+
+====================
+     08-05-2016
+====================
+
+
+   * bionic/
+9259508 linker: Avoid logcat spam with some blobs
+
+   * build/
+7143cae build: Readd msm7x27a to QCOM Targets
+
+   * device/qcom/common/
+b6d2e17 power: Undo video decode hint for ondemand
+6d70cd4 power: Simplify display_hint_sent
+a277d81 dtbtool: use O_TRUNC when writing to output file
+
+   * device/qcom/sepolicy/
+091da82 Revert "SElinux policy rules addition for early audio feature"
+9d013af sepolicy: Fix garbage in upstream commit
+7e91768 seandroid: allow QFP dameon access to Android services
+6e709b2 sepolicy: Add policy for VR service
+98fa20a sepolicy: remove exec permission for radio
+88707c0 sepolicy: Add permissions for new dsp node
+9400d2f Location: added media server access permission for test app
+40a865c SEPolicy: Update SePolicy for IOP
+43335cd SElinux policy rules addition for early audio feature
+242e02c sepolicy: add permissions for i2c-6 device
+e8b3230 sepolicy : add inital rule to bootanimation.
+2bf358c sepolicy: Add secontexts boot and persist.nativehmi.exit
+dc1abcd sepolicy : Allow bootkpi access to system apps and vold
+3825d73 common: add selinux policy for fastmmi
+53b3086 sepolicy: Policy for SmartcardService
+796761b sepolicy: allow fstman write permissions to wifi directory
+f1e1874 sepolicy: update iop socket path
+
+   * frameworks/base/
+66af012 bootanimation: add multithreaded decode
+88e7a6c SystemUI: Display bluetooth battery status when available
+
+   * frameworks/opt/telephony/
+6162b23 DCT: Tear down MMS+default connections raised by config_enable_mms_with_mobile_data_off
+
+   * packages/apps/Bluetooth/
+2132084 bluetooth: Broadcast battery status
+
+   * packages/apps/Settings/
+3827d97 Allow restricted users to change status bar settings
+
+   * packages/apps/Snap/
+c4762ff snap: fix untraslatables
+
+   * packages/services/Telephony/
+d2c1ea5 MobileNetworkSettings: Check CarrierConfig on isWorldMode
+
+   * vendor/cm/
+a516c2f cm: extract_utils: Add a firmware extraction method
+3a03012 cm: extract_utils: Fixup xml files
+7f9fff2 cm: extract_utils: Implement oat2dex
+463feb6 cm: sepolicy: Fix the vold blkid.tab denial from recovery
+
+   * vendor/cmsdk/
+3e7dac1 cmhw: Add support for display mode remapping
+19345cb livedisplay: Enable by default
+
+====================
+     08-04-2016
+====================
+
+
+   * bionic/
+545862d bionic: Sort and cache hosts file data for fast lookup
+
+   * frameworks/base/
+d59f367 framework: don't allow assist activities while not provisioned
+
+   * frameworks/native/
+542b068 surfaceflinger: Fix uninitialized variable
+da998f4 surfaceflinger: Unbreak casting and other use cases
+52b8462 surfaceflinger: Add check for number of queued buffers
+
+   * packages/apps/Snap/
+51be6e8 Revert "SnapdragonCamera: Fix AEC lock issue after non-zsl snapshot."
+45769ae snap: Add constrained longshot mode
+81110de snap: Additional fixes for auto-HDR mode
+1ccf372 snap: Fixes for advanced features and scene modes
+d91acef snap: Always turn touch-af-aec on
+8fef7ac snap: Add missing resource
+38a5e13 SnapdragonCamera: Fix the advanced features relative toast issue
+846dc6a SnapdragonCamera: implement optizoom and chromaflash UI
+9a1d5c2 SnapdragonCamera: Fix panorama cancel button location
+ee8c922 SnapdragonCamera: Fix the issue that camera control is removed
+a58a537 SnapdragonCamera: Add manufacture and model info
+2a3c90c SnapdragonCamera: adjust video recording duration margins
+53a2b18 SnapdragonCamera: Fix incorrect focus mode
+72cf374 SnapdragonCamera: resolve touch af issue during countdown
+16ac0c5 SnapdragonCamera: Add support for outputting MPO format files
+e5d300a SnapdragonCamera: Removing unnecessary orientation check
+96c7df0 SnapdragonCamera: Fix viewfinder flashing issue in camcorder mode
+72a66ba SnapdragonCamera: hide the preview surface during suspend
+4180e3b SnapdragonCamera: Resolve camera control overlapping issue
+5bb6fe3 Fix android.process.media got killed when capture
+c58924a SnapdragonCamera: Fix missing icon issue in error condition
+038809e SnapdragonCamera: Reset menu when device is rotated
+b2b382b SnapdragonCamera: fix null pointer exception
+26d9ea2 SnapdragonCamera: Fix menu highlight issue when rotating device
+d1712aa SnapdragonCamera: Adding null exception handler.
+f64b94c SnapdragonCamera: Register media status listener
+f5fb6cf SnapdragonCamera: Removing filmstrip view touch handler
+2609176 SnapdragonCamera: Adding current camera null check
+1f74331 SnapdragonCamera: Adding toast for media recording failure.
+f10d6c1 SnapdragonCamera: Improving Burstmode performance
+69d1c4d SnapdragonCamera: Do not update panorama thumbnail when cancelled
+48feef9 SnapdragonCamera: Fix crash issue with enable FD with TruePortrait
+e99828d VideoModule: Removing tmpPath and use path
+a2794ea SnapdragonCamera: Handle startPreview exception in camera.
+7383a2d SnapdragonCamera: Fix to make back key event work normally
+bc53629 SnapdragonCamera: Reset navigation bar state whenever screen turns on
+e039354 SnapdragonCamera: Always enable FD with TruePortrait on
+48a4d32 SnapdragonCamera: Fix progress indicator overlapped by thumbnail icon
+a93b185 SnapdragonCamera: Fix the preview thumbnail issue
+20a0405 SnapdragonCamera: Fix not able to view other pictures when macro mode
+322b414 SnapdragonCamera: Reduce the latency for panorama preview starting
+e0b7ffe SnapdragonCamera: Limit preview size by capping display dimensions.
+8e75470 SnapdragonCamera: add button border
+1ff17d7 SnapdragonCamera: Fix app freeze when connect to camera failed
+902626f SnapdragonCamera: Use StorageManager for SDCard
+fb876ae SnapdragonCamera: Fix display smaller thumbnail on panorama preview
+
+   * vendor/cm/
+ce489f1 Add LG msm8226 family maintainers
+fea2dc9 Add Asus Z380KL maintainer
+79204e6 version: Set version string to 13.0.1 to reflect security update
+
+====================
+     08-03-2016
+====================
+
+
+   * android/
+aaf63f6 manifests: Add ThemeManagerService
+bc5efdb default.xml: cm: Update to 6.0.1_r61
+
+   * build/
+d5a160c Merge tag 'android-6.0.1_r61' into HEAD
+
+   * external/libavc/
+6718ae7 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * external/sepolicy/
+c6c90b3 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * frameworks/av/
+aa98968 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * frameworks/base/
+0d92814 am: Notify zygote of font change in ActivityManagerService
+c291bea SysUI: Add theme manager permission
+778cc82 Themes: Add permission to themes protected broadcasts
+cacdaa4 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * frameworks/native/
+2ab013d Merge tag 'android-6.0.1_r61' into HEAD
+
+   * frameworks/opt/net/wifi/
+705773d Merge tag 'android-6.0.1_r61' into HEAD
+
+   * frameworks/opt/telephony/
+d8208c3 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * hardware/qcom/media-caf/msm8916/
+9a99017 DO NOT MERGE mm-video-v4l2: venc: add checks before  accessing heap pointers
+f0dcb1e DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8952/
+2182d03 DO NOT MERGE mm-video-v4l2: venc: add checks before  accessing heap pointers
+8db7a42 DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8974/
+052ff8f DO NOT MERGE mm-video-v4l2: venc: add checks before  accessing heap pointers
+0977dcf DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8994/
+4e82dac DO NOT MERGE mm-video-v4l2: venc: add checks before  accessing heap pointers
+1c31219 DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media-caf/msm8996/
+1cbab89 DO NOT MERGE mm-video-v4l2: venc: add checks before  accessing heap pointers
+de2960f DO NOT MERGE Fix wrong nAllocLen
+
+   * hardware/qcom/media/default/
+a1b4b98 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * hudson/
+500d4cf Add ZNH5Y translation target
+
+   * packages/apps/Eleven/
+4961f4e Merge "handle media keys" into cm-13.0
+
+   * packages/apps/Nfc/
+72fb115 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * packages/apps/PackageInstaller/
+96f551c Merge tag 'android-6.0.1_r61' into HEAD
+
+   * system/bt/
+ccde045 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * system/core/
+4a978c6 Merge tag 'android-6.0.1_r61' into HEAD
+
+   * vendor/cm/
+19b67c6 Tele2 (LT) APN updates
+851457a config: Add ThemeManagerService to PRODUCT_PACKAGES
+79eda9e sepolicy: Put theme service in its own context
+
+   * vendor/cmsdk/
+c4ed8c8 Themes: Broker the theme service
+
+====================
+     08-02-2016
+====================
+
+
+   * frameworks/base/
+1ab48a3 SystemUI: avoid null tile creation
+
+   * frameworks/native/
+b86bb46 sf: Fix compliation for non-8996 platforms
+193a8c9 surfaceflinger: Isolate S3D code to msm8996 only
+534f857 surfaceflinger: Cleanups for blur
+
+   * hardware/qcom/media-caf/msm8937/
+a7b4886 The libOmxSw encoders require prop headers :(
+
+   * packages/services/ThemeManagerService/
+256ba47 Initial code checkin
+
+   * vendor/cmsdk/
+4cf18a3 livedisplay: Tweak defaults
+7bf7c4b cmsdk: Allow services to conditionally start before decryption
+
+====================
+     08-01-2016
+====================
+
+
+   * device/samsung/qcom-common/
+ef2b25d Automatic translation import
+
+   * frameworks/base/
+75864c6 Automatic translation import
+
+   * frameworks/native/
+f5486d6 sf: Allow HWC composition of virtual displays for HDMI primary
+537364c SF: Add support to draw S3D framebuffer target
+
+   * frameworks/opt/hardware/
+a8ef044 cmhw: Add PictureAdjustment stubs
+
+   * hardware/cyanogen/
+3c1ac73 cmhw: Minor change to color balance API
+
+   * hardware/qcom/display-caf/msm8996/
+b2ef0db Merge tag 'LA.HB.1.3.2-20700-8x96.0' of git://codeaurora.org/platform/hardware/qcom/display into cm-13.0
+
+   * hardware/qcom/media-caf/msm8996/
+2345dca Merge tag 'LA.HB.1.3.2-20700-8x96.0' of git://codeaurora.org/platform/hardware/qcom/media into cm-13.0
+5029df7 venc: Fix VQZip issue
+
+   * hudson/
+d90c726 hudson: Add kiwi
+
+   * packages/apps/CellBroadcastReceiver/
+4cc0ece Automatic translation import
+
+   * packages/apps/DeskClock/
+1332243 Automatic translation import
+
+   * packages/apps/Dialer/
+9144ad1 Automatic translation import
+
+   * packages/apps/Gello/
+e4bb564 Automatic translation import
+
+   * packages/apps/Settings/
+1d21500 Automatic translation import
+
+   * packages/apps/Trebuchet/
+753e2ad Automatic translation import
+
+   * packages/providers/TelephonyProvider/
+65f7537 TelephonyProvider: Fix Default APN Preference Overlay on 1st Boot
+
+   * packages/providers/WeatherProvider/
+3ffc294 Automatic translation import
+
+   * vendor/cm/
+7f81f3c cm: Update contributors
+cd726ac sepolicy: More IOP rules
+
+   * vendor/cmsdk/
+fa227b1 Automatic translation import
+
+====================
+     07-31-2016
+====================
+
+
+   * hardware/samsung/
+f9e2a71 libril: Remove unused include
+
+   * hudson/
+d25e2a9 hudson: Add Xiaomi Redmi Note 3 (kenzo)
+
+====================
+     07-30-2016
+====================
+
+
+   * frameworks/base/
+607b54a mountservice: Don't nuke all volumes when decrypting
+
+   * hardware/qcom/display-caf/msm8916/
+f9b87fe display: Fix warnings on 64-bit clang
+
+   * packages/apps/Gello/
+be6327c gello: unbreak the gellin'time
+
+   * packages/apps/Settings/
+d3f3d0d Automatic translation import
+
+   * packages/apps/Snap/
+d3497e2 SnapdragonCamera: Fix FD roll_dir issue
+61c3ce9 SnapdragonCamera: Reduce number of countdown timer option
+848bd70 SnapdragonCamera: limit AF animation FPS
+118b54c SnapdragonCamera: fix crash after photo deletion
+eb60e2e SnapdragonCamera: Fix app crash when taking longshot during countdown
+828954c SnapdragonCamera: Fix app auto close when repeat plug in/out USB cable
+2428156 SnapDragon: Changes to fix popup menu issue in camcorder
+1fddfd0 SnapdragonCamera: fix camera FC when internal storage isn't enough
+0bce7c9 SnapdragonCamera: fix crash with persist.panel.orientation
+f09d9d0 SnapdragonCamera: fix a panorama memory leak
+a704fe9 SnapdragonCamera: Fix face detection UI offset
+5933a0b SnapdragonCamera: Fix AEC lock issue after non-zsl snapshot.
+ebe93e5 SnapdragonCamera: Disable continuous shot when HDR is enabled
+656585d SnapDragan: Changes to enable UI option for ASD mode.
+858413d SnapdragonCamera: Fix the issue that IS is not disabled
+2fc004c SnapdragonCamera: Disable CDS and TNR if SeeMore is enabled
+6d7dfbf Snap: Unbreak auto-HDR
+75096f2 Fix orientation handling in secure camera.
+
+   * packages/providers/WeatherProvider/
+50d4702 Automatic translation import
+
+   * system/netd/
+11825d1 Enforces bandwidth limit on portable access point
+
+   * vendor/cm/
+5b6ff16 sepolicy: Fix MTP for sdcardfs
+fdd1ffc Gello artifact: v29
+fb00ca6 Add missing OnePlus Two contributors
+
+   * vendor/cmsdk/
+92fdd2b Automatic translation import
+55c755a CMSettings: Add default overlay for forward and reverse lookup
+
+====================
+     07-29-2016
+====================
+
+
+   * cts/
+3eab954 Merge "DO NOT MERGE, re-apply, Adjust testAppFailAccessPrivateData to fail on non-tagged sockets" into marshmallow-cts-release
+3762c5d DO NOT MERGE, re-apply, Adjust testAppFailAccessPrivateData to fail on non-tagged sockets
+
+   * frameworks/base/
+decf60b pm: Skip custom resolver use when mOnlyCore
+81208c4 Automatic translation import
+52d7572 lights: Make sure the lights are out
+
+   * hardware/qcom/audio-caf/msm8937/
+bf8c1ab audio: Fix complilation warnings under Clang
+
+   * hardware/qcom/audio-caf/msm8996/
+abff8fe hal: Haxed header
+
+   * hardware/qcom/media-caf/msm8916/
+c2008de media: Fix issues when building with Clang
+
+   * hudson/
+3c55820 Add Asus P024
+
+   * packages/apps/CMBugReport/
+ea9f2f0 Automatic translation import
+
+   * packages/apps/Gello/
+34ad277 Automatic translation import
+
+   * packages/apps/LockClock/
+65407c7 AM/PM: Fix incorrect am/pm text
+
+   * packages/apps/Settings/
+d7c7c8e Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+c150b3a InputMethods: set the default value for preference
+
+   * packages/providers/WeatherProvider/
+d947141 Automatic translation import
+
+   * packages/services/Telephony/
+8dc84ac EditPhoneNumberPreference: Prevent empty text from being set
+
+   * system/core/
+4123d86 healthd: Add DASH charger type
+
+   * vendor/cm/
+fa37074 sepolicy: Let the IO prefetcher look at sdcardfs
+03ce400 Revert "extract_utils: Don't write multilib tags on 32-bit only devices"
+630d7ed cm: sepolicy: Allow system_server dir read access
+3b96ba5 cm: extract_utils: Rewrite file existence checks
+b7b7f88 extract_utils: Don't write multilib tags on 32-bit only devices
+a991cf1 extract_utils: Add support for files in rootfs
+
+   * vendor/cmsdk/
+544d324 Automatic translation import
 
