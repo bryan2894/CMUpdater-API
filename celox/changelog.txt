@@ -1,429 +1,100 @@
 ====================
-     08-20-2016
+     08-28-2016
 ====================
 
-
-   * build/
-3fa03d0 dt_image: Rename target
-
-   * device/samsung/msm8660-common/
-2a9f692 msm8660: update sepolicy for bluesleep driver
-a9da8cc camera: set fixed frame rate mode
-
-   * device/samsung/qcom-common/
-5032052 qcom: Remove recovery power modes script
-
-   * external/ffmpeg/
-0a27fb6 Revert "ffmpeg: Additional APE extradata"
-b0f5859 Merge branch 'release/3.0' of https://github.com/FFmpeg/FFmpeg into cm-13.0
-
-   * frameworks/av/
-16d14e1 stagefright: Disable thumbnail mode for 8996-class devices
-e4575ae audioflinger: Always process volume commands from a latest track
-6fde774 audioflinger: set flush pending on invalidating offload track
-e72652f Don't place large objects on the stack
 
    * kernel/samsung/msm8660-common/
-85ad55c bluetooth: update bluesleep_bcm driver
-5732c84 bluetooth: Add low-power mode to support Bluedroid
-e6e2c07 Revert "board-bluetooth-bcm4330: Disable bluesleep"
-1168e98 msm_serial_hs: Add flush state machine for UART Tx Transfer
-402ccd8 msm: dma: unify flush and stop_cmd interfaces
-57a1d4f msm: dma: Add graceful argument to msm_dmov_flush
-f097fcf msm_serial_hs: Fix section mismatch
-597289a msm_serial_hs: Use new clock framework apis
-96216fb msm_serial_hs: Release wakelock in case of failure case
-24a2291 msm_serial_hs: Fix the issue with device unregister/register
-2a00e2f msm_serial_hs: Cleanup regarding usage of clock enable/disable apis
-19dda6e Revert "msm8x60_celox: Update Bluetooth configuration for bcm_bt_lpm driver"
-62257b1 Revert "tty: Import bcm_bt_lpm driver from sultan-kernel-pyramid-pure"
-
-   * packages/apps/Snap/
-46a8831 Snap: Make developer menu more accessible
-
-   * system/security/
-6b8a2a3 keystore: Fix SoterTest issues
-
-   * vendor/cmsdk/
-2059ea6 You are now a developer!
+00f3e3c defconfig: enable EFI partition support
 
 ====================
-     08-19-2016
-====================
-
-
-   * build/
-0e39dd2 build: Add dt.img and kernel target
-6f76f6b generate_extra_images: Rename targets and add 'sec' prefix
-
-   * device/samsung/msm8660-common/
-be78d6f msm8660: update media profiles from stock
-e210797 Revert "bluetooth: vnd_msm8660: Update configuration from HTC Pyramid"
-
-   * frameworks/native/
-60f8bdf surfaceflinger: Add support for Exynos HWC services
-b7021ef Fix xxhdpi 3072 heap sizes
-
-   * hardware/libhardware/
-a900556 keymaster: Add SOTER tags and API definations
-
-   * hudson/
-8c3d5b3 hudson: add Amazon Kindle Fire HDX 7/8.9" devices (thor/apollo)
-
-   * kernel/samsung/msm8660-common/
-d2c3a5e power: max17040_battery: Set type to UNKNOWN
-
-   * packages/apps/Snap/
-6304f00 SnapdragonCamera: Force removing preview cover for camcorder
-a780bd9 SnapdragonCamera: Fix NPE caused by empty permission result
-f41b627 snap: Change to target SDK 23
-7d7a688 SnapdragonCamera: Remove custom location permission request window
-219fbf4 Minimum viable Android M runtime permissions handling for H.
-db4f534 SnapdragonCamera: Force removing preview cover
-
-   * packages/inputmethods/LatinIME/
-ff8efcf Revert "LatinIME: add shortcut functionality" Fix broken build from incomplete checkin for this change This reverts commit 877f8b481a6c6452a3894df14ec527c21d8e2d8c.
-
-   * prebuilts/cmsdk/
-755b224 prebuilts/cmsdk: Provide release artifact for Fig.
-
-   * system/keymaster/
-dc06a0f keymaster: Add SOTER support
-
-   * system/security/
-b926925 keystore: Add SOTER support in keystore
-
-====================
-     08-18-2016
-====================
-
-
-   * build/
-d302afe core_minimal.mk: Remove duplicate packages
-
-   * device/samsung/qcom-common/
-cb1d664 qcom: Remove healthd extension
-6c5f458 qcom: Stop building generic charger images
-
-   * frameworks/base/
-5422685 Ensure packages on adopted media do not move when updated
-d119bd8 Apps on adopted storage should stay there during update
-
-   * frameworks/native/
-2a2b06d Fix xxxhdpi 3072 heap sizes
-
-   * packages/inputmethods/LatinIME/
-877f8b4 LatinIME: add shortcut functionality
-
-   * vendor/cm/
-a194731 cm: "Released" means current.
-
-   * vendor/cmsdk/
-c349280 cmsdk: Finalize api level 6 (Fig).
-
-====================
-     08-17-2016
+     08-27-2016
 ====================
 
 
    * frameworks/base/
-6573f4d SystemUI: Fix build without jack
+4be68cd SystemUI: Don't pad when config_showScreenOnLockScreenHints is false
+db7e389 Themes: Give power dialogs own set of volume icons for themes
 
-   * frameworks/opt/net/wifi/
-19adf48 Fix potential memory leak
-
-   * hudson/
-9595bb5 s3ve3g: correct img
-e7b7542 Getcm: add s3ve3g
-
-   * packages/apps/Contacts/
-a5730ba Contacs: Fix build without jack
-
-   * packages/apps/Dialer/
-7f23b87 Dialer: Fix build without jack
-
-   * packages/apps/LockClock/
-fa73ab0 LockClock: Clean up proguard, fix build without jack
-
-   * packages/providers/ContactsProvider/
-4346f8e ContactsProvider: Fix build without jack
-
-   * packages/services/LiveLockScreenService/
-09b857e LiveLockScreenService: Fix build without jack
-
-   * packages/services/WeatherService/
-5f53cda WeatherManagerService: Fix build without jack
-
-   * vendor/cm/
-850dd22 charger: Add 640dpi support
-3e85bf7 version: Keep the maintenance version defined and use it if needed
-
-====================
-     08-16-2016
-====================
-
-
-   * android/
-974968e Revert "Add qrd.xml for working with caf    *s"
-
-   * frameworks/native/
-94774ac dalvik: rework 3 and 4-GB dalvik heap configurations
-
-   * frameworks/opt/net/wifi/
-cab7889 wifi: Stop spamming logs
-
-   * hudson/
-be667b6 hudson: Add S3 NEO(s3ve3g)  to cm-12.1
-
-   * packages/apps/ContactsCommon/
-60a394e Fix crash when block incoming call without caller ID
-
-   * packages/apps/LockClock/
-968e746 LockClock: Don't forcefully enable widget calendar on resume
-
-   * packages/apps/Messaging/
-6086e51 Unachive conversations from unblocked participants
-
-   * packages/services/WeatherService/
-42edf42 Allow Weather service to write to secure settings
-
-   * packages/themes/HexoLibre/
-18ba8af Kover Libre
-
-   * vendor/cmsdk/samples/weatherproviderservice/OpenWeatherMapProvider/
-2661188 Fix string
-
-====================
-     08-15-2016
-====================
-
-
-   * build/
-f63b642 build: Source a CM-specific global BoardConfig
-
-   * external/wpa_supplicant_8/
-dc6ca43 Merge branch 'wlan-service.lnx.1.0-rel.1.0' of git://codeaurora.org/platform/external/wpa_supplicant_8 into cm-13.0
-
-   * frameworks/base/
-1a83b36 am: Account for time changes when showing recent activities
-
-   * frameworks/opt/net/wifi/
-709a459 Wifi: Do full DHCP if framework roam to a new SSID
-6d461a7 Do not process the results array if no results are received
-37cde44 Reply with a FAILURE if enable network is received for invalid id
-6501ec3 WifiService:Fix profile can't be updated when SIM changed
-4bbf00c Wifi: Issue Disconnect when Ip is changed
-875d895 wifi: Create new WifiConfiguration for savedConfig in addOrUpdateNetworkNative
-
-   * hudson/
-936b1fc hudson: Add Xperia TX (hayabusa) to cm-13.0
-44b5cfd hudson: Add Xperia V (tsubasa) to cm-13.0
-2b7df91 hudson: Add Xperia T (mint) to cm-13.0
-
-   * packages/apps/Eleven/
-c7f1f86 Convert to new media button receiver logic.
-
-   * vendor/cm/
-ec6c945 apns: Fix T-Mobile MK DATA access
-e73b8c1 cm: Allow LiveDisplay to write to display misc dir
-e91605c cm: charger: Export the RTC Clock and Alarm timestamps
-cadd0be cm: charger: Add support for double backlight displays
-7595620 cm: Add custom off-mode charging screen
-48f8df8 extract-utils: Add pinning support
-
-   * vendor/cmsdk/
-e1ba940 CMSDK : Fix generateAlertColorFromDrawable for non BitmapDrawable
-
-   * vendor/cmsdk/samples/weatherproviderservice/OpenWeatherMapProvider/
-afe47bc Refactor OpenWeatherMap weather provider service
-
-====================
-     08-14-2016
-====================
-
-
-   * frameworks/base/
-8b088b6 Automatic translation import
-f0beb7f Fix slow anim when using a gesture to open status bar pulldown
+   * hardware/qcom/audio-caf/msm8660/
+335f572 Revert "msm8x60: Increase buffer size and sample rate"
 
    * packages/apps/AudioFX/
-47248a0 Automatic translation import
-
-   * packages/apps/CMBugReport/
-f8fb93b Automatic translation import
-
-   * packages/apps/Camera2/
-e3d02a2 Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-b35b459 Automatic translation import
-
-   * packages/apps/Contacts/
-09dccf0 Automatic translation import
-
-   * packages/apps/ContactsCommon/
-ec49830 Automatic translation import
-
-   * packages/apps/DeskClock/
-2412531 Automatic translation import
-
-   * packages/apps/Exchange/
-4758359 Automatic translation import
-
-   * packages/apps/FMRadio/
-1f5e945 Automatic translation import
-
-   * packages/apps/Gallery2/
-a0ee497 Gallery: Remove more possible NPEs
-
-   * packages/apps/Gello/
-8fb25f4 Automatic translation import
-
-   * packages/apps/LockClock/
-f03e72b Automatic translation import
-
-   * packages/apps/Messaging/
-8f1ecd7 Automatic translation import
-
-   * packages/apps/PhoneCommon/
-f3ceccc Automatic translation import
-
-   * packages/apps/Settings/
-2949303 Automatic translation import
-
-   * packages/apps/Snap/
-1a18632 SnapdragonCamera: Adjusting view initialization
-2e94604 SnapdragonCamera: Turn off LONGSHOT on ubifocus scene mode
-1532d76 Automatic translation import
-2781c8e Snap: String improvements
-
-   * packages/apps/ThemeChooser/
-dd53b04 Automatic translation import
-
-   * packages/apps/Trebuchet/
-cef6d9c Automatic translation import
-
-   * packages/apps/TvSettings/
-514c721 Automatic translation import
-
-   * packages/inputmethods/LatinIME/
-fa3518f Automatic translation import
-
-   * packages/providers/BookmarkProvider/
-be42e53 Automatic translation import
-
-   * packages/providers/CalendarProvider/
-4066adb Automatic translation import
-
-   * packages/providers/CallLogProvider/
-ba2ea00 Automatic translation import
-
-   * packages/providers/DataUsageProvider/
-51d9963 Automatic translation import
-
-   * packages/providers/TelephonyProvider/
-490a177 Automatic translation import
-
-   * packages/services/CMAudioService/
-4f029e0 Automatic translation import
-
-   * packages/services/Telecomm/
-7ee39a5 Automatic translation import
-
-   * packages/services/Telephony/
-a686e01 Automatic translation import
-
-   * packages/services/ThemeManagerService/
-93d9504 Automatic translation import
-
-   * packages/wallpapers/LivePicker/
-39dc141 Automatic translation import
-
-   * packages/wallpapers/MagicSmoke/
-b204d0b Automatic translation import
-
-   * vendor/cmsdk/
-4ceac56 Automatic translation import
+70457e9 AudioFXTests: rename module back to AudioFXTests
 
 ====================
-     08-13-2016
+     08-26-2016
 ====================
 
-
-   * android/
-3760299 Add CM Weather service repo
-
-   * cmu-api/
-a1c5a63 celox: 08-12-06
 
    * device/samsung/celox/
-0cd2846 celox: add support for SuperSU systemless root
+85f3468 celox: update bluetooth config
 
-   * external/ffmpeg/
-66bd740 avcodec/h264: Put context_count check back
-534dc63 Update for 3.0.3
-09d1854 cmdutils: remove the current working directory from the DLL search path on win32
-ab96164 avcodec/raw: Fix decoding of ilacetest.mov
-e7c00a2 avcodec/ffv1enc: Fix assertion failure with non zero bits per sample
-2a8441e avformat/oggdec: Fix integer overflow with invalid pts
-7876fd6 ffplay: Fix invalid array index
-8b3d9c3 avcodec/vp9_parser: Check the input frame sizes for being consistent
-c575726 libavformat/rtpdec_asf: zero initialize the AVIOContext struct
-6e6609f libavutil/opt: Small bugfix in example.
-6e13aca libx264: Increase x264 opts character limit to 4096
-a5680d8 avformat/mov: Check sample size
-811d560 avformat/format: Fix registering a format more than once and related races
-c34f061 avformat/flacdec: Fix seeking close to EOF
-96ce6f6 avcodec/flac_parser: Raise threshold for detecting invalid data
-13b6852 avformat/flvdec: Accept last size if its off by 1
-d13ba39 tests/api/api-codec-param-test: Do not directly access caps_internal
-19b86db avcodec: Add avpriv_codec_get_cap_skip_frame_fill_param()
-694d37e avfilter/vf_telecine: Make frame writable before writing into it
-4e5d1c4 avformat/mpegts: adjust probe score for low check_count
-2577cfd avcodec/mpc8: Correct end truncation
-280587b avformat/mp3dec: Increase probe score slightly when the whole data from begin to end is mp3
-5bf1122 avcodec/cfhd: Set dimensions unconditionally
-679e869 avcodec/mpegvideo: Do not clear the parse context during init
-7216068 MAINTAINERs cleanup (remove myself from things i de facto dont maintain)
-e7a064e avcodec/h264: Fix off by 1 context count
-a004e2e avcodec/alsdec: Check r to prevent out of array read
-f50f7ad avcodec/alsdec: fix max bits in ltp prefix code
-9cf8541 avcodec/utils: check skip_samples signedness
-b3fe93e avformat/mpegts: Do not trust BSSD descriptor, it is sometimes not an S302M stream
-603fd4f avcodec/bmp_parser: Check fsize
-76a2397 avcodec/bmp_parser: reset state
-fca62cc avcodec/bmp_parser: Fix remaining size
-9f1e8b4 avcodec/bmp_parser: Fix frame_start_found in cross frame cases
-b2a2b1a avfilter/af_amix: dont fail if there are no samples in output_frame()
-f3c1a76 avformat/allformats: Making av_register_all() thread-safe.
+   * device/samsung/msm8660-common/
+564a51d msm8660: some memory tweaks
 
-   * frameworks/native/
-a5f80a5 surfaceflinger: Access s3d flags only for valid display ID.
+   * frameworks/opt/telephony/
+26de237 Skip unknown tags instead of aborting when parsing UICC TLV data
+
+   * hudson/
+0e063fd Promote shieldtablet to cm-13.0
+dcb991e Stop cm-11.0 weeklies
+
+   * packages/apps/AudioFX/
+874ef70 Merge "AudioFX: disable debug logging" into cm-13.0
+fd4bccd Merge "AudioFX: remove legacy metrics provider" into cm-13.0
+6d435a4 Fix strings.
+ee3a578 AudioFX: disable debug logging
+0429bca AudioFX: remove legacy metrics provider
+173320f Merge branch 'cm-13.0-oss' into HEAD
+e95b026 Revert "Revert "AudioFX: rename module back to AudioFX""
+
+   * packages/apps/Snap/
+2cad43d SnapdragonCamera: Adding PRIVILEGED true
+
+====================
+     08-24-2016
+====================
+
+
+   * device/samsung/celox/
+0b55bc9 celox: set custom dalvik heap properties
+
+   * hardware/cyanogen/
+74128e2 livedisplay: Moving native API to OSS
 
    * kernel/samsung/msm8660-common/
-4e27ebf Revert "lowmemorykiller: Compact memory when killing processes"
+2385583 Revert "mm: change max readahead size to 512KB"
 
-   * packages/apps/Gello/
-cf74c29 Gello: Make incognito sentence fully translatable
-
-   * packages/providers/MediaProvider/
-876ce08 MediaProvider: catch data exception to avoid crash
-d38f5fe MediaProvider: Fix failure in android.provider.cts.MediaStore_FilesTest
-daf4128 Gallery2: Fix thumbnails of new edit photos display wrongly in Documents.
-97020c4 Music: Fix force closed when plug out the SD card while music is playing.
-7c4bd66 MediaProvider: Fix SQLiteDiskIOException.
-
-   * packages/themes/HexoLibre/
-e9a9feb Remove custom package signature
-792b24b Remove device specific assignments.
-
-   * system/netd/
-a178f13 Listen to xt_quota2 kobject event for quota
-8ff7082 TetherController: fix forwarding request aggregation logic
+   * packages/apps/AudioFX/
+c7dc272 Revert "AudioFX: rename module back to AudioFX"
+f520900 AudioFX: rename module back to AudioFX
+415792d AudioFX: rename package to org.cyanogenmod.audiofx
+b01d792 ModioFX: split backend implementations
 
    * vendor/cm/
-049d4c5 config: Add WeatherManagerService to PRODUCT_PACKAGES
+e900ddd Fix Discovery permission blockage
 
-   * vendor/cmsdk/
-c487191 CMSDK: Broker out WeatherManagerService
+====================
+     08-23-2016
+====================
+
+
+   * packages/apps/Gello/
+01d73e8 gello: increase res of shared images
+
+====================
+     08-22-2016
+====================
+
+
+   * cmu-api/
+89e732f celox: 08-21-16
+
+   * frameworks/base/
+c2f1770 Prevent invocation of startNavigating() when GPS is off
+473970b services: core: use proper tags when logging
+
+   * packages/apps/Snap/
+92009be SnapdragonCamera: Fix first-time crash and cleanup permissions
+7ed0766 Snap: Fix bad merge of "Fixed M permission issue"
 
