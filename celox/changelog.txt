@@ -1,100 +1,536 @@
 ====================
-     08-28-2016
+     10-19-2016
 ====================
 
 
-   * kernel/samsung/msm8660-common/
-00f3e3c defconfig: enable EFI partition support
-
-====================
-     08-27-2016
-====================
-
+   * frameworks/av/
+62661dc minijail: Add extended policies for all devices
 
    * frameworks/base/
-4be68cd SystemUI: Don't pad when config_showScreenOnLockScreenHints is false
-db7e389 Themes: Give power dialogs own set of volume icons for themes
+e2a5d34 wm: Add support for split screen button behavior
+720e3ae SystemUI: make long pressing recent switch to last app
+2d40bb1 SystemUI: add left and right virtual buttons while typing
 
-   * hardware/qcom/audio-caf/msm8660/
-335f572 Revert "msm8x60: Increase buffer size and sample rate"
+   * hardware/qcom/wlan-caf/
+5d68fdb Wifi: Quiet some excessive debug output
 
-   * packages/apps/AudioFX/
-70457e9 AudioFXTests: rename module back to AudioFXTests
+   * packages/apps/CMParts/
+2505554 cmparts: Add split screen to button behaviors
+613dfd6 CMParts: Set correct value for clock take two
+
+   * vendor/cmsdk/
+e721f8c cmsdk: Add support for split screen button behavior
 
 ====================
-     08-26-2016
+     10-18-2016
 ====================
 
 
-   * device/samsung/celox/
-85f3468 celox: update bluetooth config
+   * device/qcom/sepolicy/
+27b3a87 msm8960: Remove the references to misc_device
+85e3afd Revert "uncrypt needs to write to the BCB"
+22ea8db Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/device/qcom/sepolicy into cm-14.0
 
-   * device/samsung/msm8660-common/
-564a51d msm8660: some memory tweaks
+   * external/ant-wireless/ant_native/
+d650b42 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/ant-wireless/ant_native into cm-14.0
+
+   * external/skia/
+ccdff3f Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/skia into cm-14.0
+
+   * external/wpa_supplicant_8/
+9bb144b Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/wpa_supplicant_8 into cm-14.0
+
+   * frameworks/av/
+3dad99f seccomp: Permit getsockopt
+4d06724 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/av into cm-14.0
+
+   * frameworks/base/
+ff94386 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/base into cm-14.0
+68a4adf Use custom ADB over wifi property
+b2047f4 Implement expanded desktop feature
+
+   * frameworks/native/
+c473bd8 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/native into cm-14.0
+
+   * frameworks/opt/net/wifi/
+bb15217 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/opt/net/wifi into cm-14.0
 
    * frameworks/opt/telephony/
-26de237 Skip unknown tags instead of aborting when parsing UICC TLV data
+ed9b90a Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/opt/telephony into cm-14.0
 
-   * hudson/
-0e063fd Promote shieldtablet to cm-13.0
-dcb991e Stop cm-11.0 weeklies
+   * hardware/qcom/audio-caf/msm8996/
+eae0453 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/audio into cm-14.0
 
-   * packages/apps/AudioFX/
-874ef70 Merge "AudioFX: disable debug logging" into cm-13.0
-fd4bccd Merge "AudioFX: remove legacy metrics provider" into cm-13.0
-6d435a4 Fix strings.
-ee3a578 AudioFX: disable debug logging
-0429bca AudioFX: remove legacy metrics provider
-173320f Merge branch 'cm-13.0-oss' into HEAD
-e95b026 Revert "Revert "AudioFX: rename module back to AudioFX""
+   * hardware/qcom/bt-caf/
+4901ae7 libbt-vendor: Add kernel header dependency
+5b9da70 libbt-vendor: Don't bother with gen-buildcfg for CAF variant
+b67375e Fix up building with TARGET_2ND_ARCH
+f69d4be Bluetooth: load btaddr from NV if QCOM_BT_USE_BTNV is set
+3f2e454 Revert "Bluetooth: Compilation Fix for BT bring up"
+196966a Remove QCOM platform check from top makefile
+a0d21ed libbt: Fix case where SoC type is not set
+2982599 libbt-qcom: Allow building without proprietary bits
+59c755c bt-caf: Add guard makefile
 
-   * packages/apps/Snap/
-2cad43d SnapdragonCamera: Adding PRIVILEGED true
+   * hardware/qcom/display-caf/msm8996/
+3e890d1 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/display into cm-14.0
+
+   * hardware/qcom/media-caf/msm8996/
+d12ae60 mm-video: Disable proprietary extension
+0173d99 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/media into cm-14.0
+
+   * hardware/qcom/wlan-caf/
+a2dc34d Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/wlan into cm-14.0
+
+   * libcore/
+70ef6d8 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/libcore into cm-14.0
+
+   * packages/apps/Bluetooth/
+e93c758 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Bluetooth into cm-14.0
+
+   * packages/apps/CMParts/
+e3f2cd8 CMParts: statusbar: Correct clock style default value
+5282a35 CMParts: widget: Add WallOfText and Divider preferences
+71981e9 CMParts: applications: Add Expanded Desktop settings
+
+   * packages/apps/CarrierConfig/
+b8c59bf Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/CarrierConfig into cm-14.0
+
+   * packages/apps/CellBroadcastReceiver/
+4f0c283 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/CellBroadcastReceiver into cm-14.0
+
+   * packages/apps/Contacts/
+4700d94 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Contacts into cm-14.0
+
+   * packages/apps/ContactsCommon/
+c67a5ec Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/ContactsCommon into cm-14.0
+
+   * packages/apps/DeskClock/
+a6f63bf Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/DeskClock into cm-14.0
+
+   * packages/apps/Dialer/
+26159fb dialer: Remove proprietary SmartDial extension
+3ff0622 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Dialer into cm-14.0
+05c26ee Give speed dial entry editor a sane layout.
+
+   * packages/apps/Email/
+44e40d2 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Email into cm-14.0
+
+   * packages/apps/ExactCalculator/
+de1be37 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/ExactCalculator into cm-14.0
+
+   * packages/apps/Exchange/
+6bbe564 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Exchange into cm-14.0
+
+   * packages/apps/Settings/
+1066318 Settings: display: Fix accidental build breakage
+21ffa1c Settings: Implement ADB notification and ADB over network
+839427b Settings: display: Add expanded desktop preference
+
+   * packages/apps/Stk/
+9d3f066 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Stk into cm-14.0
+
+   * packages/apps/UnifiedEmail/
+b6fb810 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/UnifiedEmail into cm-14.0
+
+   * packages/providers/ContactsProvider/
+3d435af Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/providers/ContactsProvider into cm-14.0
+
+   * packages/services/Telecomm/
+14ebde1 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/services/Telecomm into cm-14.0
+
+   * packages/services/Telephony/
+c2ae960 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/services/Telephony into cm-14.0
+
+   * system/bt/
+49bae4d Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/bt into cm-14.0
+
+   * system/core/
+1dbd176 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/core into cm-14.0
+
+   * system/netd/
+801fe7c Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/netd into cm-14.0
+
+   * vendor/cmsdk/
+26977b4 cmsdk: Refactor Parts to use RemotePreference
+3805419 cmsdk: RemotePreference API
+0dae635 cmsdk: Helper for working with Settings URIs
+78079ea cmsdk: Add support for more preference constraints
+
+   * vendor/qcom/opensource/bluetooth/
+e5448ac Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/vendor/qcom-opensource/bluetooth into cm-14.0
 
 ====================
-     08-24-2016
+     10-17-2016
 ====================
 
 
-   * device/samsung/celox/
-0b55bc9 celox: set custom dalvik heap properties
+   * android/
+fe7426b Fork repositories needed for CM translations
+6566f12 Cleanup the manifest
+e953c2e Remove intel edison from main manifest.
 
-   * hardware/cyanogen/
-74128e2 livedisplay: Moving native API to OSS
+   * art/
+b6aa2d7 ART: Add scorpion to the known cpu variants list
 
-   * kernel/samsung/msm8660-common/
-2385583 Revert "mm: change max readahead size to 512KB"
-
-   * packages/apps/AudioFX/
-c7dc272 Revert "AudioFX: rename module back to AudioFX"
-f520900 AudioFX: rename module back to AudioFX
-415792d AudioFX: rename package to org.cyanogenmod.audiofx
-b01d792 ModioFX: split backend implementations
-
-   * vendor/cm/
-e900ddd Fix Discovery permission blockage
-
-====================
-     08-23-2016
-====================
-
-
-   * packages/apps/Gello/
-01d73e8 gello: increase res of shared images
-
-====================
-     08-22-2016
-====================
-
-
-   * cmu-api/
-89e732f celox: 08-21-16
+   * bionic/
+0d0b7a9 linker: load shims prior to dt_needed check
 
    * frameworks/base/
-c2f1770 Prevent invocation of startNavigating() when GPS is off
-473970b services: core: use proper tags when logging
+1d475ba SystemUI: fix navbar drawing glitch
 
-   * packages/apps/Snap/
-92009be SnapdragonCamera: Fix first-time crash and cleanup permissions
-7ed0766 Snap: Fix bad merge of "Fixed M permission issue"
+   * frameworks/native/
+a93dbeb Revert "Revert "input: Adjust priority""
+
+   * hardware/samsung/
+ae50788 macloader: add another semco3rd OUI for klte (SM-G900F)
+
+   * packages/apps/Bluetooth/
+73f1cec Bluetooth: Move & improve caf strings
+eec9e74 [2/3]Bluetooth: add "Accept all files" option for incoming files
+
+   * packages/apps/CMParts/
+92b090e cmparts: Replace remaining observers with Observatory
+69144e9 cmparts: Refactor for RemotePreference and SettingsHelper
+754340c CMParts: statusbar: Set default preference values in XML
+
+   * packages/apps/CellBroadcastReceiver/
+c772391 Themes: Expose hardcoded styles and colors for themes
+e39ce5f Hide CMAS dev options in user builds
+
+   * packages/apps/Messaging/
+06c98cd Messaging: make some more elements use accent instead of primary
+6f61484 Messaging: show snackbar instead of toast when deleting conversation
+d91a847 Messaging: Switch to mipmap launcher icons
+6075066 MediaPicker: Check for NPE
+f9e627a Messaging: fix bad recycle on sending two mms in a row
+3fcc9ef Use app settings for conversation settings if no custom set
+739c76c Messaging app crashes after a few MMS
+5b14156 Fixed storage permission issue for attachments Moved some audio library tab related string to cm_strings.xml
+2e6e88f Added support for video and audio mms attachments
+0011a89 Add UI/UX capability to attach a saved video to a MMS message
+d4f36c2 Play an audible notification on receiving a class zero message. Changes ported from http://review.cyanogenmod.org/#/c/125457/
+6875156 Messaging: Implement saved video attachments in MMS
+d2f0329 Messaging: bring back accent color
+f423d7a Messaging App is crashing when storage  memory is full
+0f9830d Fix menu item highlight color.
+11642e0 Improve swipe to delete strings
+116e328 Messaging: Toggable keyboard emoticons access
+a00ab15 Messaging: Swipe right to delete conversation
+defe1da MessageQueue: Process pending messages per subscription
+6ac4bdf Messaging: change Avatar fontFamily to sans-serif-medium
+76fd9c1 Messaging: Implement option for swipe to delete.
+
+   * packages/apps/Settings/
+7f815e9 settings: Add a RemotePreference for device-specific doze settings
+298feb2 settings: Simplify RemoteSummaryProvider for new API
+
+   * vendor/cmsdk/
+32921b7 cmsdk: Fix lint warning in string conversion
+
+====================
+     10-16-2016
+====================
+
+
+   * frameworks/base/
+a95ee9f PowerManager: Add proximity check on wake
+
+   * packages/apps/AudioFX/
+98931b9 AudioFX: fix missing virtualizer
+
+   * packages/apps/CMParts/
+443b304 CMParts: weather: Correct the default unit for each Locale
+
+   * packages/apps/DeskClock/
+f1d91c1 Make new menu entry to link to cLock widget settings.
+
+   * packages/apps/Settings/
+695ef5f settings: Remove lock screen blur stuff breaking build
+
+   * packages/inputmethods/LatinIME/
+8832d47 LatinIME: Add shortcuts support
+
+   * system/core/
+6b71e30 init: Add support for kernels that don't have finit_module
+
+====================
+     10-15-2016
+====================
+
+
+   * bionic/
+938781e Revert "bionic: Allow devices to add device specfic static libs"
+
+   * bootable/recovery/
+f4f6705 updater: Allow devices to suppress BLKDISCARD
+c07204f sr: Add performance control
+
+   * external/icu/
+7b4f34b icu: Regenerate ICU data
+
+   * frameworks/base/
+cac7ffc BluetoothAdapter: disable logspew
+
+   * frameworks/native/
+a58a9e0 Revert "libgui: Provide M-compatible sensors ABI"
+
+   * packages/apps/CMParts/
+0e6cfa0 cmparts: Cleanup on aisle 9
+
+   * packages/apps/Eleven/
+dfad377 Eleven: Simplify MediaSession queue processing
+
+====================
+     10-14-2016
+====================
+
+
+   * device/samsung/msm8660-common/
+244424c [TEMP] build fixes for N
+ef0a56f init: Allow ssr
+
+   * frameworks/base/
+095f9ea SystemUI: Use Tuner API for CM settings
+d0adc72 systemui: Tweak the media queue UX
+84b06b5 SystemUI: tuner: Allow Tuner API for System settings
+
+   * hardware/qcom/display-caf/msm8996/
+4c081f6 hwc: Set ioprio for vsync thread
+
+   * kernel/samsung/msm8660-common/
+6f916eb msm8x60_celox: decrease panel UV to 250mAh
+54c2332 msm: subsystem_restart: restart the subsystem independently
+
+   * packages/apps/Bluetooth/
+d2f3fdc bluetooth: Disable logspam from GattService
+3375584 Kill logspam during battery level events
+446714d bluetooth: Tone down the logspam
+
+   * packages/apps/CMParts/
+0770323 CMParts: weather: Make 'Add weather provider' button more obvious
+ee95498 CMParts: weather: Actually mark selected provider as active
+
+   * packages/apps/Settings/
+8dec027 Settings: Add toggles for several CM additions
+
+====================
+     10-13-2016
+====================
+
+
+   * external/uicommon/
+97fe017 uicommon: Fix StopMotionVectorDrawable for N
+
+   * frameworks/av/
+8f2f779 libstagefright: Support YVU420SemiPlanar camera format
+
+   * frameworks/base/
+71490dc Revert "Add support for sending raw commands"
+821f8fe SystemUI: make sure to expand all the way when flinging
+4746e9c Do not scan a file which cannot be read
+4608a60 Should use scan flag, or it will not scan device.
+71c3a63 MediaScanner: Detect folders
+6101526 Add support for sending raw commands
+866b194 Properly handle null URIs.
+58cc1bd MiniThumbFile: Fix image/bitmap retrieval
+0fed1d8 Rework thumbnail handling
+8984d33 mountservice: Don't nuke all volumes when decrypting
+003cfca mountservice: Shut down volumes before restarting framework
+577e72f MountService: ensure VolumeRecord with UUID exists before modifying
+e1a3d42 perf: Add missing activity resumed trigger
+c7758fb Revert "SystemUI: tuner: Fix up button navigation in activity"
+
+   * hardware/qcom/media-caf/msm8660/
+f3af564 Merge branch 'cm-14.0-caf-8960' of https://github.com/CyanogenMod/android_hardware_qcom_media into cm-14.0-caf-8660
+
+   * packages/apps/CMParts/
+01fc9e6 cmparts: Overhaul the performance and power setttings
+
+   * packages/apps/CMWallpapers/
+a80f662 cmwalls: Clear lockscreen wallpaper too
+
+   * packages/apps/Settings/
+20af3c2 settings: Implement SummaryProvider for external tiles
+e71061a Settings: battery: Add CMParts perf profiles preference
+
+   * packages/apps/WallpaperPicker/
+8164b5c Update the WallpaperPicker
+
+   * vendor/cm/
+df96b44 cm: Re-add WallpaperPicker
+2e994ce Update to smali/baksmali v2.2b3
+763438b cm: changelog: Update changelog for 13.0 releases
+e6ba745 cm: config: Build telephony-ext for all devices
+
+   * vendor/cmsdk/
+5d787c2 cmsdk: preference: Add SecureSettingSwitchPreference
+f4cd277 cmsdk: Update performance profile descriptions
+
+====================
+     10-12-2016
+====================
+
+
+   * hardware/samsung/
+6daeeef Fix build failure which occurs after setting macro RILC_LOG.
+cfef9bd RIL: release unsol wakelock
+0af7d1c Ril Error codes: Voice related messages
+6965975 New error codes for SMS/other messages
+7dd377c Add RIL Error code list
+4877845 Enable integer sanitization in libril.
+df3dabe Fixing security vulnerabilities in ril.cpp
+db5d1e0 Add OEM specific error code space which can by used to  replace Generic errors.
+6049dec Convert newly added error code to string values in ril.cpp.
+9f97208 Use different response type for unsolicited mesg requiring  wakelock.
+a7c043d Improve wakelock symantics in RIL.
+a79128a Added fields to CELL_INFO_LIST.
+201aca3 Use SimRefreshResponse struct in RIL Versions greater than 7
+e63b4f6 Add WRITE_SMS_TO_SIM and UNSOL_SUPP_SVC_NOTIFICATION
+9343e87 Improve RIL versioning.
+48d3f72 libril: revert network operator string handling
+
+   * packages/apps/CMParts/
+be40850 CMParts: Add performance profile settings
+63d9c6d cmparts: Implement summaries for dashboard tiles
+
+   * vendor/cmsdk/
+cd98e0b cmsdk: Rework the PerformanceManager
+
+====================
+     10-11-2016
+====================
+
+
+   * frameworks/base/
+7c2361f SystemUI: System UI force close when switch font size
+596c1da Lockscreen: Introduce window type TYPE_KEYGUARD_PANEL
+
+   * frameworks/native/
+be0d6af Rename dump methods to dumpState (again)
+
+   * hardware/qcom/audio-caf/msm8996/
+4daeaaa DO NOT MERGE Fix AudioEffect reply overflow
+
+   * hardware/qcom/media-caf/msm8996/
+6151dc4 swvenc : Sanitize buffer to native colorformat
+
+   * packages/apps/CMParts/
+1827c85 cmparts: Implement SummaryProvider for a few components
+ee8f6e8 cmparts: Add PartsRefresher for updating remote UI components
+3b9691d cmparts: Weather service settings
+
+   * packages/apps/Dialer/
+5e6eca1 Merge "Dialer: fix the runtime exception issue for smartsearch."
+d944ea7 Merge "IMS-VT: InCallUI fragment cropped in landscape"
+29bd7a3 Merge "IMS-VT: FR36492 - UI to disable picture in picture mode"
+3da0a47 Merge "IMS-VT: Handle configuration changes on low battery Video call"
+53ec937 IMS-VT: Handle configuration changes on low battery Video call
+6403294 IMS-VT: FR36492 - UI to disable picture in picture mode
+1cc84c2 IMS-VT: InCallUI fragment cropped in landscape
+d9bad58 IMS-VT: Fix preview size issue during VT call
+412ad2c Dialer: fix the runtime exception issue for smartsearch.
+
+   * packages/apps/Settings/
+9d1a4fb settings: Add permissions for CMParts
+
+   * packages/services/Telecomm/
+509f1b4 Emergency Call when there is no room left for new Call.
+
+   * vendor/cm/
+e3ed12c Gello artifact v40
+
+   * vendor/cmsdk/
+7928707 cmsdk: Update API
+c27e31f cmsdk: Add support for PartsRefresher to CMPartsPreference
+
+====================
+     10-10-2016
+====================
+
+
+   * device/qcom/sepolicy/
+33634b6 Merge d22eecffecc4bc284dd053b01181c854e3a0df2a on remote branch
+f7a12e8 Sepolicy: Allow mediaserver to access media_settings_xml_prop
+47ef8dd Sepolicy: Allow mediaserver/mediacodec to access media.msm8956hw
+
+   * external/wpa_supplicant_8/
+9b65a6b Merge 4b90e06ec3e20955d327a9da9e806b2591967b00 on remote branch
+
+   * frameworks/av/
+ae15d99 Merge commit 'a58cbdf8b5f132301ff0bc7b9144c1dade76ffc0' into remote
+135af12 mediaserver: Fix LOCAL_CFLAGS
+
+   * frameworks/base/
+51ba7c5 Merge commit '77024009f446b1579a181591d642d42ec50c6213' into remote
+
+   * frameworks/native/
+5950f0c Merge 6ab69f0ef7f3adb6be11291bab3cffb78ba2e92a on remote branch
+
+   * frameworks/opt/net/wifi/
+3af8543 Merge 8d36019a03d68dfba436532d105e1d233217bcc2 on remote branch
+
+   * frameworks/opt/telephony/
+a4dec37 Merge 0145c06bae969f95bf54df9f798a945ed506096b on remote branch
+
+   * hardware/qcom/audio-caf/msm8996/
+65a8b92 Merge 82b1db675ebabe7d3a8d6ed1c6f6e1a335649dc7 on remote branch
+
+   * hardware/qcom/bt-caf/
+748dc15 Merge 98a63b9f6db239735a2057a03848bfc57962ba13 on remote branch
+
+   * hardware/qcom/media-caf/msm8996/
+6f2ad6e Merge 328f6b77ecdeca770a5a187ecf4ca6b37e9b34a9 on remote branch
+
+   * hardware/qcom/wlan-caf/
+c461d90 Merge 6d1aa565b893b707a59f5c91d0d4438b69fdbf62 on remote branch
+
+   * packages/apps/Bluetooth/
+0611b4c Merge 2cc1cf4eb2f53741d072fe2f26401aab86d1965f on remote branch
+
+   * packages/apps/CMParts/
+b63cd66 Fix fragment launching
+4f34349 Fix reaching PrivacySettings menu
+
+   * packages/apps/CellBroadcastReceiver/
+5bd2986 Merge 00525d31d18aa3adff5f229eac2f6de8c71e130f on remote branch
+
+   * packages/apps/Contacts/
+5bede15 Merge 64df2d11762aef48ef6cb62fb244937bee6fd1d5 on remote branch
+
+   * packages/apps/ContactsCommon/
+2c45694 Merge a9ffae166483e95f4f71f0ec5fddb955eeb81357 on remote branch
+
+   * packages/apps/DeskClock/
+58bbc86 Merge 34f9de6c71ea9956a1336238522179de1cd0bd19 on remote branch
+
+   * packages/apps/Dialer/
+5051b2c Merge 0ecb265c960cac127559d0c69776a3fcef6f56e2 on remote branch
+
+   * packages/apps/Email/
+c3323be Merge f7fe6872d5a349a8458331d93aa217cb59f1e004 on remote branch
+
+   * packages/apps/Exchange/
+c9feb64 Merge 9e2d7c47751ac34310c493443dea58ae65863406 on remote branch
+
+   * packages/apps/Nfc/
+3982619 Nfc: read extra properties of Mifare Classic
+
+   * packages/apps/Stk/
+a161298 Merge aff944dfed0e5d64043d5304a41d751e34ba802a on remote branch
+
+   * packages/apps/UnifiedEmail/
+8c443fa Merge 72eb5ae0c0ea8a8dd112b7c017a81e537d4dfaca on remote branch
+
+   * packages/providers/ContactsProvider/
+ff88e5f Merge ebc440123b003483b058c44b1e5fea4fa43fc2e1 on remote branch
+
+   * packages/services/Telephony/
+166f9bb Merge d4bfdc2a548343a852d9c315a989f4e4fe9fb8ed on remote branch
+
+   * system/bt/
+d8afca9 Merge f3be84555a575f8ab6089a54df927364231972e3 on remote branch
+
+   * system/core/
+68f850f Merge ca7fdffa38cd7c6114e3d82c7f9e1b02433e91e4 on remote branch
 
