@@ -1,536 +1,708 @@
 ====================
-     10-19-2016
+     10-31-2016
 ====================
 
 
-   * frameworks/av/
-62661dc minijail: Add extended policies for all devices
+   * device/samsung/celox/
+ffcbceb celox: specify cache partition format
+b15a707 celox: add persist.radio.apm_sim_not_pwdn prop
 
-   * frameworks/base/
-e2a5d34 wm: Add support for split screen button behavior
-720e3ae SystemUI: make long pressing recent switch to last app
-2d40bb1 SystemUI: add left and right virtual buttons while typing
-
-   * hardware/qcom/wlan-caf/
-5d68fdb Wifi: Quiet some excessive debug output
-
-   * packages/apps/CMParts/
-2505554 cmparts: Add split screen to button behaviors
-613dfd6 CMParts: Set correct value for clock take two
-
-   * vendor/cmsdk/
-e721f8c cmsdk: Add support for split screen button behavior
-
-====================
-     10-18-2016
-====================
-
-
-   * device/qcom/sepolicy/
-27b3a87 msm8960: Remove the references to misc_device
-85e3afd Revert "uncrypt needs to write to the BCB"
-22ea8db Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/device/qcom/sepolicy into cm-14.0
-
-   * external/ant-wireless/ant_native/
-d650b42 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/ant-wireless/ant_native into cm-14.0
-
-   * external/skia/
-ccdff3f Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/skia into cm-14.0
-
-   * external/wpa_supplicant_8/
-9bb144b Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/external/wpa_supplicant_8 into cm-14.0
-
-   * frameworks/av/
-3dad99f seccomp: Permit getsockopt
-4d06724 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/av into cm-14.0
-
-   * frameworks/base/
-ff94386 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/base into cm-14.0
-68a4adf Use custom ADB over wifi property
-b2047f4 Implement expanded desktop feature
-
-   * frameworks/native/
-c473bd8 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/native into cm-14.0
+   * device/samsung/msm8660-common/
+8afeb09 msm8660: use Gello for now
 
    * frameworks/opt/net/wifi/
-bb15217 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/opt/net/wifi into cm-14.0
-
-   * frameworks/opt/telephony/
-ed9b90a Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/frameworks/opt/telephony into cm-14.0
-
-   * hardware/qcom/audio-caf/msm8996/
-eae0453 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/audio into cm-14.0
-
-   * hardware/qcom/bt-caf/
-4901ae7 libbt-vendor: Add kernel header dependency
-5b9da70 libbt-vendor: Don't bother with gen-buildcfg for CAF variant
-b67375e Fix up building with TARGET_2ND_ARCH
-f69d4be Bluetooth: load btaddr from NV if QCOM_BT_USE_BTNV is set
-3f2e454 Revert "Bluetooth: Compilation Fix for BT bring up"
-196966a Remove QCOM platform check from top makefile
-a0d21ed libbt: Fix case where SoC type is not set
-2982599 libbt-qcom: Allow building without proprietary bits
-59c755c bt-caf: Add guard makefile
-
-   * hardware/qcom/display-caf/msm8996/
-3e890d1 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/display into cm-14.0
-
-   * hardware/qcom/media-caf/msm8996/
-d12ae60 mm-video: Disable proprietary extension
-0173d99 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/media into cm-14.0
-
-   * hardware/qcom/wlan-caf/
-a2dc34d Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/hardware/qcom/wlan into cm-14.0
-
-   * libcore/
-70ef6d8 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/libcore into cm-14.0
-
-   * packages/apps/Bluetooth/
-e93c758 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Bluetooth into cm-14.0
-
-   * packages/apps/CMParts/
-e3f2cd8 CMParts: statusbar: Correct clock style default value
-5282a35 CMParts: widget: Add WallOfText and Divider preferences
-71981e9 CMParts: applications: Add Expanded Desktop settings
-
-   * packages/apps/CarrierConfig/
-b8c59bf Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/CarrierConfig into cm-14.0
-
-   * packages/apps/CellBroadcastReceiver/
-4f0c283 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/CellBroadcastReceiver into cm-14.0
-
-   * packages/apps/Contacts/
-4700d94 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Contacts into cm-14.0
-
-   * packages/apps/ContactsCommon/
-c67a5ec Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/ContactsCommon into cm-14.0
-
-   * packages/apps/DeskClock/
-a6f63bf Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/DeskClock into cm-14.0
-
-   * packages/apps/Dialer/
-26159fb dialer: Remove proprietary SmartDial extension
-3ff0622 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Dialer into cm-14.0
-05c26ee Give speed dial entry editor a sane layout.
-
-   * packages/apps/Email/
-44e40d2 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Email into cm-14.0
-
-   * packages/apps/ExactCalculator/
-de1be37 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/ExactCalculator into cm-14.0
-
-   * packages/apps/Exchange/
-6bbe564 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Exchange into cm-14.0
-
-   * packages/apps/Settings/
-1066318 Settings: display: Fix accidental build breakage
-21ffa1c Settings: Implement ADB notification and ADB over network
-839427b Settings: display: Add expanded desktop preference
-
-   * packages/apps/Stk/
-9d3f066 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/Stk into cm-14.0
-
-   * packages/apps/UnifiedEmail/
-b6fb810 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/apps/UnifiedEmail into cm-14.0
-
-   * packages/providers/ContactsProvider/
-3d435af Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/providers/ContactsProvider into cm-14.0
-
-   * packages/services/Telecomm/
-14ebde1 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/services/Telecomm into cm-14.0
-
-   * packages/services/Telephony/
-c2ae960 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/packages/services/Telephony into cm-14.0
-
-   * system/bt/
-49bae4d Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/bt into cm-14.0
-
-   * system/core/
-1dbd176 Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/core into cm-14.0
-
-   * system/netd/
-801fe7c Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/system/netd into cm-14.0
-
-   * vendor/cmsdk/
-26977b4 cmsdk: Refactor Parts to use RemotePreference
-3805419 cmsdk: RemotePreference API
-0dae635 cmsdk: Helper for working with Settings URIs
-78079ea cmsdk: Add support for more preference constraints
-
-   * vendor/qcom/opensource/bluetooth/
-e5448ac Merge tag 'LA.UM.5.5.r1-00900-8x96.0' of git://codeaurora.org/platform/vendor/qcom-opensource/bluetooth into cm-14.0
+e07f319 wifi: Set the mode at native layer
 
 ====================
-     10-17-2016
+     10-30-2016
+====================
+
+
+   * frameworks/av/
+e982b9b minijail: allow x86 to use a common mediaextractor cm seecomp policy
+
+   * frameworks/base/
+75ac078 base: update cid adb icon (again)
+6effdfd Status bar: Add HSPA+ icons
+0c9a07d Revert "core: Add support for more webviews"
+25e41d4 [2/2] Allow navigation bar home actions to be configurable
+
+   * hardware/libhardware_legacy/
+2cf952c insmod: Add support for kernels that don't have finit_module
+
+   * kernel/samsung/msm8660-common/
+7b6bff1 defconfig: enable namespaces support
+3436dce vfs: more mnt_parent cleanups
+0c7bb23 vfs: new internal helper: mnt_has_parent(mnt)
+e1d083f mnt: Prevent pivot_root from creating a loop in the mount tree
+2eec74d mnt: Only change user settable mount flags in remount
+75e2729 mnt: Fail collect_mounts when applied to unmounted mounts
+ce0066d vfs: read file_handle only once in handle_to_path
+e1ddcb9 proc: fix build broken by proc inode per namespace patch
+8ea19c6 Fix incorrect conflict resolution in "vfs: Add setns support for the mount namespace"
+613c3d6 proc: Allow proc_free_inum to be called from any context
+7807675 proc: Usable inode numbers for the namespace file descriptors.
+767cdca proc: Fix the namespace inode permission checks.
+f95b8b5 proc: Generalize proc inode allocation
+234a662 vfs: Allow unprivileged manipulation of the mount namespace.
+364b984 vfs: Only support slave subtrees across different user namespaces
+e0742e5 vfs: Add a user namespace reference from struct mnt_namespace
+9c4fdf6 vfs: Add setns support for the mount namespace
+e51773b consitify do_mount() arguments
+adec9ed do_add_mount()/umount -l races
+f126728 fs: introduce inode operation ->update_time
+a4e30ce VFS: Comment mount following code
+a23af13 VFS: Make clone_mnt()/copy_tree()/collect_mounts() return errors
+2642e9a get rid of magic in proc_namespace.c
+527a4bd get rid of ->mnt_longterm
+09b7d48 brlocks/lglocks: API cleanups
+eeb8bda brlocks/lglocks: turn into functions
+1c9b922 lglock: remove online variants of lock
+550a9b0 vfs: export symbol d_find_any_alias()
+cbaf9d5 vfs: mnt_drop_write_file()
+1281653 switch a bunch of places to mnt_want_write_file()
+01e5cd2 vfs: umount_tree() might be called on subtree that had never made it
+234dfdd Revert "VFS : mount lock scalability for internal mounts"
+1795aad Revert "mnt: Only change user settable mount flags in remount"
+bc7953b Revert "mnt: Prevent pivot_root from creating a loop in the mount tree"
+dc0cdb9 Revert "vfs: read file_handle only once in handle_to_path"
+4b0ba27 Revert "vfs: new internal helper: mnt_has_parent(mnt)"
+85580cc Revert "vfs: more mnt_parent cleanups"
+8b551b5 Revert "mnt: Fail collect_mounts when applied to unmounted mounts"
+
+   * packages/apps/CMParts/
+c1be604 [1/2] Allow navigation bar home actions to be configurable
+
+   * packages/apps/CMUpdater/
+61bf31a config: update to cm-14.1
+
+   * packages/apps/Dialer/
+433fca9 incallui: remove qti framework dependency for DSDA
+
+   * system/sepolicy/
+ad7c631 sepolicy: Fix android beam image transfer
+
+   * vendor/cm/
+9fcd3c6 webview_packages: prefer the more powerful webview packages
+
+====================
+     10-29-2016
 ====================
 
 
    * android/
-fe7426b Fork repositories needed for CM translations
-6566f12 Cleanup the manifest
-e953c2e Remove intel edison from main manifest.
+056f369 cm: Remove AndroidAsync dependency
 
    * art/
-b6aa2d7 ART: Add scorpion to the known cpu variants list
+450ad94 Fix build on XCode 8 w/OSX 10.12 SDK
 
-   * bionic/
-0d0b7a9 linker: load shims prior to dt_needed check
+   * build/
+d83e69d build: Fix LOCAL_PROTOC_OUTPUT
 
-   * frameworks/base/
-1d475ba SystemUI: fix navbar drawing glitch
-
-   * frameworks/native/
-a93dbeb Revert "Revert "input: Adjust priority""
-
-   * hardware/samsung/
-ae50788 macloader: add another semco3rd OUI for klte (SM-G900F)
-
-   * packages/apps/Bluetooth/
-73f1cec Bluetooth: Move & improve caf strings
-eec9e74 [2/3]Bluetooth: add "Accept all files" option for incoming files
-
-   * packages/apps/CMParts/
-92b090e cmparts: Replace remaining observers with Observatory
-69144e9 cmparts: Refactor for RemotePreference and SettingsHelper
-754340c CMParts: statusbar: Set default preference values in XML
-
-   * packages/apps/CellBroadcastReceiver/
-c772391 Themes: Expose hardcoded styles and colors for themes
-e39ce5f Hide CMAS dev options in user builds
-
-   * packages/apps/Messaging/
-06c98cd Messaging: make some more elements use accent instead of primary
-6f61484 Messaging: show snackbar instead of toast when deleting conversation
-d91a847 Messaging: Switch to mipmap launcher icons
-6075066 MediaPicker: Check for NPE
-f9e627a Messaging: fix bad recycle on sending two mms in a row
-3fcc9ef Use app settings for conversation settings if no custom set
-739c76c Messaging app crashes after a few MMS
-5b14156 Fixed storage permission issue for attachments Moved some audio library tab related string to cm_strings.xml
-2e6e88f Added support for video and audio mms attachments
-0011a89 Add UI/UX capability to attach a saved video to a MMS message
-d4f36c2 Play an audible notification on receiving a class zero message. Changes ported from http://review.cyanogenmod.org/#/c/125457/
-6875156 Messaging: Implement saved video attachments in MMS
-d2f0329 Messaging: bring back accent color
-f423d7a Messaging App is crashing when storage  memory is full
-0f9830d Fix menu item highlight color.
-11642e0 Improve swipe to delete strings
-116e328 Messaging: Toggable keyboard emoticons access
-a00ab15 Messaging: Swipe right to delete conversation
-defe1da MessageQueue: Process pending messages per subscription
-6ac4bdf Messaging: change Avatar fontFamily to sans-serif-medium
-76fd9c1 Messaging: Implement option for swipe to delete.
-
-   * packages/apps/Settings/
-7f815e9 settings: Add a RemotePreference for device-specific doze settings
-298feb2 settings: Simplify RemoteSummaryProvider for new API
-
-   * vendor/cmsdk/
-32921b7 cmsdk: Fix lint warning in string conversion
-
-====================
-     10-16-2016
-====================
-
+   * external/koush/ion/
+14d5d87 ion: Mavenize
+ca0316b Revert "prep for build"
+0bbdd5c Ion: Ignore get exif rotation exception
+3a0af6d Ion: Add .flv file type
+7ffcd74 Ion: Update mediafile to match mediastores BMP entries
+e13eabd Ion: Support exif rotation when using deepzoom
+b7fedb1 Get building with android studio
+188176c Updated for SDK builds
+16af739 Ion: Update supported media types
+387c9e1 Ion: fix build for GalleryNext
+0d6edc5 Disable spdy
 
    * frameworks/base/
-a95ee9f PowerManager: Add proximity check on wake
-
-   * packages/apps/AudioFX/
-98931b9 AudioFX: fix missing virtualizer
-
-   * packages/apps/CMParts/
-443b304 CMParts: weather: Correct the default unit for each Locale
-
-   * packages/apps/DeskClock/
-f1d91c1 Make new menu entry to link to cLock widget settings.
-
-   * packages/apps/Settings/
-695ef5f settings: Remove lock screen blur stuff breaking build
-
-   * packages/inputmethods/LatinIME/
-8832d47 LatinIME: Add shortcuts support
-
-   * system/core/
-6b71e30 init: Add support for kernels that don't have finit_module
-
-====================
-     10-15-2016
-====================
-
-
-   * bionic/
-938781e Revert "bionic: Allow devices to add device specfic static libs"
-
-   * bootable/recovery/
-f4f6705 updater: Allow devices to suppress BLKDISCARD
-c07204f sr: Add performance control
-
-   * external/icu/
-7b4f34b icu: Regenerate ICU data
-
-   * frameworks/base/
-cac7ffc BluetoothAdapter: disable logspew
-
-   * frameworks/native/
-a58a9e0 Revert "libgui: Provide M-compatible sensors ABI"
-
-   * packages/apps/CMParts/
-0e6cfa0 cmparts: Cleanup on aisle 9
-
-   * packages/apps/Eleven/
-dfad377 Eleven: Simplify MediaSession queue processing
-
-====================
-     10-14-2016
-====================
-
-
-   * device/samsung/msm8660-common/
-244424c [TEMP] build fixes for N
-ef0a56f init: Allow ssr
-
-   * frameworks/base/
-095f9ea SystemUI: Use Tuner API for CM settings
-d0adc72 systemui: Tweak the media queue UX
-84b06b5 SystemUI: tuner: Allow Tuner API for System settings
-
-   * hardware/qcom/display-caf/msm8996/
-4c081f6 hwc: Set ioprio for vsync thread
-
-   * kernel/samsung/msm8660-common/
-6f916eb msm8x60_celox: decrease panel UV to 250mAh
-54c2332 msm: subsystem_restart: restart the subsystem independently
-
-   * packages/apps/Bluetooth/
-d2f3fdc bluetooth: Disable logspam from GattService
-3375584 Kill logspam during battery level events
-446714d bluetooth: Tone down the logspam
-
-   * packages/apps/CMParts/
-0770323 CMParts: weather: Make 'Add weather provider' button more obvious
-ee95498 CMParts: weather: Actually mark selected provider as active
-
-   * packages/apps/Settings/
-8dec027 Settings: Add toggles for several CM additions
-
-====================
-     10-13-2016
-====================
-
-
-   * external/uicommon/
-97fe017 uicommon: Fix StopMotionVectorDrawable for N
-
-   * frameworks/av/
-8f2f779 libstagefright: Support YVU420SemiPlanar camera format
-
-   * frameworks/base/
-71490dc Revert "Add support for sending raw commands"
-821f8fe SystemUI: make sure to expand all the way when flinging
-4746e9c Do not scan a file which cannot be read
-4608a60 Should use scan flag, or it will not scan device.
-71c3a63 MediaScanner: Detect folders
-6101526 Add support for sending raw commands
-866b194 Properly handle null URIs.
-58cc1bd MiniThumbFile: Fix image/bitmap retrieval
-0fed1d8 Rework thumbnail handling
-8984d33 mountservice: Don't nuke all volumes when decrypting
-003cfca mountservice: Shut down volumes before restarting framework
-577e72f MountService: ensure VolumeRecord with UUID exists before modifying
-e1a3d42 perf: Add missing activity resumed trigger
-c7758fb Revert "SystemUI: tuner: Fix up button navigation in activity"
-
-   * hardware/qcom/media-caf/msm8660/
-f3af564 Merge branch 'cm-14.0-caf-8960' of https://github.com/CyanogenMod/android_hardware_qcom_media into cm-14.0-caf-8660
-
-   * packages/apps/CMParts/
-01fc9e6 cmparts: Overhaul the performance and power setttings
-
-   * packages/apps/CMWallpapers/
-a80f662 cmwalls: Clear lockscreen wallpaper too
-
-   * packages/apps/Settings/
-20af3c2 settings: Implement SummaryProvider for external tiles
-e71061a Settings: battery: Add CMParts perf profiles preference
-
-   * packages/apps/WallpaperPicker/
-8164b5c Update the WallpaperPicker
-
-   * vendor/cm/
-df96b44 cm: Re-add WallpaperPicker
-2e994ce Update to smali/baksmali v2.2b3
-763438b cm: changelog: Update changelog for 13.0 releases
-e6ba745 cm: config: Build telephony-ext for all devices
-
-   * vendor/cmsdk/
-5d787c2 cmsdk: preference: Add SecureSettingSwitchPreference
-f4cd277 cmsdk: Update performance profile descriptions
-
-====================
-     10-12-2016
-====================
-
-
-   * hardware/samsung/
-6daeeef Fix build failure which occurs after setting macro RILC_LOG.
-cfef9bd RIL: release unsol wakelock
-0af7d1c Ril Error codes: Voice related messages
-6965975 New error codes for SMS/other messages
-7dd377c Add RIL Error code list
-4877845 Enable integer sanitization in libril.
-df3dabe Fixing security vulnerabilities in ril.cpp
-db5d1e0 Add OEM specific error code space which can by used to  replace Generic errors.
-6049dec Convert newly added error code to string values in ril.cpp.
-9f97208 Use different response type for unsolicited mesg requiring  wakelock.
-a7c043d Improve wakelock symantics in RIL.
-a79128a Added fields to CELL_INFO_LIST.
-201aca3 Use SimRefreshResponse struct in RIL Versions greater than 7
-e63b4f6 Add WRITE_SMS_TO_SIM and UNSOL_SUPP_SVC_NOTIFICATION
-9343e87 Improve RIL versioning.
-48d3f72 libril: revert network operator string handling
-
-   * packages/apps/CMParts/
-be40850 CMParts: Add performance profile settings
-63d9c6d cmparts: Implement summaries for dashboard tiles
-
-   * vendor/cmsdk/
-cd98e0b cmsdk: Rework the PerformanceManager
-
-====================
-     10-11-2016
-====================
-
-
-   * frameworks/base/
-7c2361f SystemUI: System UI force close when switch font size
-596c1da Lockscreen: Introduce window type TYPE_KEYGUARD_PANEL
-
-   * frameworks/native/
-be0d6af Rename dump methods to dumpState (again)
-
-   * hardware/qcom/audio-caf/msm8996/
-4daeaaa DO NOT MERGE Fix AudioEffect reply overflow
-
-   * hardware/qcom/media-caf/msm8996/
-6151dc4 swvenc : Sanitize buffer to native colorformat
-
-   * packages/apps/CMParts/
-1827c85 cmparts: Implement SummaryProvider for a few components
-ee8f6e8 cmparts: Add PartsRefresher for updating remote UI components
-3b9691d cmparts: Weather service settings
-
-   * packages/apps/Dialer/
-5e6eca1 Merge "Dialer: fix the runtime exception issue for smartsearch."
-d944ea7 Merge "IMS-VT: InCallUI fragment cropped in landscape"
-29bd7a3 Merge "IMS-VT: FR36492 - UI to disable picture in picture mode"
-3da0a47 Merge "IMS-VT: Handle configuration changes on low battery Video call"
-53ec937 IMS-VT: Handle configuration changes on low battery Video call
-6403294 IMS-VT: FR36492 - UI to disable picture in picture mode
-1cc84c2 IMS-VT: InCallUI fragment cropped in landscape
-d9bad58 IMS-VT: Fix preview size issue during VT call
-412ad2c Dialer: fix the runtime exception issue for smartsearch.
-
-   * packages/apps/Settings/
-9d1a4fb settings: Add permissions for CMParts
-
-   * packages/services/Telecomm/
-509f1b4 Emergency Call when there is no room left for new Call.
-
-   * vendor/cm/
-e3ed12c Gello artifact v40
-
-   * vendor/cmsdk/
-7928707 cmsdk: Update API
-c27e31f cmsdk: Add support for PartsRefresher to CMPartsPreference
-
-====================
-     10-10-2016
-====================
-
-
-   * device/qcom/sepolicy/
-33634b6 Merge d22eecffecc4bc284dd053b01181c854e3a0df2a on remote branch
-f7a12e8 Sepolicy: Allow mediaserver to access media_settings_xml_prop
-47ef8dd Sepolicy: Allow mediaserver/mediacodec to access media.msm8956hw
-
-   * external/wpa_supplicant_8/
-9b65a6b Merge 4b90e06ec3e20955d327a9da9e806b2591967b00 on remote branch
-
-   * frameworks/av/
-ae15d99 Merge commit 'a58cbdf8b5f132301ff0bc7b9144c1dade76ffc0' into remote
-135af12 mediaserver: Fix LOCAL_CFLAGS
-
-   * frameworks/base/
-51ba7c5 Merge commit '77024009f446b1579a181591d642d42ec50c6213' into remote
-
-   * frameworks/native/
-5950f0c Merge 6ab69f0ef7f3adb6be11291bab3cffb78ba2e92a on remote branch
-
-   * frameworks/opt/net/wifi/
-3af8543 Merge 8d36019a03d68dfba436532d105e1d233217bcc2 on remote branch
-
-   * frameworks/opt/telephony/
-a4dec37 Merge 0145c06bae969f95bf54df9f798a945ed506096b on remote branch
-
-   * hardware/qcom/audio-caf/msm8996/
-65a8b92 Merge 82b1db675ebabe7d3a8d6ed1c6f6e1a335649dc7 on remote branch
-
-   * hardware/qcom/bt-caf/
-748dc15 Merge 98a63b9f6db239735a2057a03848bfc57962ba13 on remote branch
-
-   * hardware/qcom/media-caf/msm8996/
-6f2ad6e Merge 328f6b77ecdeca770a5a187ecf4ca6b37e9b34a9 on remote branch
+ab82c03 SystemUI: Implement hidden and text battery styles
+7d30ec3 SystemUI: Implement battery level text customisations
+e6c5b40 SystemUI: tuner: Remove battery preference
+a345b1b Remove remnants of CAF's custom reboot option
+30cb983 Update reboot action name
+
+   * hardware/qcom/audio-caf/msm8916/
+3cbf87d Disable extended precision on devices using XML audio policy
+a8b4355 Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.8' into cm-14.1-caf-8916
+
+   * hardware/qcom/audio-caf/msm8960/
+f88c517 audiopolicy: Avoid spurious routing in APM::stopSource
+
+   * hardware/qcom/display-caf/msm8916/
+10da197 Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.8' into cm-14.1-caf-8916
+
+   * hardware/qcom/media-caf/msm8916/
+0d7723d Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.8' into cm-14.1-caf-8916
 
    * hardware/qcom/wlan-caf/
-c461d90 Merge 6d1aa565b893b707a59f5c91d0d4438b69fdbf62 on remote branch
+d003010 wcnss-service: Enable and fix -Werror build
 
-   * packages/apps/Bluetooth/
-0611b4c Merge 2cc1cf4eb2f53741d072fe2f26401aab86d1965f on remote branch
+   * hardware/samsung/
+3c2325f exynos: multimedia: N/clang fixes
+
+   * packages/apps/CMFileManager/
+c21cf96 CMFileManager: Save history records when quitting
 
    * packages/apps/CMParts/
-b63cd66 Fix fragment launching
-4f34349 Fix reaching PrivacySettings menu
+4b0ce9c Update reboot action name
 
    * packages/apps/CellBroadcastReceiver/
-5bd2986 Merge 00525d31d18aa3adff5f229eac2f6de8c71e130f on remote branch
+0442952 Cleanup for translations
 
-   * packages/apps/Contacts/
-5bede15 Merge 64df2d11762aef48ef6cb62fb244937bee6fd1d5 on remote branch
+   * packages/apps/Settings/
+1ab89af Fix regulatory mismerge in manifest
+7851d52 Add back increasing ring feature (2/3).
 
-   * packages/apps/ContactsCommon/
-2c45694 Merge a9ffae166483e95f4f71f0ec5fddb955eeb81357 on remote branch
+====================
+     10-28-2016
+====================
 
-   * packages/apps/DeskClock/
-58bbc86 Merge 34f9de6c71ea9956a1336238522179de1cd0bd19 on remote branch
+
+   * bionic/
+47cf20a Revert "bionic: Registration of trapping calls during libc initialization"
+
+   * external/uicommon/
+f465bc6 uicommon: Fix getAnimatorSetViaReflection UI usage
+
+   * hardware/qcom/bt-caf/
+6bd5eef libbt-vendor: Add kernel header dependency
+1da2413 Bluetooth: load btaddr from NV if QCOM_BT_USE_BTNV is set
+
+   * hardware/qcom/display-caf/msm8952/
+fdb92a9  hwc: Move mdpHw declaration under DYNAMIC_FPS flag
+
+   * hardware/ril-caf/
+ecb9a98 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/ril into HEAD
+
+   * packages/apps/CMFileManager/
+9ba628b CMFileManager: Remove top & bottom padding in FS info dialog
+6a044ae CMFileManager: Modify disk usage graph's layout
+
+====================
+     10-27-2016
+====================
+
+
+   * build/
+a05eac5 Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_build into HEAD
+d299464 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/build into cm-14
+
+   * device/qcom/sepolicy/
+7e2df7f sepolicy: qti-testscripts will be foward-declared in system/sepolicy
+
+   * device/samsung/msm8660-common/
+0de32e5 msm8660: update partition script to support encrypted devices
+
+   * frameworks/av/
+086b70f Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_frameworks_av into HEAD
+
+   * frameworks/base/
+38b8a90 Revert "Add new importance level for blocking lock screen notifications (1/2)"
+e139503 Fix animation sequence for upload tasks
+e8dba66 Hide QS customizer correctly
+6d76430 Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_frameworks_base into HEAD
+15a87ff display: Fix crash when no display modes present on HWC2
+b0ff45e systemui: Compilation fixes
+
+   * frameworks/native/
+12f5891 surfaceflinger: Fix crash when setting priority
+
+   * frameworks/opt/telephony/
+831317a Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_frameworks_opt_telephony into HEAD
+
+   * hardware/qcom/display-caf/msm8996/
+4506302 Revert "Revert "sdm: Add support for adaptive variable refresh feature""
+
+   * hardware/samsung/
+d4ee359 macloader: Add additional OUIs
+
+   * packages/apps/CMFileManager/
+de844c2 Revert "CMFM: Fix landscape/rotation issues in file system info dialog"
+f35a631 CMFileManager: Show loading dialog while loading files
+e339f3e Show message to user when toggling word wrap mode
+c53dafc CMFileManager: Do not create multiple action dialogs
+e62ef71 CMFileManager: Refresh the disk usage graph when layout size change
+5c14f64 CMFileManager: Remove shortcut option for secure folders
+
+   * packages/apps/CMParts/
+3cfab45 cmparts: Fix power menu options
+
+   * packages/apps/CellBroadcastReceiver/
+c5f8a98 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver into 71
 
    * packages/apps/Dialer/
-5051b2c Merge 0ecb265c960cac127559d0c69776a3fcef6f56e2 on remote branch
+392cf1e Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_packages_apps_Dialer into HEAD
 
-   * packages/apps/Email/
-c3323be Merge f7fe6872d5a349a8458331d93aa217cb59f1e004 on remote branch
+   * packages/apps/Settings/
+d09623e Fix displaysettings after 4b0a863
+9d5f6f8 Revert "Add new importance level for blocking lock screen notifications (2/2)"
+e502b27 Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_packages_apps_Settings into HEAD
+98fd7df settings: Kill night mode if we have LiveDisplay
+626be33 settings: Unbreak settings
+9ec0549 Revert "Settings: Add enable/disable 4G settings."
 
-   * packages/apps/Exchange/
-c9feb64 Merge 9e2d7c47751ac34310c493443dea58ae65863406 on remote branch
-
-   * packages/apps/Nfc/
-3982619 Nfc: read extra properties of Mifare Classic
-
-   * packages/apps/Stk/
-a161298 Merge aff944dfed0e5d64043d5304a41d751e34ba802a on remote branch
-
-   * packages/apps/UnifiedEmail/
-8c443fa Merge 72eb5ae0c0ea8a8dd112b7c017a81e537d4dfaca on remote branch
-
-   * packages/providers/ContactsProvider/
-ff88e5f Merge ebc440123b003483b058c44b1e5fea4fa43fc2e1 on remote branch
+   * packages/services/Telecomm/
+d3a97e2 Add back increasing ring feature (3/3).
+16d9f11 Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_packages_services_Telecomm into HEAD
+1269906 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/services/Telecomm into 71
 
    * packages/services/Telephony/
-166f9bb Merge d4bfdc2a548343a852d9c315a989f4e4fe9fb8ed on remote branch
+68cd0f7 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/services/Telephony into rb
+
+   * system/sepolicy/
+94f7d91 sepolicy: Forward declaration of qti-testscripts domain
+
+   * vendor/cm/
+ce6d812 cm: overlay: Use restart action
+36ae30b cm: mka nicer
+e483101 Follow FBE refactoring.
+2fd50c4 Merge branch 'cm-14.0' of git://github.com/CyanogenMod/android_vendor_cm into HEAD
+
+====================
+     10-26-2016
+====================
+
+
+   * android/
+1aa7144 More fixes for cm-14.1
+06d131f Use the CM fork of invensense
+da59644 Use correct branch in cm-14.1
+7b9ccd6 cm-14.1
+7d087c7 Update manifest for 7.1.0_r4
+
+   * bionic/
+d51d721 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/bionic into 71
+
+   * bootable/recovery/
+717b26f Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/bootable/recovery into 71
+
+   * external/icu/
+53dca4d Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/icu into 71
+d4703ae Revert "icu: Regenerate ICU data"
+
+   * external/libnfc-nci/
+75bb196 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/libnfc-nci into 71
+cb82243 Revert "libnfc-nci: Add NXP chip type disambiguation"
+
+   * external/skia/
+6da8bae Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/skia into 71
+
+   * external/wpa_supplicant_8/
+f953a5b Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/wpa_supplicant_8 into 71
+
+   * frameworks/av/
+c322399 libcameraservice: Don't pass NULL args on setCallbacks call
+b2bb936 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/av into cm-14.0
+
+   * frameworks/base/
+b7ceb61 Forward port Samsung STK support (frameworks/base)
+7ccc672 systemui: Compilation fixes
+c9e2fa9 Revert "Wifi: Introduce additional APIs to support STA + SoftAp concurrency"
+1d9bcaf Misc compilation fixes
+fc24ab3 SystemUI: navbar dpad fixes
+532e8c2 Global actions: fix airplane mode switch for MSIM
+a9931cb Add new importance level for blocking lock screen notifications (1/2)
+8571b32 base: show bluetooth battery status when available
+984794a am: Remove launch boosts
+da2b1f8 Revert "Revert "Change the routing path of bluetooth headset connections.""
+
+   * frameworks/opt/net/wifi/
+6ec1171 WifiController: Update usage of WiFi lock management
+3aceede Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/net/wifi into 71
+9043484 Revert QCOM changes in favor of AOSP implementations.
+
+   * frameworks/opt/telephony/
+80b8461 telephony: More build fixes
+83aba1a Revert "IMS: Update VoLTE, VoWifi icons based on IMS capabilities"
+3ec6a0c Revert "Support for emergency redial in multisim"
+8297114 Revert "Telephony: Add CallFailCause values for clear code."
+0d4514f Revert "Telephony: Generic Blacklist support (5 of 5)"
+0314807 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/telephony into 71
+
+   * frameworks/support/
+44b8ad6 Factor out preference-in-storage check to overridable method.
+
+   * hardware/cyanogen/
+7d48182 livedisplay: Minor cleanups
+
+   * hardware/libhardware/
+f305386 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/libhardware into 71
+0d76048 Revert "BT-HFP: HFP1.7 AG support"
+
+   * hardware/qcom/bootctrl/
+2100e44 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/bootctrl into 71
+
+   * hardware/qcom/display/
+bcf7987 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/display into 71
+
+   * kernel/samsung/msm8660-common/
+3b01c4c KEYS: Fix short sprintf buffer in /proc/keys show function
+b0d1583 tcp: fix use after free in tcp_xmit_retransmit_queue()
+b5f5018 fix infoleak in rtnetlink
+ed0824e Replace %p with %pK to prevent leaking kernel address
+df161d5 UPSTREAM: ALSA: control: Fix replacing user controls
+94fb732 fs: ext4: disable support for fallocate FALLOC_FL_PUNCH_HOLE
+7aaadd5 net: Fix use after free in the recvmmsg exit path
+73046cf binder: prevent kptr leak by using %pK format specifier
+a61db68 BACKPORT: signal: allow to send any siginfo to itself
+
+   * packages/apps/Bluetooth/
+d8e9445 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Bluetooth into 71
+a0581a4 Revert "BT-HFP: HFP1.7 AG support in app."
+
+   * packages/apps/CMFileManager/
+7fd6ba8 Fix rename of files ending with . on sdcard
+
+   * packages/apps/CMParts/
+8d61bdb cmparts: Use GLOBAL_ACTION_KEY_RESTART
+
+   * packages/apps/CarrierConfig/
+e2f8692 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/CarrierConfig into 71
+
+   * packages/apps/CellBroadcastReceiver/
+1989b2c Revert "WEA: Audio signal sequence for Wireless Emergency Alerts."
+2a236c0 Revert "Remove prefences on cell broadcast settings."
+d177312 Revert "Configure the channel for customized UI"
+
+   * packages/apps/Contacts/
+e37557a Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Contacts into 71
+
+   * packages/apps/ContactsCommon/
+2f65746 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/ContactsCommon into 71
+
+   * packages/apps/Dialer/
+95ac66c Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Dialer into 71
+
+   * packages/apps/PhoneCommon/
+dafee13 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/PhoneCommon into 71
+
+   * packages/apps/Settings/
+4b0a863 settings: Cleanups
+11cee81 Revert "Wifi: Add support for STA + SoftAp concurrency."
+1f9b8c5 Revert "Settings: porting N code"
+67ab9af Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Settings into 71
+559033e Revert QCOM stuff which links to proprietary APKs
+
+   * packages/apps/Stk/
+4658859 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Stk into 71
+25adf7f Revert "Stk: New launcher icon"
+
+   * packages/providers/ContactsProvider/
+e9eb169 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/ContactsProvider into 71
+
+   * packages/providers/MediaProvider/
+982c219 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/MediaProvider into 71
+
+   * packages/services/Telephony/
+2e37d88 Revert "Voice Privacy Icon Support for CDMA."
+2cde61d Revert "Telephony: Return the correct res id for text and tone"
+87f8405 Revert "Emergency Number Implementation"
+6848999 Revert "Telephony: Break qti-telephony-framework dependency"
 
    * system/bt/
-d8afca9 Merge f3be84555a575f8ab6089a54df927364231972e3 on remote branch
+ce1c332 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/bt into 71
+1a855c2 Revert HFP 1.7 for new impl
 
    * system/core/
-68f850f Merge ca7fdffa38cd7c6114e3d82c7f9e1b02433e91e4 on remote branch
+ce7d592 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/core into 71
+
+   * system/media/
+d7d1992 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/media into 71
+
+   * system/netd/
+a97730b Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/netd into 71
+b081d9a Revert "server: Add custom implementation for tethering and statistics"
+825101b Revert "netd: Trap dns calls"
+
+   * system/sepolicy/
+2b7b434 sepolicy: Additional userdebug/eng restrictions for 7.1
+1ced08f Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/sepolicy into 71
+
+   * vendor/cm/
+89450fb More 14.0 -> 14.1 changes
+13512fb backuptool: /system/addon.d explicit creation
+97b035d envsetup: dopush: fix finding files to be pushed with ninja
+2be9cac envsetup: dopush: allow (symbolic) host names for adb connect
+299137f envsetup: dopush: fix test if device is in recovery
+7d4f0f2 cm: We are cm-14.1
+
+   * vendor/cmsdk/
+9705424 cm: Fixes for 7.1
+
+====================
+     10-25-2016
+====================
+
+
+   * art/
+ddb5a3c Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/art into cm-14
+
+   * dalvik/
+0364206 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/dalvik into cm-14
+
+   * development/
+f5d1658 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/development into cm-14
+
+   * external/boringssl/
+57957fc Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/boringssl into 71
+
+   * external/iproute2/
+29c0e98 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/iproute2 into 71
+
+   * external/libhevc/
+f8060d4 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/libhevc into 71
+
+   * external/libselinux/
+3c303df Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/libselinux into 71
+
+   * external/okhttp/
+50235c8 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/okhttp into 71
+
+   * external/tinyalsa/
+7dcd77f Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/external/tinyalsa into 71
+
+   * frameworks/av/
+7321305 Revert "libstagefright: Avoid negative values for cttsOffsetTimeUs"
+125632a Revert changes for temporal layer encoding
+e5d7431 Revert "IMediaSource: add check before calling readMultiple"
+
+   * frameworks/base/
+4d3fd15 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/base into cm-14.0
+730d4ea Revert all CAF network indicator stuff.
+85582013 Revert "BootAnimation: Play boot/shutdown animation and music"
+9fd3d62 Revert "telephony: Make the disconnect cause distinguishable"
+13051b7 Revert "Framework: Generic Blacklist support (4 of 5)"
+5bd8096 Revert "Synchronize access of mSubscriptions and fix NPE"
+
+   * frameworks/native/
+ae1d7e2 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/native into cm-14
+
+   * frameworks/opt/chips/
+51290b6 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/chips into 71
+
+   * frameworks/opt/datetimepicker/
+57bf07b Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/datetimepicker into 71
+
+   * frameworks/opt/net/ims/
+3a17110 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/net/ims into 71
+
+   * frameworks/opt/setupwizard/
+c5327a2 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/frameworks/opt/setupwizard into 71
+
+   * hardware/broadcom/libbt/
+931b403 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/broadcom/libbt into 71
+
+   * hardware/broadcom/wlan/
+e5c5039 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/broadcom/wlan into 71
+
+   * hardware/intel/common/libmix/
+fab23e6 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/common/libmix into 71
+
+   * hardware/intel/common/libva/
+497db87 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/common/libva into 71
+
+   * hardware/intel/common/omx-components/
+dee133e Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/common/omx-components into 71
+
+   * hardware/intel/common/utils/
+5b8d193 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/common/utils into 71
+
+   * hardware/intel/img/hwcomposer/
+21c391f Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/img/hwcomposer into 71
+
+   * hardware/intel/img/psb_headers/
+8a83c73 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/intel/img/psb_headers into 71
+
+   * hardware/libhardware_legacy/
+9251408 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/libhardware_legacy into 71
+
+   * hardware/qcom/bt/
+35610e0 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/bt into 71
+
+   * hardware/qcom/camera/
+b89e788 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/camera into 71
+
+   * hardware/qcom/gps/
+63d296c Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/gps into 71
+
+   * hardware/qcom/keymaster/
+0655980 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/keymaster into 71
+
+   * hardware/qcom/media/
+4155a6b Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/media into 71
+
+   * hardware/qcom/wlan/
+ed62a2f Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/qcom/wlan into 71
+
+   * hardware/ril/
+235a464 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/hardware/ril into 71
+
+   * libcore/
+f699d69 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/libcore into 71
+
+   * packages/apps/Camera2/
+24ccd9d Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Camera2 into 71
+
+   * packages/apps/CertInstaller/
+70f3d6d Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/CertInstaller into 71
+
+   * packages/apps/DeskClock/
+54d29be Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/DeskClock into 71
+
+   * packages/apps/Email/
+ca5e235 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Email into 71
+
+   * packages/apps/EmergencyInfo/
+015740d Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/EmergencyInfo into 71
+
+   * packages/apps/ExactCalculator/
+9c17d63 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/ExactCalculator into 71
+
+   * packages/apps/Gallery2/
+eecc8c0 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Gallery2 into 71
+
+   * packages/apps/KeyChain/
+9b8fb55 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/KeyChain into 71
+
+   * packages/apps/Launcher3/
+858ab71 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Launcher3 into 71
+
+   * packages/apps/ManagedProvisioning/
+445a2ef Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/ManagedProvisioning into 71
+
+   * packages/apps/Messaging/
+acb1b4a Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Messaging into 71
+
+   * packages/apps/Nfc/
+71cd359 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Nfc into 71
+
+   * packages/apps/PackageInstaller/
+92a86b3 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/PackageInstaller into 71
+
+   * packages/apps/TV/
+867cecd Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/TV into 71
+
+   * packages/apps/Tag/
+1d23cbf Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/Tag into 71
+
+   * packages/apps/TvSettings/
+ccda8e0 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/apps/TvSettings into 71
+
+   * packages/inputmethods/LatinIME/
+30345ab Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/inputmethods/LatinIME into 71
+
+   * packages/providers/BlockedNumberProvider/
+5efb4ff Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/BlockedNumberProvider into 71
+
+   * packages/providers/CalendarProvider/
+4554466 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/CalendarProvider into 71
+
+   * packages/providers/CallLogProvider/
+c7da1a9 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/CallLogProvider into 71
+
+   * packages/providers/DownloadProvider/
+90b9ca3 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/DownloadProvider into 71
+
+   * packages/providers/TelephonyProvider/
+846e328 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/TelephonyProvider into 71
+
+   * packages/providers/TvProvider/
+22ed917 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/TvProvider into 71
+
+   * packages/providers/UserDictionaryProvider/
+831d9a6 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/providers/UserDictionaryProvider into 71
+
+   * packages/screensavers/PhotoTable/
+35ac4d3 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/screensavers/PhotoTable into 71
+
+   * packages/services/Car/
+038acd5 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/services/Car into 71
+
+   * packages/services/Mms/
+0d09a5b Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/services/Mms into 71
+
+   * packages/wallpapers/LivePicker/
+2751676 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/packages/wallpapers/LivePicker into 71
+
+   * system/extras/
+19661b4 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/extras into 71
+
+   * system/keymaster/
+6455181 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/keymaster into 71
+
+   * system/security/
+79f2dc9 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/security into 71
+
+   * system/tools/aidl/
+87149c8 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/tools/aidl into 71
+
+   * system/vold/
+6c41ce1 Merge tag 'android-7.1.0_r4' of https://android.googlesource.com/platform/system/vold into 71
+
+====================
+     10-24-2016
+====================
+
+
+   * hardware/invensense/
+1693470 Merge tag 'android-7.1.0_r4' into HEAD
+
+   * hardware/qcom/audio-caf/msm8916/
+193ba51 msm8009: Update device mixer controls for SVA
+37a790b msm8009: Update device mixer controls for listen
+
+   * hardware/qcom/media-caf/msm8916/
+086967c mm-video-v4l2: vdec: Disallow input usebuffer for secure case
+
+   * hardware/samsung/
+5a2cc4e Fix RIL_CardStatus_v5 Parceling.
+70ecc09 Add support for cdma dynamic address length.
+
+   * vendor/cm/
+e724a1c envsetup: Fix cafremote/aospremote for    *s with non-standard paths
+5bf4527 charger: Use the same metrics as recovery to pick a density
+4cc370e cm: charger: Center capacity and vertical offset
+
+====================
+     10-23-2016
+====================
+
+
+   * build/
+2e887b3 Fix a race condition while building the recovery patch (needed for msm8226)
+
+   * frameworks/av/
+a38ed90 libcameraservice: Don't pass NULL args on setCallbacks call
+
+   * packages/apps/Dialer/
+571bf69 Let InCallUI handle proximity sensor for incoming calls [2/2]
+
+   * vendor/cm/
+ab9ffbc Fix Truphone APN
+
+====================
+     10-22-2016
+====================
+
+
+   * frameworks/base/
+62e6c41 Forward port Samsung STK support (frameworks/base)
+
+   * frameworks/opt/telephony/
+c949101 Forward port Samsung STK support (frameworks/opt/telephony)
+
+====================
+     10-21-2016
+====================
+
+
+   * cmu-api/
+7995c24 celox: 10-20-16
+
+   * hardware/qcom/media-caf/msm8916/
+1e53b1d Merge AU_LINUX_ANDROID_LA.BR.1.2.9_RB1.07.00.00.254.010 on remote branch
+
+   * packages/services/Telecomm/
+5566789 Add back phone notification LED settings backend (1/2)
+
+   * vendor/cm/
+a3a9a13 Add a new APN to device/sample/etc/apns-full-conf.xml for new mcc/mnc assigned to Truphone
 
