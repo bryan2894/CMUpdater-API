@@ -2,11 +2,11 @@
  "id": null,
  "result": [
     {
-        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=21449&task=get",
-        "timestamp": "1478892095",
+        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=21704&task=get",
+        "timestamp": "1479887442",
         "api_level": "25",
-        "md5sum": "43692b9993ae88052a25cb4a204043fb",
-        "filename": "cm-14.1-20161111-UNOFFICIAL-celox.zip",
+        "md5sum": "8c4992439f32b6cd1c5c9ff93034f6b2",
+        "filename": "cm-14.1-20161122-UNOFFICIAL-celox.zip",
         "channel": "NIGHTLY",
         "changes": "https://raw.githubusercontent.com/bryan2894/CMUpdater-API/cm-14.1/celox/changelog.txt",
         "incremental": ""

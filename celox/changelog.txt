@@ -1,489 +1,880 @@
 ====================
-     11-11-2016
+     11-23-2016
 ====================
 
 
-   * device/qcom/sepolicy/
-9e0da1f msm8974: add common sepolicy needed for M blobs on N
+   * external/openssh/
+613dd5c Merge branch 'master' of https://android.googlesource.com/platform/external/openssh into cm-14.1
+
+   * hudson/
+1cb7b01 Move kiwi back to nightly
+5f49ecc hudson: Move CM13 to weekly, again
+
+====================
+     11-22-2016
+====================
+
 
    * device/samsung/msm8660-common/
-d5f81c1 sepolicy: leave rmt_storage in permissive mode
-
-   * frameworks/av/
-b0ff52f av: fix support for legacy HALv1 after android-7.1.0_r7 merge
-4435e87 Allow to use baseline profile for AVC recording
+108576c msm8660: compile libc with gcc
+004dfac msm8660: enable sdclang
+e2a25d6 msm8660: Turn on sdcardfs
 
    * frameworks/base/
-ee7492b BatteryMeter: disable until ThemeEngine is up
-5369cd4 SysUI: Use VectorDrawable's for rendering battery
-d1a048a Tuner: allow power notif controls to be launched externally
-34df621 Tuner: hide settings item in dashboard
-8ed86f5 PowerManager: don't pass NULL pointers to power HAL (2)
-16eb672 systemui: Fix NPE when changing importance
-71887d9 Turn on Power Notification Controls by default (1/2)
-6650cad SystemUI: add more buttons to NavBar Tuner
-728b07a GlobalActions: Long press screenshot action to take a partial screenshot
-6a95e12 zygote: Allow device to append extra whitelisted paths
+5067e48 Restore Pyxis to fix build
+816c22f fix persistent process is killed and restart again and again
+299f344 [ActivityManager] Reset killed flag at attachApplicationLocked
+da1007d1c Fix window animation flash issue
+23b8d37 Modify the case in adjustFocus when the mFocusedActivity is null
+5d49005 IndexOutOfBoundsException observed in ProcessStats
+00f0fd4 Fix split-screen flash issue
+92e4239 Fix memory leak of Dnd tile
+8c833c6 Fix static analyzer warnings.
+f1ddd94 Fix static-analyzer warning.
+94bb7d5 Fix a static-analyzer warning.
+c29b7d3 Avoid automatically mirroring Drawable of CustomTile
+e93d8d7 Avoid NPE around mReusedTask of ActivityStarter
+2321c5c LEDs Brightness: Rewrite the slider control without TunerService
+85ba1c6 Fix issue that Overview key doesn't work at secondary user
+c01611b Share one receiver for CurrentUserTracker
+ce0f23e data: sounds: cleanup ogg
 
-   * packages/apps/Settings/
-0aaa8d2 Settings: notifications: add tuner's importance level shortcut
-573414d Turn on Power Notification Controls by default (2/2)
-bf4e859 settings: nfc: Forward port Android Pay removal
-bdadc1e settings: Rename reboot to restart in Power menu
-
-   * vendor/cm/
-9689bb9 build: kernel: Set prefix based on KERNEL_ARCH
-
-====================
-     11-10-2016
-====================
-
-
-   * device/qcom/common/
-a0f2b05 power: msm8937: Improve boost values
-c404f2a power: msm8937: Remove display_hint_sent usage
-3c49a11 power: msm8937: Fix build warnings
-
-   * frameworks/av/
-721cd20 libstagefright: fix camera/encoder for targets that using native handle source
-
-   * vendor/cm/
-e7573da build: qcom_target: Enable BOARD_USES_ADRENO
-
-====================
-     11-09-2016
-====================
-
-
-   * android/
-4f70e6e cm: android-7.1.0_r7
-
-   * build/
-c2de06e Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/build into HEAD
-a0ae508 build: Require devices to opt-in for SDCLANG
-
-   * device/qcom/common/
-3d9d25c qc: Add guard makefile for binaries repo
-
-   * external/bash/
-3088421 Revert "bash: prefer toybox's ls"
-
-   * frameworks/av/
-c3c767d Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/frameworks/av into HEAD
-
-   * frameworks/base/
-3a597b4 base: Rename reboot to restart in Power menu
-37402e3 batteryservice: Remove remnants of CAF's HVDCP changes
-182f38e Add CMSDK resource APK to Zygote FD whitelist
-527bbc0 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/frameworks/base into HEAD
-14d1cfd PackageInstallerSession: use ftruncate if fallocate is ENOTSUP
-
-   * frameworks/opt/telephony/
-c5c2808 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/frameworks/opt/telephony into HEAD
-
-   * hardware/qcom/audio-caf/msm8996/
-0feef69 Revert "hal: Add abstraction for soundtrigger session"
-
-   * hardware/qcom/audio/default/
-f864766 post_proc: use pathmap for include path
-930f147 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/hardware/qcom/audio into HEAD
-
-   * packages/apps/Bluetooth/
-699645f Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/packages/apps/Bluetooth into HEAD
-
-   * packages/apps/CMParts/
-9869b8c cmparts: Rename reboot to restart in Power menu
-
-   * packages/apps/Launcher3/
-53eefc5 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/packages/apps/Launcher3 into HEAD
-
-   * packages/apps/Settings/
-6c57ef8 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/packages/apps/Settings into HEAD
-
-   * packages/providers/DownloadProvider/
-9bfe375 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/packages/providers/DownloadProvider into HEAD
-
-   * packages/services/Telephony/
-c13a547 Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/packages/services/Telephony into HEAD
-
-   * system/core/
-8f0937d Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/system/core into HEAD
-
-   * system/media/
-adae89b Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/system/media into HEAD
-
-   * system/sepolicy/
-da1033f Merge tag 'android-7.1.0_r7' of https://android.googlesource.com/platform/system/sepolicy into HEAD
-
-   * vendor/cm/
-c86fb12 cm: Fix bootanimation sorting
-
-====================
-     11-08-2016
-====================
-
-
-   * bootable/recovery/
-de8de5f Constrain log text output to bottom quarter of the screen.
-55ade75 Remove duplicate draw_background_locked() call.
-
-   * device/samsung/msm8660-common/
-6175160 msm8660: enable legacy camera fixes
-
-   * frameworks/av/
-fdde5b2 Camera: Support obtaining camera memory from MemoryHeapIon
-
-   * frameworks/native/
-d7b29fa binder: Squashed commit of MemoryHeapBaseIon
-
-   * frameworks/opt/telephony/
-ec18aba Add dummy SUB record in CDMA NV mode
-6b3b5b8 Send EVENT_NV_READY to GsmCdmaPhone
-1bcf4b7 tests: Update SubscriptionInfo parameters to match fwb
-
-   * packages/apps/Settings/
-f17fd9e Settings: fix battery icon in dashboard
-
-   * packages/services/Telecomm/
-e496041 Ignore null groupId when restoring default account.
-
-   * system/bt/
-7924a32 bt: Use HCI H4 HAL for BT SOC ATH3K
-
-   * vendor/cm/
-4f17434 common: add quotes to satisfy kati/bash/make/whatever
-
-   * vendor/cmsdk/
-7f19e74 PerformanceManager: Fix power hint values
-
-====================
-     11-07-2016
-====================
-
-
-   * frameworks/av/
-0e9394b Merge branch 'av-aosp.lnx.2.0.r5-rel' of git://codeaurora.org/platform/frameworks/av into cm-14.1
-
-   * frameworks/base/
-f17619e connectivity: Configure additional TCP parameters
-778f5f2 Fix nav bar showing always on the left when rotated to 270 degrees.
-e3fe757 pm: Fix NPE
-52ef85a SystemServer: Do not start Atlas Service on lowram devices.
-b082881 Fix long press volume buttons skip tracks
-
-   * frameworks/opt/setupwizard/
-b9dc8b2 Fix setupwizard crashes for tablets
-
-   * frameworks/opt/telephony/
-7893415 Telephony: fix SMS NPE
-aa9bab9 Phone App crash: process com.android.phone has stopped.
-6e91f68 Single digit MMI codes cause CTS to fail
-9766216 GsmMmiCode: Fix USSD NPE
-2a16b66 For NV-based devices like CDMA only devices, ignore ICC Card status change EVENT.
-213e3cd Suppress error pop-ups for single digit dials.
-3eae650 MMS: Update apnProfileID for MMS only apn.
-a357ec0 telephony: Configure additional TCP parameters
-3800210 telephony: Fix NPE when switching data SIM
-
-   * hardware/intel/img/hwcomposer/
-09c4a9b intel: hwcomposer: csc mode is only supported on newer blobs
-e9b348b intel: hwcomposer: Use ASUS_ZENFONE2_LP_BLOBS instead
-158e0af hwc: merrifield_plus: Add legacy LP blob support
-bb212e0 Selectivly Revert "Switch away from the deprecated IMG Graphics HAL APIs."
-
-   * hardware/ril-caf/
-03a5a1d Properly parcel v6 RIL_CellInfo GSM cell response.
-
-   * hardware/samsung/
-b215923 macloader: Add even more OUIs
-
-   * packages/apps/CMParts/
-b62ecf7 CMParts: rotation: Clean up UI and code
-
-   * packages/apps/CarrierConfig/
-0af4ed4 Resolve NZ roaming entry
-
-   * packages/apps/Dialer/
-1e5c3de Re-add call recording feature.
-c4ac6d5 Revert "nCallUI: Add support for call recording"
-425abd4 InCallUI: Fix background colour of tabs on DSDA phones
-c1e1098 Fix reveal animation for outgoing calls.
-
-   * packages/apps/Settings/
-a885d22 WirelessSettings: Remove NFC category if there's no NFC adapter
-491ae1a Settings: cm-ify wireless settings screen
-7939cca Fix searched item isn't highlighted
-ce22032 Settings: Fix Crash when switch user
-50304a0 Settings: fix the "force close" in Settings at monkey-test.
-e1aef2c Settings: Occurred "com.android.phone" force close 9 times at monkey test.
-
-   * packages/services/Telecomm/
-529106c Fix sporadic crashes with MSIM devices and inactive SIMs
-d37a99e Telecomm: Update icon to Material
-
-   * packages/services/Telephony/
-eb055fa Telephony: Redirect to roaming SIM network setting(Dual SIM)
-80416fe EditPhoneNumberPreference: Prevent empty text from being set
-9022fda Switch back to Auto selection if Manual fail's
-2ae24ed PhoneApp Crash: Multiple times due to permission issue
-21bd850 MSIM: Show Enhanced 4G LTE mode option for IMS subscription
-ac96ab8 Revert "Single digit MMI codes invalid." Feijao: Single digit MMI codes are valid when in-call
-1608ed1 Apply correct theme color to USSD progress dialog.
-b027031 Fix MSIM voicemail notification icons.
-fcc98cb Single digit MMI codes invalid.
-36673a9 Fix CDMA vs. WCDMA typo in cs translations
-2d191b7 Fix removal of 'all accounts' preference.
-49433ec Order SIM accounts properly.
-245ca39 Telephony: Exit call features if our error is unrecoverable.
-91d68d8 Remove hard-coded CDMA roaming mode restrictions.
-e12b716 Change string "Cellular" to "Mobile"
-c867378 Fix multiple apn items issue
-
-   * system/sepolicy/
-a35663a Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
-
-   * vendor/cm/
-143269c vendor: cm: Move fuseblk to system/sepolicy
-1bbf3e9 envsetup: block SDCLANG on Darwin for now
-
-====================
-     11-06-2016
-====================
-
-
-   * device/qcom/sepolicy/
-8259f14 Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.8' into cm-14.1
-
-   * frameworks/av/
-dc61dbf libstagefright: Support for legacy camera/encoder buffers
-
-   * hardware/qcom/audio-caf/msm8994/
-b4e35e6 Revert "post_proc: fix crash in offload effect bundle during stop output"
-107ee41 post_proc: Fix mismerge by CAF
-
-   * packages/apps/CMBugReport/
-4cf7aad bugreport: Fix permission restrictions
+   * kernel/samsung/msm8660-common/
+fc3960f defconfig: regen config
+6b94da6 defconfig: enable SDCARDFS
+c392c7e defconfig: Enable page table mapping for zsmalloc
+7767da8 defconfig: enable ZPOOL
+a56af81 Disable "maybe-uninitialized" warning globally
+7c6ec91 Revert "Makefile: Try to always use GNU ld"
+294ce16 ion: disable system contig heap
+7977ddf HID: core: prevent out-of-bound readings
+f0d77ca BACKPORT: tty: Prevent ldisc drivers from re-using stale tty fields
+41c86a1 perf: Fix race in swevent hash
+272f2a5 ALSA: usb-audio: Fix double-free in error paths after snd_usb_add_audio_stream() call
+88d0701 ALSA: usb-audio: Minor code cleanup in create_fixed_stream_quirk()
+67c1d0e ALSA: usb-audio: Fix NULL dereference in create_fixed_stream_quirk()
+e02544e sg: Fix double-free when drives detach during SG_IO
+f273f87 block: fix use-after-free in sys_ioprio_get()
+1da5474 block: fix use-after-free in seq file
+595599d ALSA: usb-audio: avoid integer overflow in create_fixed_stream_quirk()
+22566f8 ALSA: usb-audio: fix possible hang and overflow in parse_uac2_sample_rate_range()
+6a6adc0 mm: remove gup_flags FOLL_WRITE games from __get_user_pages()
+347d95d ARM: 7527/1: uaccess: explicitly check __user pointer when !CPU_USE_DOMAINS
+96d1125 fix d_walk()/non-delayed __d_free() race
+af622a4 dcache: Handle escaped paths in prepend_path
+cccb5e2 d_walk() might skip too much
+58b160d dcache: Fix locking bugs in backported "deal with deadlock in d_walk()"
+f917024 deal with deadlock in d_walk()
+e19bef9 move d_rcu from overlapping d_child to overlapping d_alias
+f8933bc Nest rename_lock inside vfsmount_lock
+b9b147f sdcardfs: fix external storage exporting incorrect uid
+4254f2b sdcardfs: Flag files as non-mappable
+bf4517a sdcardfs: Remove stale dentries when reusing an inode.
+638850b sdcardfs: Fix issue with d_child move
+004844d sdcardfs: Added top to sdcardfs_inode_info
+db8aa42 sdcardfs: Fix locking
+ba2cc10 sdcardfs: Check for other cases on path lookup
+ae86d1a sdcardfs: override umask on mkdir and create
+4ff8599 ANDROID: sdcardfs: fix itnull.cocci warnings
+0824a14 sdcardfs: Truncate packages_gid.list on overflow
+74340b3 fuse: Add support for d_canonical_path
+7dab476 vfs: change d_canonical_path to take two paths
+a405098 sdcardfs: remove unneeded __init and __exit
+676f143 sdcardfs: Remove unused code
+efe1230 inotify: Fix erroneous update of bit count
+dc60b91 sdcardfs: Add support for d_canonicalize
+82ebbcf vfs: add d_canonical_path for stacked filesystem support
+ff5d3d6 sdcardfs: Bring up to date with Android M permissions:
+0c06b71 sdcardfs: Changed type-cast in packagelist management
+436dc64 sdcardfs: (parts of) Port to 3.4
+6c2eb88 get rid of kern_path_parent()
+2cd1980 devtmpfsd: fix task state handling
+946752c drivers/base/devtmpfs.c: correct annotation of `setup_done'
+40a7840 devtmpfs: missing initialialization in never-hit case
+b28a92e fix devtmpfs race
+33f9894 devtmpfs: get rid of bogus mkdir in create_path()
+9669b86 switch devtmpfs to kern_path_create()
+edd1ca1 switch devtmpfs object creation/removal to separate kernel thread
+8f2e5f0 new helpers: kern_path_create/user_path_create
+20c53ed Included sdcardfs source code for kernel 3.0
+9cf8727 vfs: d_obtain_alias() needs to use "/" as default name.
+32d3902 vfs: dcache: fix deadlock in tree traversal
+e236199 debugfs: debugfs_remove_recursive() must not rely on list_empty(d_subdirs)
+35f84c8 zram: introduce per-device debug_stat sysfs node
+0e1fd67 zram: Remove unused ratelimit stuff and old    * link
+0daea38 zram: use __GFP_MOVABLE for memory allocation
+1ae1892 zram: drop gfp_t from zcomp_strm_alloc()
+91bcd9c zram: make is_partial_io/valid_io_request/page_zero_filled return boolean
+48b0a9c zram: keep the exact overcommited value in mem_used_max
+ebe10e2 zram: introduce comp algorithm fallback functionality
+80e538c zram: unify error reporting
+a11d262 zram: check comp algorithm availability earlier
+b15b0d5 zram: cut trailing newline in algorithm name
+6f40d6e zram: close race by open overriding
+c43259f zram: trivial: correct flag operations comment
+53927a9 zram: remove max_num_devices limitation
+d8b74f9 mmdebug.h: No dump_page reason param in 3.0
+e2456f5 BUG: headers with BUG/BUG_ON etc. need linux/bug.h
+e5ab492 include/linux/bug.h: fix sparse warning related to BUILD_BUG_ON_INVALID
+9449403 bug: introduce BUILD_BUG_ON_INVALID() macro
+ea68d00 bug: consolidate BUILD_BUG_ON with other bug code
+f34d426 kernel.h: add BUILD_BUG() macro
+af92145 zsmalloc: Fix CPU hotplug callback registration
+462619e zsmalloc: clean up many BUG_ON
+0d91a37 mm: dump page when hitting a VM_BUG_ON using VM_BUG_ON_PAGE
+3dd793e bug: completely remove code generated by disabled VM_BUG_ON()
+81439f9 compiler.h: Fix include for WRITE_ONCE backport
+36af2ef5 locking: Remove atomicy checks from {READ,WRITE}_ONCE
+38ed1fc kernel: make READ_ONCE() valid on const arguments
+03c779f kernel: Change ASSIGN_ONCE(val, x) to WRITE_ONCE(x, val)
+4703e76 kernel: Provide READ_ONCE and ASSIGN_ONCE
+82f8e58 zsmalloc: remove unused pool param in obj_free
+c858d90 zsmalloc: reorder function parameters
+4aeb5a3 zsmalloc: use first_page rather than page
+5303cfb zsmalloc: fix zs_can_compact() integer overflow
+602f4e2 mm/zsmalloc: add `freeable' column to pool stat
+1f9454b zsmalloc: drop unused member 'mapping_area->huge'
+6aa27a7 zsmalloc: fix migrate_zspage-zs_free race condition
+b64857a zsmalloc: reorganize struct size_class to pack 4 bytes hole
+b5a1eb6 zsmalloc: use page->private instead of page->first_page
+b59cb4e zsmalloc: reduce size_class memory usage
+33fee70 mm/zsmalloc.c: remove useless line in obj_free()
+9eac324 zsmalloc: don't test shrinker_enabled in zs_shrinker_count()
+d58d675 zsmalloc: use preempt.h for in_interrupt()
+1c69f56 zsmalloc: fix obj_to_head use page_private(page) as value but not pointer
+c1c3566 zsmalloc: add comments for ->inuse to zspage
+b6cd304 zsmalloc: use the old shrinker API
+481e753 zsmalloc: do not take class lock in zs_shrinker_count()
+cc1a9f8 zsmalloc: use class->pages_per_zspage
+ccac387 zsmalloc: consider ZS_ALMOST_FULL as migrate source
+b5c2128 zsmalloc: partial page ordering within a fullness_list
+0aac1ca zsmalloc: use shrinker to trigger auto-compaction
+a3453b7 zsmalloc: account the number of compacted pages
+6b42efe zsmalloc/zram: introduce zs_pool_stats api
+49dc2a0 zram: reorganize code layout
+cc2c6df zram: remove max_comp_streams internals
+847b386 zram: user per-cpu compression streams
+9373487 zram: cosmetic zram_bvec_write() cleanup
+5e691b5 staging: zcache: Pass GFP flags to zs_malloc()
+8bfa13d zsmalloc: require GFP in zs_malloc()
+a730a52 zram: fix pool name truncation
+a6e66f7 zsmalloc: cosmetic compaction code adjustments
+3f7ab2c zsmalloc: introduce zs_can_compact() function
+181d5f7 zsmalloc: always keep per-class stats
+e1e08a3 zsmalloc: drop unused variable `nr_to_migrate'
+ac22e1c mm: zsmalloc: constify struct zs_pool name
+eb367cb zpool: remove redundant zpool->type string, const-ify zpool_get_type
+646d058 zpool: add zpool_has_pool()
+5af767b zpool: remove no-op module init/exit
+6658f55 zpool: change pr_info to pr_debug
+7fdd333 mm: zpool: constify the zpool_ops
+2137e18 nick kvfree() from apparmor
+5ecb678 zram/zcomp: do not zero out zcomp private pages
+8868b19 zram: pass gfp from zcomp frontend to backend
+d03503d zram: try vmalloc() after kmalloc()
+d6dcf87 zram/zcomp: use GFP_NOIO to allocate streams
+238093d mm: swap: fix swapcache usage for fast swap devices
+372d91b cpu: fix section mismatch warnings with __hotcpu_register
+8eb0240 CPU hotplug: Provide lockless versions of callback registration functions
+2d03cf8 zram: remove obsolete ZRAM_DEBUG option
+5df7867 zpool: remove zpool_evict()
+d4e40d8 zsmalloc: remove obsolete ZSMALLOC_DEBUG
+c84d365 zsmalloc: fix a null pointer dereference in destroy_handle_cache()
+8a31ffa zram: clear disk io accounting when reset zram device
+e77381a zram: fix error return code
+0cf4662 zsmalloc: remove extra cond_resched() in __zs_compact
+24213a6 zsmalloc: fix fatal corruption due to wrong size class selection
+e187e0e zsmalloc: remove unnecessary insertion/removal of zspage in compaction
+f9839d4 zsmalloc: micro-optimize zs_object_copy()
+08de14f zsmalloc: remove synchronize_rcu from zs_compact()
+df43499 zram: deprecate zram attrs sysfs nodes
+6115af9 zram: export new 'mm_stat' sysfs attrs
+0b4c6f8 zram: export new 'io_stat' sysfs attrs
+176eb6b zram: describe device attrs in documentation
+fa06f91 zram: remove `num_migrated' device attr
+8d00f68 mm/zsmalloc.c: fix comment for get_pages_per_zspage
+fc59c04 zsmalloc: zsmalloc documentation
+21729e7 zsmalloc: add fullness into stat
+d50b5e8 zsmalloc: record handle in page->private for huge object
+1bf9e47 zram: support compaction
+3e944bc zsmalloc: adjust ZS_ALMOST_FULL
+792520e zsmalloc: support compaction
+ba8dca2 zsmalloc: factor out obj_[malloc|free]
+579fb01 zsmalloc: decouple handle and object
+6dbb0f2 zram: use proper type to update max_used_pages
+e1aa3a2 mm/zsmalloc: add statistics support
+7b5ade6 mm/zpool: add name argument to create zpool
+22530ba zram: remove request_queue from struct zram
+faf6677 zram: remove init_lock in zram_make_request
+d05772a zram: check bd_openers instead of bd_holders
+405199d zram: rework reset and destroy path
+527217f zram: fix umount-reset_store-mount race condition
+68c2a79 zram: free meta table in zram_meta_free
+4a84852 zram: clean up zram_meta_alloc()
+e73be27 mm/zsmalloc: adjust order of functions
+ab682a9 mm/zsmalloc: avoid duplicate assignment of prev_class
+466bb51 mm/zram: correct ZRAM_ZERO flag bit position
+da8d825 mm/zsmalloc: support allocating obj with size of ZS_MAX_ALLOC_SIZE
+8fe5162 zsmalloc: fix zs_init cpu notifier error handling
+d5459fd zram: change parameter from vaild_io_request()
+abd8049 zram: remove bio parameter from zram_bvec_rw()
+8a05198 zram: avoid kunmap_atomic() of a NULL pointer
+b90f41b zram: avoid NULL pointer access in concurrent situation
+35df4db zram: use notify_free to account all free notifications
+d806de5 zram: doc fixes
+f5f773d zram: report maximum used memory
+e43476f zram: zram memory size limitation
+aa54236 mm/zsmalloc.c: correct comment for fullness group computation
+ed98811 mm/zpool: use prefixed module loading
+3c0c4fb mm/zpool: zbud/zsmalloc implement zpool
+ba2fc44 mm/Kconfig: fix URL for zsmalloc benchmark
+b6880a0 mm/zpool: implement common zpool api to zbud/zsmalloc
+8ed295a zsmalloc: fixup trivial zs size classes value in comments
+b017a0d block: disable entropy contributions for nonrot devices
+477bc13 mm: vmscan: do not count anon pages as reclaimable if swap is small
+3b8fd74 mm: swap: don't delay swap free for fast swap devices
+4e09cd8 mm: methods for teaching filesystems about PG_swapcache pages
+377b4a4 block: ioctl support for sanitize in eMMC 4.5
+57aeb9a block: strict rq_affinity
+0f0037f mm: make swapin readahead skip over holes
+813702e swap: add per-partition lock for swapfile
+a69d42a mm: vmscan: Move pages that fail swapout to LRU active list
+dccb28e kswapd: reduce time spent in congestion_wait
+9d47277 mm: vmscan: support complete shrinker reclaim
+276ae64 vmscan: add customisable shrinker batch size
+65b1457 mm: bugfix: set current->reclaim_state to NULL while returning from kswapd()
+295b44f vmscan: fix initial shrinker size handling
+ae5cd30 cpuset: mm: reduce large amounts of memory barrier related damage v3
+1838430 mm: vmscan: convert global reclaim to per-memcg LRU lists
+8b8d5b3 mm: test PageSwapBacked in lumpy reclaim
+4009c7c mm/vmscan.c: consider swap space when deciding whether to continue reclaim
+e493179 vmscan: activate executable pages after first usage
+163eec3 vmscan: promote shared file mapped pages
+49ff88b mm: vmscan: check if reclaim should really abort even if compaction_ready() is true for one zone
+7ae6b5b mm: vmscan: do not OOM if aborting reclaim to start compaction
+1a73e67 mm: vmscan: when reclaiming for compaction, ensure there are sufficient free pages available
+67a34f8 kswapd: assign new_order and new_classzone_idx after wakeup in sleeping
+99706b0 kswapd: avoid unnecessary rebalance after an unsuccessful balancing
+6c34885 mm: zone_reclaim: make isolate_lru_page() filter-aware
+d024689 mm: compaction: make isolate_lru_page() filter-aware
+eec3fce mm: change isolate mode from #define to bitwise type
+6d48fbc vmscan: abort reclaim/compaction if compaction can proceed
+5030a30 vmscan: limit direct reclaim for higher order allocations
+ea20cac vmscan: reduce wind up shrinker->nr when shrinker can't do work
+35c8820 vmscan: shrinker->nr updates race and go wrong
+202368f vmscan: add shrink_slab tracepoints
+927cc04 vmscan: clear ZONE_CONGESTED for zone with good watermark
+cd154b6 cpusets: stall when updating mems_allowed for mempolicy or disjoint nodemask
+ef5efb5 cpusets: avoid looping when storing to mems_allowed if one node remains set
+5715251 mm: vmscan: fix force-scanning small targets without swap
+fe23ce1 mm: fix lost kswapd wakeup in kswapd_stop()
+e3c20de mm: migration: add migrate_entry_wait_huge()
+116cdda mm compaction: fix of improper cache flush in migration code
+d582637 mm: compaction: introduce sync-light migration for use by compaction
+d76089b mm: compaction: determine if dirty pages can be migrated without blocking within ->migratepage
+ff1f887 mm: migration: clean up unmap_and_move()
+24246c1 Revert "mm: Need page_swap_info() helper method from upstream"
+d35a2c3 Revert "mm: swap: don't delay swap free for fast swap devices"
+5a6b48c Revert "mm: implement WasActive page flag (for improving cleancache)"
+16f22ab Revert "mm/vmscan: Add #ifdef around "WasActive page flag""
+8c03647 mm: Fix NULL pointer dereference in madvise(MADV_WILLNEED) support
+75b1a4f mm: pmd_read_atomic: fix 32bit PAE pmd walk vs pmd_populate SMP race condition
+27e1a9b Revert "mm: Fix NULL pointer dereference in madvise(MADV_WILLNEED) support"
+a3b46f4 kernel: Add hooks for user-accessible timers in the kernel.
+145d9e8 kernel: ARM-specific implementation of user-accessible timers
+7f684fe ARM: 7294/1: vectors: use gate_vma for vectors user mapping
+4527fa4 kernel: gtod: vsyscall
+5999643 mm: add MM_SWAPENTS and page table when calculate tasksize in lowmem_scan()
+a45eeaf lowmemorykiller: Check tgid with rcu lock held
+8ff711e staging: android: lowmemorykiller: skip dying or exiting task
+fd7ee52 lowmemorykiller: use for_each_thread instead of buggy while_each_thread
+95fe489 introduce for_each_thread() to replace the buggy while_each_thread()
+78d212b f2fs: remove percpu_count due to performance regression
+2415ccf f2fs: Fix noflush_merge option case
+09f5fcc f2fs: fix wrong sum_page pointer in f2fs_gc
+81e10bc f2fs: introduce update_ckpt_flags to clean up
+7b4f62b f2fs: don't submit irrelevant page
+9b92f22 f2fs: fix to commit bio cache after flushing node pages
+12ca422 f2fs: introduce get_checkpoint_version for cleanup
+38ec45b f2fs: remove dead variable
+8b52172 f2fs: remove redundant io plug
+7054061 f2fs: support checkpoint error injection
+058a677 f2fs: fix to recover old fault injection config in ->remount_fs
+5d326f5 f2fs: do fault injection initialization in default_options
+dce8df8 f2fs: remove redundant value definition
+d03297a f2fs: support configuring fault injection per superblock
+9d6818d f2fs: adjust display format of segment bit
+ec442e2 f2fs: remove dirty inode pages in error path
+d55ddec f2fs: do not unnecessarily null-terminate encrypted symlink data
+45e579a f2fs: handle errors during recover_orphan_inodes
+2e6d96e f2fs: avoid gc in cp_error case
+7efde40 f2fs: should put_page for summary page
+a029c3f f2fs: assign return value in f2fs_gc
+ae8eb6e f2fs: introduce cp_lock to protect updating of ckpt_flags
+79c4c6e f2fs: fix to avoid race condition when updating sbi flag
+21ccc6b f2fs: put directory inodes before checkpoint in roll-forward recovery
+766cabd f2fs: use crc and cp version to determine roll-forward recovery
+f200981 f2fs: preallocate blocks for encrypted file
+d079935 f2fs: show dirty inode number
+4139824 f2fs: support IO error injection
+bdda02e f2fs: fix to return error number of read_all_xattrs correctly
+4d662d1 f2fs: make f2fs_filetype_table static
+238cb0d f2fs: handle error in recover_orphan_inode
+6812310 f2fs: fix to set PageUptodate in f2fs_write_end correctly
+03f6845 f2fs: avoid ENOMEM during roll-forward recovery
+e4ac896 f2fs: add common iget in add_fsync_inode
+3f299ac f2fs: check free_sections for defragmentation
+d71f301 f2fs: forbid to do fstrim if fs has some error
+ad9782e f2fs: avoid page allocation for truncating partial inline_data
+93ce381 f2fs: no need to make zeros beyond i_size
+5a3e3b9 f2fs: fix to detect temporary name of multimedia file
+bd21f8d f2fs: set dentry bits on random location in memory
+800f664 f2fs: fix to set superblock dirty correctly
+2c86329 f2fs: add roll-forward recovery process for encrypted dentry
+7381048 f2fs: fix lost xattrs of directories
+2018e8f f2fs: set encryption name flag in add inline entry path
+086b9ab f2fs crypto: avoid unneeded memory allocation in ->readdir
+59585c4 f2fs: fix to do security initialization of encrypted inode with original filename
+f67a740 f2fs: do in batch synchronously readahead during GC
+1ce11c7 f2fs: schedule in between two continous batch discards
+8381a9b f2fs: enable inline_dentry by default and add noinline_dentry option
+230ccdb f2fs: fix a bug when using namehash to locate dentry bucket
+76df09a f2fs: fix to preallocate block only aligned to 4K
+e2c3f1a f2fs: fix non static symbol warning
+16012c8 f2fs: remove unnecessary initialization
+a479857 f2fs: remove redundant judgement condition in available_free_memory
+5c57612 f2fs: check return value of write_checkpoint during fstrim
+05aa6d5 f2fs: fix to do f2fs_balance_fs in f2fs_map_blocks correctly
+ce09553 f2fs: avoid unneeded loop in build_sit_entries
+5171e5f f2fs: clean up foreground GC flow
+c151358 f2fs: set dirty state for filesystem only when updating meta data
+45adb9b f2fs: skip new checkpoint when doing fstrim without fs change
+3d28029 f2fs: add discard info to sys entry of f2fs status
+9498147 f2fs: reduce batch size of fstrim
+24a25f6 f2fs: do not use discard_map for hard disks
+f65011d f2fs: not allow to write illegal blkaddr
+dfc30b3 Revert "f2fs: move i_size_write in f2fs_write_end"
+25ae9f4 fscrypto: no support for v3.4
+c324f7f f2fs: adjust other changes
+ead1103 f2fs: get victim segment again after new cp
+a182362 f2fs: handle error case with f2fs_bug_on
+ce2354a f2fs: avoid data race when deciding checkpoin in f2fs_sync_file
+c666209 f2fs: fix to report error number of f2fs_find_entry
+7597d4d f2fs: avoid memory allocation failure due to a long length
+2e95a97 f2fs: reset default idle interval value
+eb6a1f3 f2fs: use blk_plug in all the possible paths
+f6b485b f2fs: fix to avoid data update racing between GC and DIO
+5c8a331 f2fs: add maximum prefree segments
+3d30f04 f2fs: disable extent_cache for fcollapse/finsert inodes
+07c9793 f2fs: refactor __exchange_data_block for speed up
+ed99ea5 f2fs: fix ERR_PTR returned by bio
+7814611 f2fs: avoid mark_inode_dirty
+0a8de62 f2fs: move i_size_write in f2fs_write_end
+057bdce f2fs: fix to avoid redundant discard during fstrim
+5e8a770 f2fs: avoid mismatching block range for discard
+ca9adba f2fs: fix incorrect f_bfree calculation in ->statfs
+b700c4e f2fs: skip to check the block address of node page
+fb134da f2fs: shrink critical region in spin_lock
+6379e84 f2fs: call SetPageUptodate if needed
+95a54eb f2fs: introduce f2fs_set_page_dirty_nobuffer
+b2b148f f2fs: remove unnecessary goto statement
+a7af49b f2fs: add nodiscard mount option
+75245fe f2fs: fix to redirty page if fail to gc data page
+ee9cf5b f2fs: fix to detect truncation prior rather than EIO during read
+f2e5aac f2fs: fix to avoid reading out encrypted data in page cache
+4b0a5f1 f2fs: avoid latency-critical readahead of node pages
+d8fb974 f2fs: avoid writing node/metapages during writes
+35c3c90 f2fs: produce more nids and reduce readahead nats
+6ea187b f2fs: detect host-managed SMR by feature flag
+467ca4c f2fs: call update_inode_page for orphan inodes
+ad538d3 f2fs: report error for f2fs_parent_dir
+a5228e0 f2fs: find parent dentry correctly
+a74db98 f2fs: fix deadlock in add_link failure
+d01969b f2fs: introduce mode=lfs mount option
+c5fb51b f2fs: skip clean segment for gc
+0609ffe f2fs: drop any block plugging
+1ddaf54 f2fs: avoid reverse IO order for NODE and DATA
+01cac7c f2fs: set mapping error for EIO
+7a1d2ee f2fs: control not to exceed # of cached nat entries
+575f633 f2fs: fix wrong percentage
+084a360 f2fs: avoid data race between FI_DIRTY_INODE flag and update_inode
+4f9b370 f2fs: remove obsolete parameter in f2fs_truncate
+8d47df0 f2fs: avoid wrong count on dirty inodes
+4956ad0 f2fs: remove deprecated parameter
+3f18eaa f2fs: handle writepage correctly
+2dad4cf f2fs: return error of f2fs_lookup
+13cb279 f2fs: return the errno to the caller to avoid using a wrong page
+7c8f8ad6 f2fs: remove two steps to flush dirty data pages
+309326e f2fs: do not skip writing data pages
+bcb092a f2fs: inject to produce some orphan inodes
+a2b5399 f2fs: propagate error given by f2fs_find_entry
+5315f9f f2fs: remove writepages lock
+2fdddcb f2fs: set flush_merge by default
+6adda59 f2fs: detect congestion of flush command issues
+0f3dcc5 f2fs: avoid unnecessary updating inode during fsync
+f0fe9e0 f2fs: remove syncing inode page in all the cases
+4762744 f2fs: flush inode metadata when checkpoint is doing
+2f00856 f2fs: call mark_inode_dirty_sync for i_field changes
+2d72cbb f2fs: introduce f2fs_i_links_write with mark_inode_dirty_sync
+c42e56f f2fs: introduce f2fs_i_blocks_write with mark_inode_dirty_sync
+412cc57 f2fs: introduce f2fs_i_size_write with mark_inode_dirty_sync
+ef7cb09 f2fs: use inode pointer for {set, clear}_inode_flag
+3e3228a Revert "f2fs: no need inc dirty pages under inode lock"
+966862f f2fs: kernel 3.0: no reason param for writeback_inodes_sb
+f8b6111 f2fs: adjust other changes
+e953877 f2fs: flush pending bios right away when error occurs
+4a12fa9 f2fs: avoid ENOSPC fault in the recovery process
+d3b9356 f2fs: make exit_f2fs_fs more clear
+d1da100 f2fs: use percpu_counter for total_valid_inode_count
+a1e5ffd f2fs: use percpu_counter for alloc_valid_block_count
+776f6da f2fs: use percpu_counter for # of dirty pages in inode
+92a114a f2fs: use percpu_counter for page counters
+d503db6 f2fs: use bio count instead of F2FS_WRITEBACK page count
+8deabd4 f2fs: manipulate dirty file inodes when DATA_FLUSH is set
+41d35f9 f2fs: add fault injection to sysfs
+e354d08 f2fs: no need inc dirty pages under inode lock
+113d7c2 f2fs: fix incorrect error path handling in f2fs_move_rehashed_dirents
+591f2d6 f2fs: fix i_current_depth during inline dentry conversion
+3424207 f2fs: correct return value type of f2fs_fill_super
+6200d9c f2fs: fix deadlock when flush inline data
+373664e4 f2fs: avoid f2fs_bug_on during recovery
+691eb85 f2fs: show # of orphan inodes
+1a536d2 f2fs: support in batch fzero in dnode page
+55d4696 f2fs: support in batch multi blocks preallocation
+f60760a f2fs: make atomic/volatile operation exclusive
+30e2b80 f2fs: use mnt_{want,drop}_write_file in ioctl
+cebb85f f2fs: do not preallocate block unaligned to 4KB
+caffffb f2fs: read node blocks ahead when truncating blocks
+82e28cb f2fs: fallocate data blocks in single locked node page
+3e175a0 f2fs: fix inode cache leak
+43ebffe fscrypto/f2fs: allow fs-specific key prefix for fs encryption
+34e7d81 f2fs: avoid panic when truncating to max filesize
+e287f97 f2fs: fix incorrect mapping in ->bmap
+1828cb5 f2fs: remove an obsolete variable
+85e2850 f2fs: don't worry about inode leak in evict_inode
+6b6bdc9 f2fs: shrink size of struct seg_entry
+5934cff f2fs: reuse get_extent_info
+a7f2ef1 f2fs: remove unneeded memset when updating xattr
+2728898 f2fs: remove unneeded readahead in find_fsync_dnodes
+819fc92 f2fs: retry to truncate blocks in -ENOMEM case
+5c3f2f0 f2fs: fix leak of orphan inode objects
+33136fb f2fs: revisit error handling flows
+c08f169 f2fs: inject ENOSPC failures
+419d429 f2fs: inject page allocation failures
+31eb6c0 f2fs: inject kmalloc failure
+b9cfd83 f2fs: add mount option to select fault injection ratio
+86772a3 f2fs: use f2fs_grab_cache_page instead of grab_cache_page
+7b27b5a f2fs: introduce f2fs_kmalloc to wrap kmalloc
+981c7a2 f2fs: add proc entry to show valid block bitmap
+7af694f f2fs: introduce macros for proc entries
+5a1790f f2fs: factor out fsync inode entry operations
+1ce1268 f2fs: fix to clear page private flag
+1041bf2 f2fs: fix to clear private data in page
+9bf0bbc f2fs: fix to return 0 if err == -ENOENT in f2fs_readdir
+ae396ca f2fs: move node pages only in victim section during GC
+70b5196 f2fs: be aware of invalid filename length
+854f357 f2fs: issue cache flush on direct IO
+70c2854 f2fs: set fsync mark only for the last dnode
+d828b20 f2fs: report unwritten status in fsync_node_pages
+b34b545 f2fs: split sync_node_pages with fsync_node_pages
+17c701a f2fs: avoid writing 0'th page in volatile writes
+fd9a46e f2fs: avoid needless lock for node pages when fsyncing a file
+abac301 f2fs: flush dirty pages before starting atomic writes
+1968b88 f2fs: don't invalidate atomic page if successful
+1bd22ca f2fs: give -E2BIG for no space in xattr
+6dd424d f2fs: remove redundant condition check
+720f8a0 f2fs: unset atomic/volatile flag in f2fs_release_file
+8da0326 f2fs: fix dropping inmemory pages in a wrong time
+5ff823a f2fs: add BUG_ON to avoid unnecessary flow
+fdf4df8 f2fs: fix to convert inline directory correctly
+a5f72c9 f2fs: show current mount status
+2246119 f2fs: treat as a normal umount when remounting ro
+b79d4be f2fs: give -EINVAL for norecovery and rw mount
+a657aa1 f2fs: recover superblock at RW remounts
+04833f0 f2fs: give RO message when recovering superblock
+80b2875 f2fs: fix to update dirty page count correctly
+f10e24f eCryptfs: export global eCryptfs definitions to include/linux/ecryptfs.h
+def13b5 fscrypto: Replace IS_ENABLED macro (n/a in 3.0) with ifdef
+1630da9 Revert "f2fs: use cryptoapi crc32 functions"
+548562c ext4/fscrypto: avoid RCU lookup in d_revalidate
+5f861d9 fscrypto: don't let data integrity writebacks fail with ENOMEM
+64e0f91 f2fs: use dget_parent and file_dentry in f2fs_file_open
+fdd91eb fscrypto: use dget_parent() in fscrypt_d_revalidate()
+3688da9 f2fs: retrieve IO write stat from the right place
+ce6f33e f2fs crypto: fix corrupted symlink in encrypted case
+5941545 f2fs: cover large section in sanity check of super
+a032752 f2fs/crypto: fix xts_tweak initialization
+48fc821 f2fs: submit node page write bios when really required
+0fd9b38 f2fs: add missing argument to f2fs_setxattr stub
+dde2f0b f2fs: fix to avoid unneeded unlock_new_inode
+1b710df f2fs: clean up opened code with f2fs_update_dentry
+4a54c1d f2fs: declare static functions
+11697be f2fs: use cryptoapi crc32 functions
+98d67ac f2fs: modify the readahead method in ra_node_page()
+8d56b1e f2fs crypto: sync ext4_lookup and ext4_file_open
+4cf78b0 f2fs: define not-set fallocate flags
+150a5c1 fs crypto: move per-file encryption from f2fs tree to fs/crypto
+b4250fb f2fs: mutex can't be used by down_write_nest_lock()
+3b3c590 f2fs: recovery missing dot dentries in root directory
+f37ca91 vfs: dcache: use DCACHE_DENTRY_KILLED instead of DCACHE_DISCONNECTED in d_kill()
+58f41d7 f2fs: squashed update of f2fs
+4908512 f2fs: bring up to date with Jaegeuk's branch
+baba0e2 mm for fs: add truncate_pagecache_range()
+c5951ae Add PR_{GET,SET}_NO_NEW_PRIVS to prevent execve from granting privs
+c1c433f f2fs: fix wrong error hanlder in f2fs_follow_link
+e4c5c37 Revert "f2fs: enhance multi-threads performance"
+5f07c64 f2fs: bring up to date with Jaegeuk's branch
+01bb4bb f2fs: update from git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs.git
+753c2b3 radix-tree: fix contiguous iterator
+ed3375b radix-tree: rewrite gang lookup using iterator
+9a4a527 radix-tree: introduce bit-optimized iterator
+94927b5 radix_tree: remove radix_tree_indirect_to_ptr()
+44b9fb2 radix_tree: take radix_tree_path off stack
+4a13190 radix_tree: clean away saw_unset_tag leftovers
+7b8f6f5 tmpfs radix_tree: locate_item to speed up swapoff
+4fdd064 radix_tree: exceptional entries and indices
+3b216b7 f2fs: support for kernel 3.0
+2d6ffa5 block: remove READ_META and WRITE_META
+fa23ab2 block: separate priority boosting from REQ_META
+9aac626 Make ->d_sb assign-once and always non-NULL
+3265fd1 CIFS: remove local xattr definitions
+daad192 xfs: introduce a generic shutdown ioctl
+a7d3264 llist: Add llist_next()
+b7296bb irq_work: Use llist in the struct irq_work logic
+ff35eb2 security: new security_inode_init_security API adds function callback
+d982716 bitops: rename for_each_set_bit_cont() in favor of analogous list.h function
+40d9a20 perf, x86: Implement event scheduler helper functions
+da65d9f perf tools: Use for_each_set_bit() to iterate over feature flags
+93dbeb8 vfs: new helper - d_make_root()
+eb8602f vfs: check i_nlink limits in vfs_{mkdir,rename_dir,link}
+f9a54af filesystems: add set_nlink()
+813076c sysfs: count subdirectories
+369e4d4 filesystems: add missing nlink wrappers
+1998186 ocfs2: remove unnecessary nlink setting
+b556a64 hypfs: remove unnecessary nlink setting
+f13fe98 vfs: add generic_file_llseek_size
+4dd5255 vfs: do (nearly) lockless generic_file_llseek
+7276ee2 fs: handle SEEK_HOLE/SEEK_DATA properly in all fs's that define their own llseek
+aeb6088 Ext4: handle SEEK_HOLE/SEEK_DATA generically
+b3f13f0 Btrfs: implement our own ->llseek
+0416ecc fs: add missing unlock in default_llseek()
+8637495 fs: add SEEK_HOLE and SEEK_DATA flags
+cab4dde msm: audio: qdsp6v2: Add missing params to audlpa_fsync handler
+674a392 msm: audio: qdsp6v2: Add missing params to audio_aio_fsync handler
+0702313 Add llist from 3.4
+5f31b91 fs: push i_mutex and filemap_write_and_wait down into ->fsync() handlers
+c627749 libfs: add simple_open()
 
    * packages/apps/Contacts/
-bb83402 [1/2] Contacts: make shapes great again
-
-   * packages/apps/ContactsCommon/
-0da306c [2/2] ContactsCommon: make shapes great again
-
-   * packages/apps/Settings/
-172fc17 Settings:  Fix settings force close in monkey test.
-8090c4d Settings: "Back" icon not work on Settings-Security-Encrypt phone
-44b992a Settings: Make APN of CT can be edited and be saved.
-5899d23 Settings: Fix settings force close in monkey test.
-849b3e7 Settings: Fix settings force close in monkey test.
-a8ffd2a Settings: Fix settings force close in monkey test.
-ec096e9 Settings: Fix AssertionError in monkey
-f471f56 Settings: Fix SparseArray null pointer issue in monkey issues
-edbadfe Hide the accounts which added for data pack
-fde7002 SAP: Enable 5Ghz AP band option only when a valid country code is received
-741d8e5 Hide the accounts which added for data pack
-fbc7f18 Settings: The APN cannot be edited after tapping right of APN
-
-   * vendor/cmsdk/
-f133161 cmhw: Fix boot handling
+2448899 De-holoize contact group activity.
 
 ====================
-     11-05-2016
-====================
-
-
-   * frameworks/base/
-86e9bc7 services: battery: Don't blink with an hvdcp charger
-ed33729 Don't crash if print spooler doesn't have location permission.
-5219705 Don't show quotation marks around Wifi network name in Settings.
-c3e4054 Support enforcing a minimum delay between notification sounds of an app.
-6226202 (Optionally) allow vibration during priority zen mode.
-a5219a2 Revert "Mms: Fix no ringtone for MT SMS during the call."
-fec9844 Add importance level to block lock screen notifications (fixed) (1/2)
-
-   * frameworks/opt/net/wifi/
-8594d48 wifi: Set the mode at native layer
-
-   * frameworks/opt/telephony/
-a164555 Telephony: handle 3rd party sms apps + 'always ask'
-
-   * packages/apps/AudioFX/
-db8cc15 AudioFX: Fix possible RuntimeException
-a01d9e0 AudioFX: Fix possible NPE
-
-   * packages/apps/Settings/
-ec024b1 Settings: we do not ship Google Now Launcher wallpapers
-5c8f480 Show SIM name as data usage mobile network category title.
-8071778 Integrate mobile network settings into SIM settings for MSIM.
-c121277 Remove a few MSIM tab hosts.
-93fb7fd Add setup UI for minimum delay between an app's notification sounds.
-2d55564 Allow selecting vibration mode during zen priority mode.
-e4edbd0 Add importance level to block lock screen notifications (fixed) (2/2)
-
-   * packages/apps/Snap/
-70edacf Snap: Fix possible RuntimeException (due to NPE)
-3da1aa3 Snap: Fix possible NPE
-72e249c CameraNext: dynamically generate available photo resolutions
-
-   * packages/apps/Trebuchet/
-7b7aab4 Trebuchet: Remove stats/tracking
-
-   * system/sepolicy/
-52a4d3b system: sepolicy: Import fuseblk from vendor/cm
-
-   * vendor/cm/
-b0cecb7 Always create a kernel defconfig build artifact
-8ab9e00 Added contributors for vegetalte
-6ddd835 themes: allow system_server to relabel them dir
-8614943 Contributors: Add maintainers for BQ Aquaris M5 (piccolo)
-7f3e6df Contributors: Add maintainer for Alcatel Idol 3
-63984ef ambient: Remove from OSS builds
-1998914 vendor_cm: Vodafone TR: Fix mobile data on first boot
-26e669b cm: Autodetect SDCLANG in prebuilts/snapdragon-llvm
-
-====================
-     11-04-2016
-====================
-
-
-   * android/
-128fe35 cm: Use CM fork of legacy apache-http library
-
-   * frameworks/native/
-28ee195 libui: gralloc1 getphys implementation for samsung OMX
-
-   * hardware/qcom/media-caf/msm8974/
-79be6bb Remove leftover QCMediaPlayer files
-d443c0d mm-video-v4l2: vdec: allocate secure buffer as native_handle
-4adc8e4 omx_venc: Handle output buffer parameter in secure mode
-19bea17 libstagefrighthw: Remove padding in encoder_nativehandle_buffer_type
-
-   * packages/apps/Dialer/
-152af85 Dialer: Fix proximity on wake handling
-
-   * vendor/cm/
-082e0ec extract_utils: Add option to define the certificate for jars
-
-====================
-     11-03-2016
+     11-21-2016
 ====================
 
 
    * device/qcom/common/
-efcb43b extractors: Add origin branches for graphics blobs
+680823c qcom: extractors: Add msm8960 graphics list
 
-   * external/jemalloc/
-f96d4f7 Allow devices to specify a default decay time
+   * device/samsung/celox/
+7addb84 celox: don't specify toolchain
 
-   * frameworks/av/
-3ee0862 camera/media: Support for legacy camera HALv1
-1e7d2ad libstagefright: fix exynos4 camcorder
+   * device/samsung/msm8660-common/
+e0091b0 msm8660: Mount debugfs on early-init
 
-   * frameworks/base/
-9713c0a Add the user set network mode to the siminfo table
-2cf8ac2 AudioService: allow volume control on analog dock
-6e1add6 Add Motorola EMU audio dock jack sensing support
-3aaae37 Add Dock USB Audio Support for Samsung Car / Desk Docks
-1e0f2cc bootanimation: enable multithread decode by default
-
-   * frameworks/opt/telephony/
-7dfa69b SubscriptionController: properly detect when MSIM has 1 SIM
-cef16bb telephony: Only set prompt enabled if available subscriptions > 1.
-fa9eead telephony: Workaround default sms sub id not being set.
-80b9aae telephony: Do not set default subscriptions on shutdown
-af77077 Set default subscriptions when single SIM is available
-
-   * hardware/qcom/audio-caf/msm8916/
-1416e5d Silence log spam.
-
-   * hardware/qcom/display-caf/msm8974/
-b520227 gralloc: Fix gralloc protected allocations
-fde98fd qservice: Allow camera server to call into HWC
-
-   * packages/apps/CMFileManager/
-5d00161 Properly upgrade DB.
-
-   * packages/apps/DeskClock/
-6846bad Fix copy'n'paste mistake in database creation.
-
-   * packages/apps/Dialer/
-f5c0256 Fix AppBarLayout elevation handling.
-e977cac Handle DB upgrade from CM13.
-
-   * packages/apps/SetupWizard/
-3408466 GmsAccount: If there's no network and FRP isn't enforcing, skip GMS
-
-   * packages/inputmethods/LatinIME/
-231c497 Fix send button not being centered for non-standard densities.
-
-   * packages/providers/TelephonyProvider/
-6b8cecc telephony: Fix initial database creation
-
-   * packages/services/Telephony/
-1a1b3cd Allow MobileNetworkSettings to be invoked for selected SIM.
-
-   * system/bt/
-a791538 Fix AG API result code to internal result code mapping.
-
-====================
-     11-02-2016
-====================
-
-
-   * android/
-5186065 Use our fork of jemalloc
-
-   * build/
-da989e7 build: Increase diff timeout
+   * device/samsung/qcom-common/
+12fa1b8 Automatic translation import
 
    * frameworks/base/
-81e247a Expose call creation time to link call recordings with recent call log (1/2)
+e5d75a0 Make Power Notification Controls scrollable
+08317fe fixed applyConfigurationToResourcesLocked WeakReference is null
+3002cbf fix NullPointerException in RegisteredServicesCache
+b8cb849 Add null check before finish SystemUI Tuner's activity
+14d2ccd Fix String is empty issue
+51fe9c4 Tethering: check if configManager is null
+2914ee3 fix mistaken check of mScreenBrightnessDarkConfig
+21d477c Remove .mk lines that are just setting the default
+a878938 Correctly handle when the user has no explicit time_12_24 setting
+27e079d Zygote: Avoid string concatentation for systrace
+9ce021e lockscreen: Add option for showing unlock screen directly
+9a1fe29 Fix idmap leak in zygote process
+0a7c189 sounds: AllAudio: Avoid conflicting ringtone names
+0466d9c Brightness mirror - fix multi-touch issue
 
    * frameworks/opt/telephony/
-099ccdf Add the user set network mode to the siminfo table
+14b6666 Update carrier services on EVENT_NV_READY
 
-   * hardware/ti/omap4/
-4a0023e camera: switch to Gralloc.allocate and generate unique Id for allocation
-c31e66e gralloc: remove gralloc-overlay, breaks build on cm-14.1
+   * hardware/qcom/media/
+068d0fa mm-video: vidc: Remove hardcoding of BufCountActual
+b1a0180 mm-video: venc: update color format in port-def
+97f071b mm-video: venc: Use correct flag for buffer index selection
+85bf3e0 mm-video: venc: update allocation-size check for meta-buffer
+79b01cb mm-video: venc: Correct a typo in variable name
+4b826f7 media: Use    * pathmap
+3516553 media: Add symlinks to msm8974
+ae0bd7c media: Use kernel headers
+19f2743 Revert "msm8974: remove from top level makefile"
 
-   * packages/apps/DeskClock/
-0179b3f Provide upgrade path for cm12.1 -> cm13.0
+   * hardware/samsung/
+fe32c93 exynos4: hwc: GLES/gl.h is needed regardless of HWC_HWOVERLAY
+1261d2b Automatic translation import
 
-   * packages/apps/Dialer/
-5226272 Don't use a different call log for MSIM.
-12bbdb5 Re-add call stats feature.
-bb46078 Update SpinnerContent class from CM 13.
+   * kernel/samsung/msm8660-common/
+4dc9cb0 f2fs: support for kernel 3.1
+ee515d1 fs: Add f2fs from Jaegeuk's linux-3.4 branch
+7d01501 Revert "F2FS for Linux 3.0"
 
-   * packages/apps/Email/
-eac3cf6 Fix DB upgrade from CM13.
+   * libcore/
+77335d6 Modify j.t.DateFormat.set24HourTimePref() to take a Boolean
+
+   * packages/apps/CMParts/
+8ffe008 CMParts: Hide Reset action if Battery LED is not multicolor
 
    * packages/apps/Settings/
-1deee81 Kill marquee display of app version/package name in app details.
+8bd4f79 lockscreen: Forward port option to pass swipe-up-to-unlock
 
-   * packages/apps/Snap/
-3f2a096 Allow to use power key as shutter
-
-   * packages/providers/ContactsProvider/
-e9be98e Ignore old CM13 columns in DB migration.
-
-   * packages/providers/TelephonyProvider/
-4957de9 Add DB upgrade path for SMS/MMS and telephony provider.
-
-   * packages/services/Telecomm/
-c0941f5 Honor option to allow vibration during priority zen mode.
-
-   * vendor/cmsdk/
-e01237e Add a CMSystemSettingDropDownPreference.
-fbd5dc1 Add option definition for vibration during zen mode.
+   * packages/inputmethods/LatinIME/
+cb3106f LatinIME: Remove gesture preference if gesture lib is unavailable
 
 ====================
-     11-01-2016
+     11-20-2016
+====================
+
+
+   * packages/apps/CMParts/
+bc6560d cmparts: Remove noop fields when LED can't pulse
+
+   * packages/apps/Settings/
+33cee22 SimSettings: Disable entry for missing sim
+
+====================
+     11-19-2016
+====================
+
+
+   * build/
+0188b8f Revert "build: Dex-preopt boot image by default on userdebug"
+
+   * device/qcom/common/
+4b8412d qc: Fix makefiles
+
+   * frameworks/base/
+90dafea Revert "Revert "zygote: Allow device to append extra whitelisted paths""
+
+   * hardware/samsung/
+1c47466 power: Fix unused argument
+e143419 power: Simplify read_panel_brightness()
+
+   * packages/apps/Settings/
+c62dabd SimPreferenceDialog: Set onDismiss() listener to finish the activity
+
+   * packages/apps/Snap/
+a47fdba snap: Remove duplicate LOCAL_PRIVILEGED_MODULE
+
+   * packages/apps/Trebuchet/
+c39bccb Disabling widget debug
+
+====================
+     11-18-2016
+====================
+
+
+   * build/
+bd0529d build: Dex-preopt boot image by default on userdebug
+
+   * frameworks/base/
+7727635 data: sounds: add Timer alarm sound
+09553fa Fix unpinning on device with Navigation Bar
+7d73d6c Fix end call by pressing power button
+
+   * hardware/qcom/display/
+eaedadc display: Don't use gnu-oldstyle field designators
+
+   * hudson/
+ca46e4f hammerheadcaf: Add to cm-14.1 nightlies
+9e6c106 hudson: Move LG GPad 8.3 (v500) to cm-14.1
+8af0524 P024: ready for N
+
+   * packages/apps/Settings/
+6e0d4d1 Settings: use CMHW serial number
+e64341f Settings: update About screen device model fields
+6f3faea Fix device storage menu when using Adopted Storage
+5b7779c Settings: Make proximity wake string more accurate
+
+   * packages/services/Telecomm/
+bbf1d24 telecom: Ensure that we always update bluetooth in dsda case
+
+   * vendor/cm/
+5cec397 Clean up 3G config for Vietnamese network
+52592a4 cm: Update APNs
+
+====================
+     11-17-2016
+====================
+
+
+   * hudson/
+1c7469b shamu: I like the smell of nougat in the morning
+
+   * packages/apps/Settings/
+bfd65df Fix NPE when ejecting the portable storage
+
+   * packages/inputmethods/LatinIME/
+ed9724f LainIME: add unicode 9.0 chars
+
+====================
+     11-16-2016
+====================
+
+
+   * frameworks/opt/telephony/
+94ae0fe GsmCdmaPhone: Return dummy ICCID serial for NV sub
+
+   * hudson/
+f20a8ac Move all stable/cm-13.0-* to Weekly
+5dd5b95 Add 14.1 translations to Jenkins job
+
+   * packages/apps/Bluetooth/
+168ecad bluetooth: Prevent null pointer crashes in A2DP initNative
+
+   * vendor/cm/
+aae6c62 config: common: Remove obsolete RomManager props
+
+====================
+     11-15-2016
+====================
+
+
+   * frameworks/base/
+0f6728d Base: fix the default icon for lockscreen shortcuts customisation
+4c1bc4b SystemUI: Fix volume panel inconsistencies
+1ed703f Include material ringtones and notification sounds
+a264b5a Sounds: Cleanup duplicate ringtones/alarms
+14c4c04 Revert "zygote: Allow device to append extra whitelisted paths"
+
+   * hudson/
+1be5f6e deb: ready to rumble - N
+8026228 bacon: nutella time
+
+   * packages/apps/Dialer/
+30c87de Clean up volume boost button logic.
+a2e2866 InCallUI: Use proper sub IDs
+
+   * packages/apps/Settings/
+5a0c426 settings: Move Emergency broadcasts to Wireless & networks
+99f52ca Settings : Improve app info screen
+bff49d9 Settings: add marquee to Device administrators screen
+fbb687e Settings: Add Cyanogenmod legal info
+11a57cb Settings: Use correct icon for ring volume
+
+   * packages/services/Telecomm/
+b115d74 Telecom: Ues proper sub IDs
+
+   * system/core/
+dc67229 init: Allow devices to opt-out of fsck'ing on power off
+db04cb7 healthd: allow custom charger images
+
+   * vendor/cm/
+11af61a apns: Remove loop and bpl mobile
+be2fca1 apns: Add Reliance Jio apn's
+
+====================
+     11-14-2016
+====================
+
+
+   * build/
+c84c6b6 core: Remove more color leftovers
+7a6a13b core: Remove color leftover
+
+   * external/yaffs2/
+fd7903a mkyaffs2image: fix stats for cache image
+
+   * frameworks/av/
+c9f3ed9 OMXNodeInstance: More legacy HAL1 fixes after merge of android-7.1.0_r7
+
+   * frameworks/base/
+72d4dcf Add back button to navbar tuner
+
+   * frameworks/opt/net/wifi/
+a5190f3 WifiQualifiedNetworkSelector: turn down the logspam
+
+   * hudson/
+9fb5cdb hudson: Move Xperia T/TX/V (mint/hayabusa/tsubasa) to cm-14.1
+e641078 hudson: Move Xperia SP (huashan) to cm-14.1
+1f13276 Move osprey to cm-14.1
+822d41a hudson: Ship 14.1 for op2
+c818797 hudson: acclaim gets N
+
+   * packages/apps/CellBroadcastReceiver/
+c6e50b4 cellbroadcastreceiver: Display channel 50 and 60 options by default
+
+   * packages/apps/Screencast/
+8a6711c screencast: Fix the recording timer notification
+
+   * packages/apps/Trebuchet/
+444e057 [DO NOT MERGE] Address some spacing issues in all apps related to new support library
+a77e9b7 Adding small padding between icons in AllApps.
+b0111a5 Compressing Launcher resources.
+
+   * packages/inputmethods/LatinIME/
+c356a1d LatinIME: disable sound on keypress on all devices by default
+
+   * system/core/
+f422f00 init: Fix possible open file pointer
+
+   * vendor/cm/
+2a5d907 qcom_target: Remove unused support for CAF manifests
+367802b qcom_target: Remove unused sony HAL support
+3681177 qcom_target: Restore original AOSP hardware/qcom/media pathmap
+aa92150 config: Add missing \ in bootanimation pick
+
+====================
+     11-13-2016
+====================
+
+
+   * external/fsck_msdos/
+674d58f fsck_msdos: Don't use Snapdragon LLVM
+
+   * frameworks/base/
+8a059b0 Handle onOptionsItemSelected for TunerActivity
+
+   * hudson/
+3f30679 flo: 14.1 time!
+0c4c946 hudson: Promote klteduos to cm-14.1
+
+   * packages/services/Telecomm/
+1d532d3 Telecomm: Forward port phone_type switch support
+
+   * packages/services/Telephony/
+929b3e7 Revert "Add support for DSDA"
+
+   * system/core/
+422f671 healthd: dock battery
+deda0d8 healthd: Detect power supply type for all charger devices
+dde613d Revert "healthd: dock battery"
+
+====================
+     11-12-2016
 ====================
 
 
    * cmu-api/
-6b0dbc6 celox: 10-31-16
+9a35d7c celox: 11-11-16
 
-   * system/sepolicy/
-11db560 sepolicy: allow sdcard access via sdcardfs
+   * frameworks/av/
+c1382b7 OMXNodeInstance: Fix legacy HAL1 after merge of android-7.1.0_r7
+
+   * hudson/
+71d6621 Move kltechn to cm-14.1
+9903729 Fix typo on unified Tab2 pictures
+6754a5f Add t6vzw to cm-13.0.
+66d62cd Move devices on cm-13.0 back to daily
+
+   * packages/apps/Camera2/
+35a25ff camera2: Fix NPE
+
+   * packages/apps/Contacts/
+45d4272 Fix NPE when 'merge contacts' encounters unknown names.
 
