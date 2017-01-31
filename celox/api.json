@@ -1,26 +1,23 @@
 {
- "id": null,
  "result": [
     {
-        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=22542&task=get",
-        "timestamp": "1484168839",
+        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=22946&task=get",
+        "timestamp": "1485846806",
         "api_level": "25",
-        "md5sum": "1e4b56fbcf43ba2a92bad0387bd3bb70",
-        "filename": "lineage-14.1-20170111-UNOFFICIAL-celox.zip",
+        "md5sum": "6c9cf57846c2241b5a9847db284575c2",
+        "filename": "lineage-14.1-20170131-UNOFFICIAL-celox.zip",
         "channel": "NIGHTLY",
         "changes": "https://raw.githubusercontent.com/bryan2894/CMUpdater-API/cm-14.1/celox/changelog.txt",
         "incremental": ""
-    },
-    {
-        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=22145&task=get",
-        "timestamp": "1481997388",
-        "api_level": "25",
-        "md5sum": "b43ef802d4b1d82b372b80e5799d5bcf",
-        "filename": "cm-14.1-20161217-UNOFFICIAL-celox.zip",
-        "channel": "NIGHTLY",
-        "changes": "https://raw.githubusercontent.com/bryan2894/CMUpdater-API/cm-14.1/celox/changelog.txt",
-        "incremental": ""
-    },
+    }
   ],
- "error": null
+ "response": [
+    {
+        "datetime": 1485846806,
+        "filename": "lineage-14.1-20170131-UNOFFICIAL-celox.zip",
+        "romtype": "nightly",
+        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=22946&task=get",
+        "version": "14.1"
+    }
+  ]
 }
