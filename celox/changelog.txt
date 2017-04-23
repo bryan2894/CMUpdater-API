@@ -1,1437 +1,775 @@
 ====================
-     04-08-2017
-====================
-
-
-   * device/samsung/msm8660-common/
-9a4a593 msm8660RIL: bring back handleNitzTimeReceived
-
-   * kernel/samsung/msm8660-common/
-932212a defconfig: enable CONFIG_INET_DIAG_DESTROY
-e53afa4 net: tcp: deal with listen sockets properly in tcp_abort.
-f4feb19 net: diag: Support destroying TCP sockets.
-d441c9a net: diag: support v4mapped sockets in inet_diag_find_one_icsk()
-c471245 net: diag: Support SOCK_DESTROY for inet sockets.
-e8baa06 net: diag: split inet_diag_dump_one_icsk into two
-34931ad inet_diag: Rename inet_diag_req_compat into inet_diag_req
-294ca02 inet_diag: Rename inet_diag_req into inet_diag_req_v2
-0c8336c inet_diag: Add the SKMEMINFO extension
-8d200f8 sock_diag: Generalize requests cookies managements
-54c169d sock_diag: Fix module netlink aliases
-8e16d95 inet_diag: Generalize inet_diag dump and get_exact calls
-1ba51ea inet_diag: Introduce the inet socket dumping routine
-c58b2f5 inet_diag: Introduce the byte-code run on an inet socket
-c7caf25 inet_diag: Split inet_diag_get_exact into parts
-c17078f inet_diag: Split inet_diag_get_exact into parts
-d316d81 inet_diag: Export inet diag cookie checking routine
-594de4c inet_diag: Reduce the number of args for bytecode run routine
-58f5a16 inet_diag: Remove indirect sizeof from inet diag handlers
-ceb2a18 sock_diag: Move the sock_ code to net/core/
-f9e74fa inet_diag: Cleanup type2proto last user
-901683b inet_diag: Introduce socket family checks
-7a81f3d inet_diag: Switch the _dump to work with new header
-371378f inet_diag: Switch the _get_exact to work with new header
-af29826 inet_diag: Introduce new inet_diag_req header
-2fa5029 sock_diag: Initial skeleton
-5f4d3e0 inet_diag: Switch from _GETSOCK to IPPROTO_ numbers
-f563d47 inet_diag: Move byte-code finding up the call-stack
-f1cec4e sock_diag: Introduce new message type
-fb3ba36 inet_diag: Partly rename inet_ to sock_
-ad13e54 net-netlink: fix diag to export IPv4 tos for dual-stack IPv6 sockets
-febedab net-netlink: Add a new attribute to expose TCLASS values via netlink
-bf93b96 ipv6: do not clear pinet6 field
-4eb1eaa net-netlink: Add a new attribute to expose TOS values via netlink
-6134e23 [media] media-device: fix infoleak in ioctl media_enum_entities()
-4c0e1b1 mac80211: fix AP powersave TX vs. wakeup race
-2bb8115 msm-camera: Addressing possible overflow conditions
-4cc171b ALSA: control: Make sure that id->index does not overflow
-65a0397 udp: properly support MSG_PEEK with truncated buffers
-
-====================
-     04-07-2017
+     04-23-2017
 ====================
 
 
    * build/
-37c399e add dirty and novo
-c8b4a0f OMS-N: adb shell command to access OverlayManagerService
+42f0dc9e3 add dirty and novo
+89a03cc70 OMS-N: adb shell command to access OverlayManagerService
 
-   * build/kati/
-d957241 [C++] Ignore white space around $(call) function name
+   * hudson/
+2706fa9 hudson: Rebalance cm-14.1 builds
+50f1d4f hudson: Bring back D2
+6c4cb52 hudson: Re-add hiae
 
-   * device/samsung/celox/
-9457842 Revert "celox: set custom dalvik heap properties"
+   * lineage/jenkins/
+2706fa9 hudson: Rebalance cm-14.1 builds
+50f1d4f hudson: Bring back D2
+6c4cb52 hudson: Re-add hiae
 
-   * frameworks/base/
-9d1ebd7 Add signature Spoofing permission
-c5d0de0 Hold "volume up" during boot to disable all overlays
-9701f47 Themes: Expose Keyboard Shortcuts Dialog
-3c67657 Expose Screenshot flash and background colors
-09e4d8d ThemeSafety: Introduce App Crash Intent
-752499e Revert "Add a protected broadcast for Masquerade events"
-f162094 base: Force authorize all calling packages by Masquerade (2/3)
-083fe7d OMS: Add hide annotation to MODIFY_OVERLAYS permission
-53be403 OMS7: Rootless Security Update Preparation for March 2017
-5f86e91 Add a protected broadcast for Masquerade events
-6a09055 FWB: Give power dialogs own set of volume icons for themes
-d11c20e Notification tint: add optional findContrastColor algorithm for dark backgrounds
-c58c9ca OMS: StrictMode and files under /data/system/theme/
-89de502 Themes: Expose manifest styles for themes
-52dbc4b Themes: Expose Keyguard affordance circle background
-ec33ee0 Set external QS tiles tint mode to SRC_ATOP
-1e27a30 graphics: ADB "N" icon compatible with OMS7
-9e6419e Expose external qs tile tint color
-35b7cf7 doze: allow grayscale even if invert boolean is false
-27a2542 SystemUI: Expose switch bar title
-007d527 OMS: Introduce MODIFY_OVERLAYS permission for user apps
-fe257d1 Themes: Expose QS battery
-75d9f6e OMS7-N: ApplicationsState: add filter for Substratum icon overlays [1/2]
-20be10e OMS7-N: ApplicationsState: add filter for Substratum overlays [1/2]
-501c12d N-Extras: AudioService: Allow system effect sounds to be themed
-997d057 N-Extras: Add dynamic theme fonts support
-20403ad N-Extras: Add dynamic theme BootAnimation support
-0f3cd5d SystemUI: Use own drawables for QS expand icon
-a4eba1c OMS7 compatible 'Ambient notification inversion'
-d83593b Allow prevention of doze notification color inversion
-25fbb98 Notification dynamic colors bool compatible with OMS7
-9b29599 Notifications: Expose a bool to disable dynamic colors
-30d8e29 Themes: Expose various QuickSettings text colors
-1388e72 Allow custom alpha for notification shade bg color
-0ceaab2 SystemUI: Expose QS edit item decoration background color
-411e3a7 Themes: Allow Navbar ripple color to be themed
-19d324a Themes: Allow Permission Icons to be fully themed
-784323a Themes: Allow Immersive cling colors to be fully themed
-312529a Themes: Expose resolver hardcoded colors
-4c37407 OMS7-N: Implement multi-target enable/disable and disable-all [11/11]
-4403ae2 OMS7-N: Do not enforce code policy limiting overlay installation [10/11]
-d0621d6 OMS7-N: Persistence on boot through OverlayManagerServiceImpl [9/11]
-e5e359c OMS7-N: Disable Zygote preloaded drawables [8/11]
-11badbf OMS7-N: installd: add command 'rmidmap' [7/11]
-4702854 OMS7-N: Fix memory leak during idmap creation [6/11]
-2b97797 OMS7-N: idmap: suppress print for padded resources [5/11]
-abb9925 OMS7-N: Set EXTRA_REPLACING correctly in ACTION_PACKAGE_ADDED [4/11]
-bbc6a9d XOMS7-N: Integrate OverlayManagerService into framework [3/11]
-cf3ced6 OMS7-N: Introduce the OverlayManagerService [2/11]
-81d715c OMS7-N: Support tagging resources as OK to overlay [1/11]
-
-   * frameworks/native/
-0b33f8e OMS7-N: installd: add command 'rmidmap'
-
-   * hardware/qcom/audio-caf/msm8660/
-c12d968 hal: Ensure mic mute state updated before starting voice call
-0d077b2 hal: use consistent in call indication
-bc8f90c audio: use consistent in call indication
-368847d hal: fix to update voice call devices in apq8084
-8febc2c hal: add DSDA support on APQ targets
-
-   * kernel/samsung/msm8660-common/
-8b9b918 celox_defconfig: disable CONFIG_SYSVIPC
-93041f1 net/llc: avoid BUG_ON() in skb_orphan()
-3fa31fe sctp: deny peeloff operation on asocs with threads sleeping on it
-13b027e msm:pm: Fix for race condition of starting cpu1 when cpu0 in PC.
-d205dd7 tcp: avoid infinite loop in tcp_splice_read()
-7ab542f mac80211: fix fragmentation code, particularly for encryption
-3a8a36f qseecom: remove entry from qseecom_registered_app_list
-9c3702e Revert "qseecom: remove entry from qseecom_registered_app_list"
-000a193 ipc/shm: Fix shmat mmap nil-page protection
-550e633 sctp: avoid BUG_ON on sctp_wait_for_sndbuf
-d63ebd4 dccp: fix freeing skb too early for IPV6_RECVPKTINFO
-f0c0ad0 ALSA: pcm : Call kill_fasync() in stream lock
-824d102 ALSA: Remove transfer_ack_{begin,end} callbacks from struct snd_pcm_runtime
-d5c9a27 l2tp: fix racy SOCK_ZAPPED flag check in l2tp_ip{,6}_bind()
-a0d39f5 l2tp: fix oops in L2TP IP sockets for connect() AF_UNSPEC case
-d5516fb net: avoid signed overflows for SO_{SND|RCV}BUFFORCE
-1ae911d net: cleanups in sock_setsockopt()
-0871eb5 ring-buffer: Prevent overflow of size in ring_buffer_resize()
-1b6db4c qseecom: remove entry from qseecom_registered_app_list
-c309f00 ARM: 8027/1: fix do_div() bug in big-endian systems
-7dd08fb msm: crypto: Fix integer over flow check in qce driver
-05e39a3 fbdev: color map copying bounds checking
-6cac3b1 Squashed merge of %p -> %pK fixes
-466821f net: ping: check minimum size on ICMP header length
-e4d3cc9 ASoC: msm: lock read/write when add/free audio ion memory
-ab52777 BACKPORT: aio: mark AIO pseudo-fs noexec
-25d99bd7 ecryptfs: don't allow mmap when the lower fs doesn't support it
-5bffdc5 ext4: validate s_first_meta_bg at mount time
-77e6655 BACKPORT: msm: kgsl: Change %p to %pK in debug messages
-0e9aa49 BACKPORT: net: ipc_router: fix NULL pointer de-reference issue
-a22a11c sg_write()/bsg_write() is not fit to be called under KERNEL_DS
-f089399 isofs: Fix infinite looping over CE entries
-da9f4c5 mm: avoid setting up anonymous pages into file mapping
-
-   * packages/apps/CMUpdater/
-dabf4b8 CMUpdater: update server url for celox
-bcb08ea UpdateCheckService: remove appends to server URI
-5791375 CMUpdater: Specify request method
-
-   * packages/apps/Contacts/
-fb5229a Themes: Expose hardcoded layout and styles colors
-
-   * packages/apps/ContactsCommon/
-b6282ca Themes: Define back arrow tint color for themes
-2791602 Themes: Expose hardcoded contact tile text colors
-
-   * packages/apps/Dialer/
-a0ea1b5 Themes: InCallUI dialpad digits color
-811b2f4 Themes: Separate background color from text color
-
-   * packages/apps/ExactCalculator/
-4440dd3 Themes: Expose all elevations
-12e31e5 Themes: Expose hard coded background in java
-
-   * packages/apps/PackageInstaller/
-b48af1b PackageInstaller: Add tint mode to icons
-
-   * packages/apps/Settings/
-446a0b2 Development: Allow all Masquerade calling packages for debugging (3/3)
-91e3989 Settings: Guard against themes without colorAccent defined
-8e16ba0 Settings: Expose "ALL" hardcoded and @android colors
-9728d3b Settings: Expose styles in the manifest for themes
-9841280 Settings: Expose and add tint mode to custom icons
-e40794d Set external settings icon tint mode to SRC_ATOP
-ce01f8d Settings: Expose bluetooth pin confirm dialog text colors
-3bb4833 Expose switchbar background color
-ddcb48d Expose dashboard category padding bottom
-7d37721 Expose color for external settings icons
-830b84e Hide the "show/hide overlays" when no overlay installed
-884b3d9 OMS7-N: Apps: show/hide Substratum icon overlays [2/2]
-e46d49c Exclude overlays from the app counter
-0e9ca72 OMS7-N: Apps: show/hide Substratum overlays [2/2]
-44107c3 Settings: Expose LinearColorBar default colors
-3cf159d Settings: Expose storage icon colors
-3a9d8ae Settings: Expose gesture settings switchbar
-fb7edb0 Settings: Expose storage summary text
-63143f1 Settings: Expose condition card colors
-0270565 Settings: Expose dashboard category and tile color
-
-   * system/core/
-47d16e5 Create "theme extras" directory
-
-   * system/sepolicy/
-55031b3 Welcome to Theme Interfacer! [2/2]
-bdf1922 sepolicy: Redo masquerade rules
-e4b4eeb sepolicy: Fix application of bootanimation
-eeafedd sepolicy: allow masquerade to read and write theme assets
-49be77f sepolicy: rename masquerade domain and allow JobService in system_server
-736c663 initial policy edits for masquerade to operate rootless
-b29ce4d sepolicy: fix themed sounds
-350a514 sepolicy: fix themed boot animation
-dace7a9 Introduce sepolicy exceptions for theme assets
-bcf0ba2 OMS7-N: Add service 'overlay' to service_contexts
-
-   * vendor/cm/
-9fd72d4 Revert "YOLO"
-02687c1 Revert "Br0Zip"
-22b9712 OMS: Add ThemeInterfacer for Substratum OMS themes
+   * lineage/wiki/
+b34cf70 wiki: Make d2 info consistent
+1152d87 wiki: Update information for d2*
 
 ====================
-     04-06-2017
+     04-22-2017
 ====================
 
 
    * device/samsung/msm8660-common/
-5456c87 msm8660: Fix restart freezing by adding a shutdown timeout to system.prop
-d59d8f2 msm8660: enable more lowram tweaks
-e944333 msm8660: disable fluence in speaker mode
-78dd48a Revert "msm8660: set QAN elements to 5"
+81dba5c50 msm8660: Fix access to SIM-contacts
+f8393eb41 msm8660: switch back to prebuilt Snap
 
-   * hardware/qcom/audio-caf/msm8660/
-821590b msm8660: change return type for legacy functions
+   * external/stagefright-plugins/
+3846013 Revert "codecs: Disable AC3/EAC3"
+
+   * hudson/
+be3d269 Move serrano devices to 14.1
 
    * kernel/samsung/msm8660-common/
-e79b951 ASoc: msm: in_count should be reset in capture prepare
+5b1b69f777d1 board-msm8x60_celox: increase ION mm heap by 16MB
+
+   * lineage/jenkins/
+be3d269 Move serrano devices to 14.1
+
+   * lineage/updater/
+0967e90 Cache device updates
+
+   * lineage/wiki/
+e6bf76d wiki: Move serrano variants to 14.1
+21ec9ad devices: Add serranodsdd
 
 ====================
-     04-05-2017
+     04-21-2017
+====================
+
+
+   * build/kati/
+97dc0b2 [C++] Ignore white space around $(call) function name
+
+   * device/samsung/msm8660-common/
+cb8a42095 msm8660: build macloader
+3af95f4be msm8660: add more permissions for PowerHAL
+
+   * frameworks/base/
+d87a9abd275 Add signature Spoofing permission
+f9219f8d73f Hold "volume up" during boot to disable all overlays
+068fad4c473 Themes: Expose Keyboard Shortcuts Dialog
+38850a4f733 Expose Screenshot flash and background colors
+9693bbaac9e ThemeSafety: Introduce App Crash Intent
+174c54d012c Revert "Add a protected broadcast for Masquerade events"
+d98106158e2 base: Force authorize all calling packages by Masquerade (2/3)
+fb09f7dbed2 OMS: Add hide annotation to MODIFY_OVERLAYS permission
+b998a0b2cfd OMS7: Rootless Security Update Preparation for March 2017
+6d98985c372 Add a protected broadcast for Masquerade events
+278fbcb9787 FWB: Give power dialogs own set of volume icons for themes
+de54af89331 Notification tint: add optional findContrastColor algorithm for dark backgrounds
+0697758ce63 OMS: StrictMode and files under /data/system/theme/
+7758345e9cb Themes: Expose manifest styles for themes
+1a124aebde2 Themes: Expose Keyguard affordance circle background
+9999999f041 Set external QS tiles tint mode to SRC_ATOP
+eeb04721988 graphics: ADB "N" icon compatible with OMS7
+6d42a04f4b7 Expose external qs tile tint color
+5563e37bec5 doze: allow grayscale even if invert boolean is false
+396da3a5e53 SystemUI: Expose switch bar title
+02217ecd4ff OMS: Introduce MODIFY_OVERLAYS permission for user apps
+8125659fc62 Themes: Expose QS battery
+3a1a8a0a154 OMS7-N: ApplicationsState: add filter for Substratum icon overlays [1/2]
+a81b7010fa8 OMS7-N: ApplicationsState: add filter for Substratum overlays [1/2]
+e399f8c5d85 N-Extras: AudioService: Allow system effect sounds to be themed
+f828878c32b N-Extras: Add dynamic theme fonts support
+8de965fa8a4 N-Extras: Add dynamic theme BootAnimation support
+89c17ac19ef SystemUI: Use own drawables for QS expand icon
+af8a82a6c86 OMS7 compatible 'Ambient notification inversion'
+f51540c761b Allow prevention of doze notification color inversion
+6c48f602436 Notification dynamic colors bool compatible with OMS7
+98d53e8daff Notifications: Expose a bool to disable dynamic colors
+cf883a5bc49 Themes: Expose various QuickSettings text colors
+29e91a33bce Allow custom alpha for notification shade bg color
+18964400a97 SystemUI: Expose QS edit item decoration background color
+a32a0745e20 Themes: Allow Navbar ripple color to be themed
+4f075dc8306 Themes: Allow Permission Icons to be fully themed
+720d6a11ba5 Themes: Allow Immersive cling colors to be fully themed
+a8002b8de72 Themes: Expose resolver hardcoded colors
+2a1d2589d8c OMS7-N: Implement multi-target enable/disable and disable-all [11/11]
+e018d6dab34 OMS7-N: Do not enforce code policy limiting overlay installation [10/11]
+d3c67113ac1 OMS7-N: Persistence on boot through OverlayManagerServiceImpl [9/11]
+9bce5be3deb OMS7-N: Disable Zygote preloaded drawables [8/11]
+ba3f4d72df7 OMS7-N: installd: add command 'rmidmap' [7/11]
+049fbe9a6ef OMS7-N: Fix memory leak during idmap creation [6/11]
+c1573b209fc OMS7-N: idmap: suppress print for padded resources [5/11]
+9a72f01e177 OMS7-N: Set EXTRA_REPLACING correctly in ACTION_PACKAGE_ADDED [4/11]
+3a975604dac XOMS7-N: Integrate OverlayManagerService into framework [3/11]
+7a6ed05f128 OMS7-N: Introduce the OverlayManagerService [2/11]
+dbe269d8932 OMS7-N: Support tagging resources as OK to overlay [1/11]
+fca6082d959 Automatic translation import
+
+   * frameworks/native/
+1c2e8c425 OMS7-N: installd: add command 'rmidmap'
+
+   * hardware/qcom/fm/
+c9258ae Automatic translation import
+
+   * hardware/qcom/media-caf/msm8660/
+5c73bb24 Merge branch 'cm-14.1-caf-8960' of https://github.com/LineageOS/android_hardware_qcom_media into cm-14.1-caf-8660
+
+   * hardware/samsung/
+1961bdb Automatic translation import
+
+   * hudson/
+8b6cdea hudson: Add Moto Z Play (addison)
+
+   * kernel/samsung/msm8660-common/
+b53d7a9e0cc6 board-msm8x60_celox: remove camera heap
+38b3106ddad0 ion: add hack for IOMMU camera
+
+   * lineage/jenkins/
+8b6cdea hudson: Add Moto Z Play (addison)
+
+   * lineage/mirror/
+348071b Updated to 21-Apr-17 06:30:43 UTC
+
+   * lineage/wiki/
+f11c34e Fix typo about addison
+dcf908f devices: Minor corrections
+accfcba devices: Add Moto Z Play (addison)
+bde495e wiki: Cosmetic changes
+623b569 wiki: build: Filter unsupported devices
+
+   * packages/apps/AudioFX/
+c22088c Automatic translation import
+
+   * packages/apps/Bluetooth/
+f5679297 Automatic translation import
+
+   * packages/apps/Browser/
+daa40d11 Automatic translation import
+
+   * packages/apps/CMBugReport/
+8a4fb41 Automatic translation import
+
+   * packages/apps/CMParts/
+6c08995 Automatic translation import
+
+   * packages/apps/Calendar/
+cabf3f55 Automatic translation import
+
+   * packages/apps/Camera2/
+19537ec3e Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver/
+c5318ec Automatic translation import
+
+   * packages/apps/Contacts/
+9597ccc5b Themes: Expose hardcoded layout and styles colors
+0d6c369b6 Automatic translation import
+
+   * packages/apps/ContactsCommon/
+889edee6 Themes: Define back arrow tint color for themes
+40ce760f Themes: Expose hardcoded contact tile text colors
+2b22e189 Automatic translation import
+
+   * packages/apps/CustomTiles/
+39732b7 Automatic translation import
+
+   * packages/apps/DeskClock/
+9e20cdf3 Automatic translation import
+
+   * packages/apps/Dialer/
+f08fa452f Themes: InCallUI dialpad digits color
+014ead19b Themes: Separate background color from text color
+4b88202c6 Automatic translation import
+
+   * packages/apps/Eleven/
+f4cab90 Automatic translation import
+
+   * packages/apps/Email/
+7c7d90c33 Automatic translation import
+
+   * packages/apps/EmergencyInfo/
+985550c Automatic translation import
+
+   * packages/apps/ExactCalculator/
+1b69efc Themes: Expose all elevations
+aa548da Themes: Expose hard coded background in java
+
+   * packages/apps/FMRadio/
+f0d11a0 Automatic translation import
+
+   * packages/apps/FlipFlap/
+52090f5 Automatic translation import
+
+   * packages/apps/Gallery2/
+fe9ee1225 Automatic translation import
+
+   * packages/apps/Gello/
+2cbe2dde Automatic translation import
+
+   * packages/apps/LockClock/
+552041b Automatic translation import
+
+   * packages/apps/Messaging/
+b3fc116 Automatic translation import
+
+   * packages/apps/PackageInstaller/
+5498a063 PackageInstaller: Add tint mode to icons
+
+   * packages/apps/PhoneCommon/
+df09655 Automatic translation import
+
+   * packages/apps/Profiles/
+5f9b3b1 Automatic translation import
+
+   * packages/apps/Recorder/
+9ab0326 Automatic translation import
+
+   * packages/apps/Settings/
+3d5666d90b Development: Allow all Masquerade calling packages for debugging (3/3)
+9197dee98e Settings: Guard against themes without colorAccent defined
+c171d22fea Settings: Expose "ALL" hardcoded and @android colors
+f50c1161ea Settings: Expose styles in the manifest for themes
+7597131023 Settings: Expose and add tint mode to custom icons
+fed1b444fe Set external settings icon tint mode to SRC_ATOP
+2897b68f98 Settings: Expose bluetooth pin confirm dialog text colors
+cb272fa023 Expose switchbar background color
+f03c2d68a6 Expose dashboard category padding bottom
+b9ff734972 Expose color for external settings icons
+69bbaf7d96 Hide the "show/hide overlays" when no overlay installed
+07b5a076bd OMS7-N: Apps: show/hide Substratum icon overlays [2/2]
+00ff96569a Exclude overlays from the app counter
+b35fef2137 OMS7-N: Apps: show/hide Substratum overlays [2/2]
+6520440184 Settings: Expose LinearColorBar default colors
+d9b1e37726 Settings: Expose storage icon colors
+06c086e222 Settings: Expose gesture settings switchbar
+fd4d43ae5c Settings: Expose storage summary text
+971dc02cd8 Settings: Expose condition card colors
+6c243339c6 Settings: Expose dashboard category and tile color
+a9fac17f81 Automatic translation import
+
+   * packages/apps/SetupWizard/
+e8e7a54 Automatic translation import
+
+   * packages/apps/Snap/
+58fa0bd2f Automatic translation import
+
+   * packages/apps/Stk/
+726621f Automatic translation import
+
+   * packages/apps/Terminal/
+b3167ed Automatic translation import
+
+   * packages/apps/ThemeChooser/
+3fa04c4 Automatic translation import
+
+   * packages/apps/Trebuchet/
+aed0d6455 Automatic translation import
+
+   * packages/apps/TvSettings/
+86a50559 Automatic translation import
+
+   * packages/apps/UnifiedEmail/
+fdb59c739 Automatic translation import
+
+   * packages/inputmethods/LatinIME/
+e443900ae Automatic translation import
+
+   * packages/providers/ContactsProvider/
+31514963 Automatic translation import
+
+   * packages/providers/DataUsageProvider/
+16bd17e Automatic translation import
+
+   * packages/providers/DownloadProvider/
+6b65be9 Automatic translation import
+
+   * packages/providers/ThemesProvider/
+b8d4369 Automatic translation import
+
+   * packages/providers/WeatherProvider/
+187ce37 Automatic translation import
+
+   * packages/resources/devicesettings/
+dccf644 Automatic translation import
+
+   * packages/services/CMAudioService/
+f9a30eb Automatic translation import
+
+   * packages/services/LiveLockScreenService/
+5d6b6ee Automatic translation import
+
+   * packages/services/Telecomm/
+99aef234 Automatic translation import
+
+   * packages/services/Telephony/
+85eeeb344 Automatic translation import
+
+   * packages/services/ThemeManagerService/
+2f285e8 Automatic translation import
+
+   * packages/services/WeatherService/
+3049526 Automatic translation import
+
+   * system/core/
+917cafd8a Create "theme extras" directory
+
+   * system/sepolicy/
+5a01702 Welcome to Theme Interfacer! [2/2]
+dac13a5 sepolicy: Redo masquerade rules
+ddf5035 sepolicy: Fix application of bootanimation
+e0bf824 sepolicy: allow masquerade to read and write theme assets
+846cd69 sepolicy: rename masquerade domain and allow JobService in system_server
+ea66402 initial policy edits for masquerade to operate rootless
+8dd8dc1 sepolicy: fix themed sounds
+66ec253 sepolicy: fix themed boot animation
+77c341b Introduce sepolicy exceptions for theme assets
+6cd6dfe OMS7-N: Add service 'overlay' to service_contexts
+
+   * vendor/cm/
+1f8ca690 OMS: Add ThemeInterfacer for Substratum OMS themes
+
+   * vendor/cmsdk/
+1908152 Automatic translation import
+
+   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
+125dd91 Automatic translation import
+
+   * vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
+d0d6665 Automatic translation import
+
+   * vendor/samsung/celox/
+bb901d4 celox: egl: Stop advertising ES3 context support
+26d472b Revert "Revert "celox: Update Adreno blobs""
+
+====================
+     04-20-2017
+====================
+
+
+   * device/samsung/msm8660-common/
+984c5222a power: Make power profiles more performance oriented
+5cabd9599 power: set additional nodes for interactive gov
+9aa69887a power: Optimise for power on video encode hints
+177218554 camera: Implement power hints for HAL
+f25106878 power: handle additional hints and interactive states
+
+   * hardware/qcom/audio-caf/msm8916/
+41cd40d05 Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.15' into cm-14.1-caf-8916
+
+   * hardware/qcom/audio-caf/msm8994/
+ce39c3066 Merge remote-tracking branch 'caf/LA.BF64.1.2.3_rb1.12' into cm-14.1-caf-8994
+
+   * hardware/qcom/display-caf/msm8994/
+434068f62 Fix duplicate copy file rules
+
+   * hardware/qcom/media-caf/msm8994/
+5f3d10543 Merge remote-tracking branch 'caf/LA.BF64.1.2.3_rb1.12' into cm-14.1-caf-8994
+
+   * hudson/
+de93623 hudson: Remove klteusc from build roster
+
+   * kernel/samsung/msm8660-common/
+6214d3ebf231 defconfig: set ondemand as default gov
+24c2488e9881 cpu_input_boost: Implement "boostpulse" feature
+
+   * lineage/jenkins/
+de93623 hudson: Remove klteusc from build roster
+
+   * lineage/wiki/
+e32db64 devices: sony: Fix download_boot informations for fastboot
+b9246f6 devices: Reflect merge of klteusc and kltevzw into klte
+
+   * vendor/cm/
+5b33c6c1 Add target to make a flashable su addon
+
+====================
+     04-19-2017
+====================
+
+
+   * device/samsung/celox/
+b5f6ac0 init: set model orientation
+580f4c0 rootdir: cleanup usb modes
+46b3ec6 celox: read device model from bootloader partition
+
+   * device/samsung/msm8660-common/
+6002ce289 msm8660: label sbl1 block device
+db451a6f0 msm8660: add support for SuperSU systemless root
+
+   * external/boringssl/
+84b7017 Make CRYPTO_is_NEON_capable aware of the buggy CPU.
+7609007 Don't set a default armcap state in dynamic armcap modes.
+733592a Rewrite ARM feature detection.
+d50af31 Remove CRYPTO_set_NEON_functional.
+
+   * frameworks/base/
+1cd61103221 SystemUI:Notification bar custom notification display problems
+e0eb83c34d0 SystemUI:Bluetooth can't be turn off
+57e4bf7aecd BT: Update wait function in ManagerService to handle  BLE states
+e5b82e0b494 frameworks/base: Fix password/PIN/pattern update issue
+357c5168fa3 SystemUI: Fix QSTileHost exception
+cc5b481c5af SystemUI: [RJIL new function] AutoBrightness
+dc364ad5d50 SystemUI: Fix SystemUI ANR
+
+   * kernel/samsung/msm8660-common/
+906d690d5530 cpu_input_boost: Don't sleep in atomic context for continuous boosts
+9a1053cd5ce3 cpu_input_boost: Improve efficiency when there is constant input
+3d0f3cbadc3a cpu_input_boost: Give fb_boost_nb the highest priority
+93f3a2468572 k3dh: create sysfs entry for device model orientation
+
+   * lineage/mirror/
+c30b8cb Updated to 18-Apr-17 21:01:51 UTC
+
+   * lineage/wiki/
+a323228 wiki: template: Add TA notice for Sony devices
+a0a269d wiki: Exclude "Contributing using [git|repo]" from search
+7bcc556 devices: Update unsupported warning message
+ad077f1 devices: Set 'channel' field on all devices
+9860c58 devices: Hide LineageOS Info in case of unsupported devices
+b2baf12 wiki: Properly filter "get LineageOS"
+17aa89b Add maintainers back to d2
+6d08d65 wiki: Show download link based on maintainers
+
+====================
+     04-18-2017
+====================
+
+
+   * android/
+3df7776 manifest: Track our external/libchrome
+
+   * external/libchrome/
+dc9036a Disable all NEON in BoringSSL if has_broken_neon is set.
+
+   * lineage/crowdin/
+ce3a685 config: cm-14.1: Add plurals.xml to CMParts
+
+   * lineage/website/
+20f5170 Last couple of weeks at LineageOS (W/C 3rd April)
+
+   * lineage/wiki/
+b7f0ca6 contributors: Update Wiki Editors list
+aaec324 devices: Add myself to bacon, ham, kipper
+
+   * system/extras/
+b5332df Update verity_verifier from master branch
+
+====================
+     04-17-2017
+====================
+
+
+   * device/samsung/msm8660-common/
+b61fa70ac Enable delay service restart
+ff27e7416 msm8660: update dalvik props
+df4759756 msm8660: re-add display props
+32124e089 Revert "msm8660: enable more lowram tweaks"
+
+   * hardware/qcom/display-caf/msm8660/
+a5d62fb Merge branch 'cm-14.1-caf-8960' of https://github.com/LineageOS/android_hardware_qcom_display into cm-14.1-caf-8660
+
+   * lineage/wiki/
+9918dfa devices: some minor corrections / additions
+
+   * system/extras/
+196ed2f verity: Include libcrypto_utils_static
+252fe23 Revert "Revert "Switch to BoringSSL for crypto.""
+442b784 Revert "Switch to BoringSSL for crypto."
+
+====================
+     04-16-2017
+====================
+
+
+   * lineage/wiki/
+15a7050 devices: Add supported models for Motorola devices.
+5b8e8ac wiki: Remove Github Pages mention
+0ea8140 devices: Update info for bq devices
+
+====================
+     04-15-2017
+====================
+
+
+   * frameworks/base/
+bdf823ed22a fingerprint: notify client when cancelling succeeded
+
+   * frameworks/opt/net/wifi/
+05213b97 Disqualify non-preferred band for both 2.4 and 5GHz
+c571e21d Load the correct Wifi Saturation Threshold by Band
+
+   * lineage/wiki/
+246dc02 devices: add lg l90 (w7)
+
+   * system/bt/
+d17396c2 bt: fix build for non-BLE after the 7.1.2 merge
+
+====================
+     04-14-2017
+====================
+
+
+   * build/
+5bcb8b7a1 build: fix verity generation
+
+   * frameworks/base/
+dbfbf86d6df Various fixes and cleanups after 7.1.2 merge
+d597cd5a871 Zygote: Fix GL preload property evaluation
+
+   * hardware/qcom/audio-caf/msm8994/
+51b5ae4fd Merge AU_LINUX_ANDROID_LA.BF64.1.2.3_RB1.07.01.01.258.022 on remote branch
+
+   * hardware/qcom/audio/default/
+262763954 msm8960: define HFP_ASM_RX_TX 24
+
+   * lineage/wiki/
+dda1c6b wiki: import gts210 family, ham, i9305, n51xx
+d42c3c6 wiki: Add essentials for making a device official
+
+====================
+     04-13-2017
 ====================
 
 
    * frameworks/av/
-eb594c4 Revert "Revert "mediacodec: minijail: Enable exporting of policy files""
+4a9859015 stagefright: Fix SurfaceMediaSource buffer search condition when buffer return
 
    * frameworks/base/
-9d85a42 Fix permission description string for DE.
-
-   * hardware/samsung/
-5781c8e power: Remove unused variables
-e37aedd lights: Put back fd checks before closing
-
-   * hudson/
-c0e379b Yu can have nougat
-a2dca2c hudson: Hima family to Nougat
-
-   * lineage/jenkins/
-c0e379b Yu can have nougat
-a2dca2c hudson: Hima family to Nougat
-
-   * lineage/mirror/
-be5da0c mirror: Add some nvidia repositories
-
-   * lineage/website/
-03ed1ad www: Fix typo
-eaffeb2 www: Fix dodgy markdown in latest post
-6398c79 Bitcoin link
-
-   * lineage/wiki/
-e233e39 wiki: Contributors: Hide non-official devices
-0da3d1c devices: Add Galaxy Note 2 LTE and Korean variants
-
-====================
-     04-04-2017
-====================
-
-
-   * device/samsung/celox/
-5c5ef3e celox: Enable TARGET_BOOTANIMATION_HALF_RES
-
-   * hardware/ti/omap4/
-86ea9e8 omap4: add more common build properties
-368f365 omap4: define BOARD_CANT_REALLOCATE_OMX_BUFFERS
-cce4d95 omap4: camera: restore compatibility with older Android versions (< Android N)
-0254e40 omap4: define TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES
-7839bd6 camera: Use GBAllocator.allocate for N_MR1.
-3c75dc7 Revert "camera: switch to Gralloc.allocate and generate unique Id for allocation"
-c9d954d camera: Rename version_major/minor to the new, non-deprecated names.
-0f2b557 camera: clean up build when various OMAP_ENHANCEMENTs are disabled
-9cf111b Revert "hwc: publicly define omap specific usage flags"
-9a75172 seccomp: allow clock_nanosleep syscall
-3a17e59 Fix camera video recording on N.
-547e464 android-api: Add N_MR1 defines.
-c7d8882 camera: fix build for LP
-9843c81 android-api: Add LP_MR1 defines.
-ef46c42 Add DOMX syscalls to seccomp filter
-6c31b84 domx: Remove implicit libc shared library declarations.
-6fc761d domx: Overhaul omx_proxy_component makefile.
-0efd58f domx: for ion_alloc alloc flag must be (1 << ID) and not the ID
-3088f9e camera: for carveout alloc we must use ID OMAP_ION_HEAP_SECURE_INPUT
-16aca2a android-api: add N
-38636fa camera: fix build for KK
-6c5b8a8 libcorkscrew: only build for Lollipop and newer
-4cd6c92 camera: Init all members of camera_module_t to fix warnings.
-f439503 libtiutils: C++11 compat fix.
-97eba14 libstagefrighthw: Build with -Wall -Werror.
-5076f97 libI420colorconvert: Build with -Wall -Werror.
-2c59035 Make bltsville opt-in.
-072fa04 camera: Makefile overhaul.
-07c4577 Revert "camera: call camera CFLAGS should use CAMERAHAL_CFLAGS"
-06ce617 omap4: Set TARGET_FORCE_SCREENSHOT_CPU_PATH.
-d1f876f SGX-BIN: build: android: Don't override PLATFORM_VERSION if supplied
-
-   * lineage/website/
-ed0fe37 Last couple of weeks at LineageOS (W/C 20th March)
-
-   * lineage/wiki/
-ab81e01 wiki: Don't close <html> before the end
-f232716 wiki: Switch to relative links for favicons
-
-   * packages/apps/CMParts/
-9198d84 CMParts: Update quick QS pull-down summary for translation
-
-   * packages/apps/Snap/
-673547e CaptureUI: fix crash on setOrientation
-a8285ad Snap: Fix effect and picture program overlay buttons
-65aa6fd Always apply frame size reduction to panorama pictures
-9e8d919 Never ignore finger swipes in gallery mode
-b9da2b0 Fix record time sometimes not seen
-
-====================
-     04-03-2017
-====================
-
-
-   * device/samsung/celox/
-12db12c celox: include superuser
-
-   * frameworks/base/
-16c5153 Hotspot Tile: longclick should open Tethering settings
-91053a5 Fix Hotspot tile is shown on Guest user
-
-   * hardware/ti/omap4/
-eb70ea8 SGX-BIN: build: android: Add fallback PLATFORM_VERSION mechanism
-dbe532a board/init: Common PVR KM build target for reuse by devices
-492610c SGX-BIN: build/srvkm: Drop SGX core/version suffixes everywhere
-42c669c SGX-BIN: buildvars: Compile PVR KM with -fno-pic
-55bfee6 libpower: Avoid overwriting custom user frequencies.
-357aaac libpower: Initialize inited variable.
-5ae1155 libpower: Add optional support for API 0.3
-c55f2bb Add OMAP PowerHAL
-
-   * lineage/website/
-df48acf Fix broken markdown for April Fool's
-435e143 April Fools...brings out fools?
-
-   * lineage/wiki/
-ad91868 wiki: delete unneeded fonts
-128c533 wiki: index.md grammar and style
-
-   * packages/providers/MediaProvider/
-e0e756f New Material icon
-
-   * packages/services/Mms/
-de8277e Add Material icon & app label
-
-   * vendor/cm/
-29f3b57 roomservice: handle devices with underscores
-
-====================
-     04-02-2017
-====================
-
-
-   * frameworks/base/
-5c923f2 SettingsProvider: Update icon.
-
-   * hardware/samsung/
-235c298 lights_helper: I/O API cleanup
-d483dd7 audience: Cleanup write_int()
-658f447 audience: Use O_WRONLY flag for write_int()
-2036814 audience: Always log write_int() fails
-7052460 audience: Warn when we cannot handle the output device
-f9b8e83 power: Add POWER_HINT_DISABLE_TOUCH support
-
-   * lineage/stats/
-9836870 tribble-tracker: add LineageOS logo as favicon
-
-   * lineage/updater/
-be36539 fix check_builds cli command
-7463fdd Fix API 500 on requestfile
-0f222e8 Regenerate device_deps.json
-
-   * lineage/wiki/
-dd3cbd1 wiki: Add h8rift to Trusted Reviewers
-f737317 wiki: Devices page: Do it properly
-
-   * packages/apps/CustomTiles/
-a25d845 WakelockService: Refactor
-e4a5f65 Caffeine: Stop service if not enabled
-
-   * packages/providers/CalendarProvider/
-94029d1 New Material icon
-
-   * packages/providers/TelephonyProvider/
-059380f TelephonyProvider: Update icon to Material
-
-   * packages/services/Telephony/
-823aaaf Revert "Add support to launch call barring"
-8fa8274 Revert "CallFeatureSettings: Only show call barring option if QTI package installed"
-
-   * packages/wallpapers/LivePicker/
-bf06fdf New Material icon
-
-   * vendor/cm/
-dd4ee0c Br0Zip
-430f569 YOLO
-
-====================
-     04-01-2017
-====================
-
-
-   * android/
-cf49fbb Sync infra-related    *s
+33e31be6d39 systemui: Fix DE translation for navbar buttons
+b531f7e3900 Show lockscreen wallpaper when blur effect is enabled
 
    * hardware/qcom/audio-caf/msm8916/
-ab780a8 Merge remote-tracking branch 'caf/LA.BR.1.2.9_rb1.14' into cm-14.1-caf-8916
+96c5ec5e7 Merge AU_LINUX_ANDROID_LA.BR.1.2.9_RB1.07.01.01.254.022 on remote branch
 
-   * hardware/qcom/audio-caf/msm8994/
-d062bdc Merge remote-tracking branch 'caf/LA.BF64.1.2.3_rb1.9' into cm-14.1-caf-8994
+   * hudson/
+b67e81e hudson: bring back w7
+
+   * lineage/jenkins/
+b67e81e hudson: bring back w7
 
    * lineage/mirror/
-0cad3fb Updated to 01-Apr-17 09:30:00 UTC
-
-   * lineage/website/
-1d92c62 Clarify mascot's name
-82df762 Announcing our new mascot!
-
-   * packages/apps/CMUpdater/
-6460e10 Fix dates of downloaded and installed builds
-
-====================
-     03-31-2017
-====================
-
-
-   * hudson/
-852277d hudson: Remove t6 and t6vzw
-
-   * lineage/jenkins/
-852277d hudson: Remove t6 and t6vzw
+4d8cf8c mirror: Updated to 13-Apr-17 16:40:00 UTC
 
    * lineage/wiki/
-51ba886 wiki: Index: Fix wrong link
-7227f8a wiki: Fix typos
-69a4ab7 wiki: Rework "Devices" page
-17b774b wiki: Package openssl-dev -> libssl-dev
-1dec8be devices: Fix griffin
-0c255c4 devices: Add ARK Benefit A3 (peach)
-d5a91bb devices: Add Moto Z (griffin)
-d54258b wiki: LineageOS, not Lineage!
-81e91a4 wiki: Some cleanup
-338d211 klte and variants: Drop stray single quotes
-89345a0 Remove stray semicolons (klte, kccat6, lentislte)
-3329a44 wiki: fix double translation proofreaders list
-91eece3 wiki: new main page
-
-   * packages/apps/ThemeInterfacer/
-ae4821c Fix failed authorization toast on restartService
-
-   * packages/resources/devicesettings/
-a765ae0 Add strings for fingerprint pocketmode
-
-====================
-     03-30-2017
-====================
-
-
-   * lineage/wiki/
-3b02115 wiki: New Material Design
-
-   * packages/apps/CMParts/
-4f90b17 Fix reorientation of volume buttons on portrait tablets
-
-   * packages/apps/CustomTiles/
-ee80e81 CaffeineTile: Use 'off' icon by default
-6bcbc09 AdbOverNetworkTile: Use 'off' icon by default
-cb6961e WakelockService: Don't check if wakelock is held twice
-513dfbf WakelockService: reference the wakelock
-04e54c3 CaffeineTile: Start service connection as current user
-
-====================
-     03-29-2017
-====================
-
-
-   * android/
-797a125 Revert "cm: Remove ahbottomnavigation library"
-
-   * frameworks/base/
-d1f8936 Automatic translation import
-
-   * hardware/samsung/
-047075e Automatic translation import
-
-   * lineage/updater/
-e28d174 updater: Discard imported commits
-0ba0552 updater: Sort changes by submit time
-dba026d Fix compatibility with Python 3
-
-   * packages/apps/AudioFX/
-2cd4a6e Automatic translation import
-
-   * packages/apps/Bluetooth/
-f4196b3 Automatic translation import
-
-   * packages/apps/Browser/
-bc8a6c7 Automatic translation import
-
-   * packages/apps/CMBugReport/
-c3b040e Automatic translation import
-
-   * packages/apps/CMParts/
-8812ebc Automatic translation import
-
-   * packages/apps/CMUpdater/
-f02ce01 Automatic translation import
-90684d0 Allow to abort completing downloads
-30b0384 Move properties parsing logic inside Utils
-22fcbb5 Drop minor revision level for remote builds
-d96d2ce Use Preference from the Android support libraries
-
-   * packages/apps/Calendar/
-918bd81 Automatic translation import
-
-   * packages/apps/Camera2/
-e96a1aa Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-17e633f Automatic translation import
-
-   * packages/apps/Contacts/
-d17c717 Automatic translation import
-
-   * packages/apps/ContactsCommon/
-52a6643 Automatic translation import
-
-   * packages/apps/CustomTiles/
-5bfa7e9 Automatic translation import
-
-   * packages/apps/DeskClock/
-ded6afb Automatic translation import
-8de8bd0 AlarmService : Change stopSelf into stopSelfResult
-1f3d393 DeskClock: fix ringtones stored on /sdcard/Alarms
-
-   * packages/apps/Dialer/
-3803085 Automatic translation import
-
-   * packages/apps/Eleven/
-3f8bab8 Automatic translation import
-
-   * packages/apps/Email/
-92c2de4 Automatic translation import
-
-   * packages/apps/FMRadio/
-bd6dd73 Automatic translation import
-
-   * packages/apps/FlipFlap/
-d08398a Automatic translation import
-
-   * packages/apps/Gello/
-a80d06a Automatic translation import
-
-   * packages/apps/LockClock/
-4afc8af Automatic translation import
-
-   * packages/apps/Messaging/
-6e37349 Automatic translation import
-
-   * packages/apps/PackageInstaller/
-0fc5fe1 Automatic translation import
-
-   * packages/apps/PhoneCommon/
-eedc20a Automatic translation import
-
-   * packages/apps/Profiles/
-2a86c63 Automatic translation import
-
-   * packages/apps/Recorder/
-b427c2f Automatic translation import
-
-   * packages/apps/Settings/
-210f42f Automatic translation import
-
-   * packages/apps/SetupWizard/
-cd33504 Automatic translation import
-
-   * packages/apps/Snap/
-13d43d7 Automatic translation import
-
-   * packages/apps/Terminal/
-44781da Automatic translation import
-
-   * packages/apps/ThemeChooser/
-39343e1 Automatic translation import
-
-   * packages/apps/ThemeInterfacer/
-0f51d79 JobService: Fix inital font application
-bed5f44 JobService: fix initial theme dir creation
-
-   * packages/apps/Trebuchet/
-defe11d Automatic translation import
-
-   * packages/apps/TvSettings/
-952bf19 Automatic translation import
-
-   * packages/apps/UnifiedEmail/
-251c7bd Automatic translation import
-
-   * packages/inputmethods/LatinIME/
-53836b2 Automatic translation import
-
-   * packages/providers/DataUsageProvider/
-149eb22 Automatic translation import
-
-   * packages/providers/DownloadProvider/
-4f6cf59 Automatic translation import
-
-   * packages/providers/ThemesProvider/
-6d5910a Automatic translation import
-
-   * packages/providers/WeatherProvider/
-fd0d410 Automatic translation import
-
-   * packages/resources/devicesettings/
-d653283 Automatic translation import
-
-   * packages/services/Telephony/
-c21ccee Automatic translation import
-
-   * vendor/cm/
-fc5ab9c Fix APNs for Cyprus
-
-   * vendor/cmsdk/
-54996d4 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-77358cc Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
-7c8a02e Automatic translation import
-
-====================
-     03-28-2017
-====================
-
-
-   * bionic/
-5848aaf libc: memcpy_base: Disable opt for certain targets
-
-   * frameworks/base/
-263acf9 Revert "[1/2] base: support separate encryption/lockscreen passwords"
-
-   * hardware/samsung/
-4bf8a79 PowerHAL: Update the hispeed_freq value before using it
-
-   * hudson/
-5bfbabb hudson: ship weeklies for griffin
-
-   * lineage/jenkins/
-5bfbabb hudson: ship weeklies for griffin
-
-   * lineage/wiki/
-369e5ea Oppo -> OPPO
-c6dcc37 Clean up d2spr maintainers
-
-   * packages/apps/Settings/
-867d97d Revert "[2/2] settings: support setting a separate encryption password"
-
-====================
-     03-27-2017
-====================
-
-
-   * hudson/
-42f8fda Remove obsolete shared-repo.map
-
-   * lineage/jenkins/
-42f8fda Remove obsolete shared-repo.map
-
-   * lineage/wiki/
-1cf79be Revert "wiki: Devices: Improve code readability"
-d6c9bf5 wiki: Make it more likely that Gapps get installed _before_ first boot
-8cd8685 wiki: Devices: Improve code readability
-b2d4c45 devices: Update Sony Blue migration downloads links
-edf70dd wiki: Improve readability of device templates
-
-   * system/core/
-1fc4f92 adb: Look for bu in /sbin when in recovery mode
-
-   * vendor/cm/
-7dc287f extract_utils: support extracting directly from an ota zip
-
-====================
-     03-26-2017
-====================
-
-
-   * bionic/
-6f130ca linker: Restore optional platform text relocations use
-
-   * frameworks/base/
-d43db80 DocumentsUI: make shapes great again
-
-   * hardware/qcom/audio-caf/msm8952/
-baabf8a audio: Fix msm8952-snd-card-mtp support
-
-   * hardware/qcom/audio-caf/msm8994/
-8174213 audio: Fix flac offload not working
-d758485 policy_hal: Line up default features with rest of HAL
-
-   * hardware/qcom/display-caf/msm8994/
-2f02a3e Merge remote-tracking branch 'caf/LA.BF64.1.2.3_rb1.9' into cm-14.1-caf-8994
-
-   * hardware/ti/omap4/
-71be556 Include common omap4 vendor repo if available.
-02837a7 libEGL_POWERVR: Replace remaining LOCAL_LDLIBS (KK compatibility)
-115c4a4 pvrsrvinit/libEGL_POWERVR: Actually ready needed vendor libraries
-aff0723 pvrsrvinit/libEGL_POWERVR: Link against generic library symlinks
-b132a61 pvrsrvinit: PVRScopeServices symlink lives in vendor/ti now
-3c61176 pvrsrvinit: define the libraries to link against in LOCAL_LDFLAGS
-ca79788 symlinks: Move Gralloc's to vendor/ti (together with processing)
-
-   * lineage/stats/
-0c9aa33 Allow disk use for count
-
-   * lineage/updater/
-cadeb4e Oppo -> OPPO
-
-   * lineage/wiki/
-3bcb740 wiki: Add device architecure to several pages
-724dd9c devices: add Galaxy S5 Plus and S5 LTE-A
-
-   * packages/apps/Settings/
-e97413d Settings: Fix AOSP WiFi AP translations
-8a3d455 Settings: Fix german string
-
-   * packages/apps/Trebuchet/
-315b2f9 Moving a few testing classes to a separate package
-3c58753 Trebuchet: Remove ambient SDK leftover
-
-   * vendor/cm/
-0277543 cm: remove special access to unused cmfm
-d5b520f cm: allow apps to find profile manager service
-
-====================
-     03-25-2017
-====================
-
-
-   * hudson/
-6850333 hudson: ship weeklies for kccat6 and lentislte
-
-   * lineage/jenkins/
-6850333 hudson: ship weeklies for kccat6 and lentislte
-
-   * lineage/updater/
-f923df1 Add Galaxy S5 Plus and S5 LTE-A
-
-   * packages/apps/CMUpdater/
-d99c319 Add ripple effect to list entries
-61bdb06 Bring back the option to delete all the downloads
-270c967 Delete partially copied files
-630a77b Make downloaded files available only if verified
-90490fc Get size of downloaded file from ParcelFileDescriptor
-dd997a7 Log package verification exception
-57bb799 Rework file name handling
-446075c Remove some unused code
-3e3fd93 Change some variable names to follow naming conventions
-8a1baa1 Updater: close file channels in onHandleIntent
-
-   * vendor/cm/
-ad5d9a0 cm: build: Don't convert patchset to int if it's None
-2756418 cm: build: Fix cherry picking specific patchsets
-
-====================
-     03-24-2017
-====================
-
-
-   * hardware/qcom/fm/
-aff061a FM: Fix KHz->kHz
-
-   * lineage/wiki/
-5f361b7 wiki: capitalize device type and table first row in device table
-146a55c wiki: Open external links in new tabs
-77d544d wiki: Group dev-only pages
-
-   * packages/apps/CustomTiles/
-440b231 CustomTiles: rename app_name to "Extra tiles"
-
-   * packages/apps/PackageInstaller/
-9b194dd Revert all the changes introduced with cafrebase
-
-   * vendor/cm/
-fc9a4c5 Make a data only config
-12ee459 APN: Fix TalkTalk
-
-====================
-     03-23-2017
-====================
-
-
-   * hardware/qcom/audio-caf/msm8916/
-926b55b Merge AU_LINUX_ANDROID_LA.BR.1.2.9_RB1.07.01.01.254.019 on remote branch
-
-   * lineage/cve/
-b009e68 cve_tracker: Make it easier to start
-
-   * lineage/mirror/
-f3b00fa mirror: Added t0lteskt and t0ltektt
-
-   * lineage/updater/
-5afeb1f Add Galaxy Note II Korean variants (t0lteskt and t0ltektt)
-b2a95b2 Add Motorola Moto Z
-b4d0a9e Add Lenovo Vibe K5/K5 Plus
-
-   * lineage/wiki/
-fcce7c5 wiki: Improve "How-to" list
-44a6ae9 wiki: Properly use tags
-61ab5cf wiki: Make "All content" actually useful
-b16b339 wiki: Rework using-gerrit how-to
-791f9d6 devices: Add Lenovo K5 to wiki (A6020)
-a281294 devices: Add jfltevzw page
-
-   * packages/apps/LockClock/
-6f2b2cc Update weather data only when the screen is on
-e039264 Register network status change listener explicity
-54e41b5 Save timestamp of last update
-069c3d1 Fix typo in method name
-
-   * packages/apps/Recorder/
-ed7a8b3 Recorder: add and fix missing copyrights
-779c197 Recorder: screen recorder overlay
-4bf3b75 Recorder: update gradle and support libraries
-
-   * vendor/cm/
-84582dd apns: Update Swiss APNs
-
-====================
-     03-22-2017
-====================
-
-
-   * frameworks/base/
-0107151 Automatic translation import
-c814ff5 Core: Make tethering notifications fully translatable
-
-   * hudson/
-00686db hudson: Remove kltevzw from build roster
-
-   * lineage/jenkins/
-00686db hudson: Remove kltevzw from build roster
-
-   * lineage/wiki/
-95cf803 Revert "devices: update gts28vewifi maintainer info"
-d2ecc00 wiki: correct typos in build template
-7f00b29 wiki: Use a better path than ~/android/system
-2a2ed29 wiki: Update "Bug report" how-to
-080c585 wiki: Update "Logcat" page and turn it into a how-to
-
-   * packages/apps/CMParts/
-52da3c9 Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-f76431f Automatic translation import
-
-   * packages/apps/Contacts/
-fa2ba7b Automatic translation import
-
-   * packages/apps/CustomTiles/
-7e4ebb2 Automatic translation import
-
-   * packages/apps/FlipFlap/
-99456b3 Automatic translation import
-
-   * packages/apps/PhoneCommon/
-dd36017 Automatic translation import
-
-   * packages/apps/Recorder/
-14c2858 Automatic translation import
-
-   * packages/apps/Settings/
-e4ce390 Automatic translation import
-
-   * packages/apps/Snap/
-3deda7f Automatic translation import
-
-   * packages/apps/TvSettings/
-72df1ce Automatic translation import
-
-   * packages/providers/DownloadProvider/
-a9fa3b2 Automatic translation import
-
-   * packages/resources/devicesettings/
-8bbb278 Automatic translation import
-
-   * vendor/cmsdk/
-f0a3ce9 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-d4703e3 Automatic translation import
-
-====================
-     03-21-2017
-====================
-
-
-   * hudson/
-6fb1762 hudson: ship weeklies for peach
-7c900cc Add t0lte, t0lteskt, and t0ltektt to cm-14.1 weekly builds
-
-   * lineage/jenkins/
-6fb1762 hudson: ship weeklies for peach
-7c900cc Add t0lte, t0lteskt, and t0ltektt to cm-14.1 weekly builds
-
-   * lineage/wiki/
-44ae075 wiki: Fix search function
-302f448 wiki: Fix formatting of "Import to Android Studio" how-to
-c304383 devices: fix link to blob extraction from zip
-7c3aca9 wiki: Add Android Studio how-to
-
-   * packages/apps/CustomTiles/
-4f757e8 Automatic translation import
-
-   * packages/apps/Settings/
-641dd97 Fix zen mode allowed event preference summary.
-
-====================
-     03-20-2017
-====================
-
-
-   * frameworks/base/
-76eae78 Automatic translation import
-
-   * hardware/qcom/fm/
-953af70 Automatic translation import
-
-   * hardware/samsung/
-56caa26 audio: Split BT SCO media/incall paths
-51bd12c audio: add support for bluetooth wideband voice calls
-
-   * lineage/updater/
-ad4b3fe Add check_builds command, print out flask shell commands to delete builds if they aren't available on the mirror
-
-   * lineage/website/
-a9d6d7b Update    * name in the footer
-3c0625c Last couple of weeks at LineageOS (W/C 6th March 2017)
-
-   * lineage/wiki/
-3ecae0e devices: Replace merlin's watermarked image
-71cecda build: Add missing dependency
-899caa4 wiki: Avoid redirect when opening devices list page
-2fc86d2 wiki: update device pages permalinks
-ec73db8 wiki: use relative links when possible
-4483c40 Added "Supported models" values to multiple Samsung devices.
-fbc8b17 wiki: fix typo on developer_information page
-27c2f6f devices: update gts28vewifi maintainer info
-
-   * packages/apps/AudioFX/
-dc65a0c Automatic translation import
-
-   * packages/apps/Bluetooth/
-888a04e Automatic translation import
-
-   * packages/apps/Browser/
-4192efb Automatic translation import
-
-   * packages/apps/CMParts/
-cf97207 Automatic translation import
-
-   * packages/apps/CMUpdater/
-947cc5e Automatic translation import
-
-   * packages/apps/Calendar/
-1826775 Automatic translation import
-
-   * packages/apps/Camera2/
-8ee8d23 Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-6950f2b Automatic translation import
-
-   * packages/apps/Contacts/
-e48e0f3 Automatic translation import
-
-   * packages/apps/ContactsCommon/
-89272ca Automatic translation import
-
-   * packages/apps/CustomTiles/
-c934927 CustomTiles: Add heads up long press action
-60897d0 CustomTiles: Add USB tethering long press action
-
-   * packages/apps/DeskClock/
-ef9fb84 Automatic translation import
-
-   * packages/apps/Dialer/
-4770839 Automatic translation import
-
-   * packages/apps/Eleven/
-d46453b Automatic translation import
-
-   * packages/apps/Email/
-af2af0b Automatic translation import
-
-   * packages/apps/FMRadio/
-588a2ab Automatic translation import
-
-   * packages/apps/FlipFlap/
-71c26e0 Automatic translation import
-
-   * packages/apps/Gello/
-18953eb Automatic translation import
-
-   * packages/apps/HTMLViewer/
-eb1c5fa Automatic translation import
-
-   * packages/apps/LockClock/
-09482ca Automatic translation import
-
-   * packages/apps/Messaging/
-cecd56f Automatic translation import
+245cbb0 wiki: Less external main-links
+f0d0eb3 wiki: Don't break mid-word
+803c0a3 devices: Add lt02ltespr
 
    * packages/apps/Nfc/
-8bb1879 Automatic translation import
+30909804 Nfc: Include android-support-v4 for the NXP stack
 
-   * packages/apps/PackageInstaller/
-6833a11 Automatic translation import
+====================
+     04-12-2017
+====================
 
-   * packages/apps/PhoneCommon/
-a86d274 Automatic translation import
 
-   * packages/apps/Recorder/
-110c07c Automatic translation import
+   * hudson/
+cf9e05d hudson: Temporarily remove ether until it gets cleaned up
+82f2b72 Unify Galaxy Note 2 Korean variants
 
-   * packages/apps/SafetyRegulatoryInfo/
-d458cf1 Automatic translation import
+   * lineage/jenkins/
+cf9e05d hudson: Temporarily remove ether until it gets cleaned up
+82f2b72 Unify Galaxy Note 2 Korean variants
 
-   * packages/apps/Settings/
-3bea55c Automatic translation import
+   * lineage/updater/
+fb1b2fa Unify Galaxy Note 2 Korean variants
 
-   * packages/apps/SetupWizard/
-f834d21 Automatic translation import
+   * lineage/wiki/
+7ffdf08 wiki: Underp filtering of peripherals
+21ed3ac wiki: contributors: Add other    *s
+0b84053 wiki: Pimp "Contributors" page
+b799ed7 devices: unify korean galaxy note 2
+c44d7d9 wiki: Move hima family to 14.1
+91d3fe9 Remove CNAME, no longer using github pages
+
+   * packages/apps/Gallery2/
+aad548ed3 Gallery2: support the newly added media file types in MTP mode
+99a5354e4 Gallery2: Fix use of uninitialized stack variables
+7959af661 Gallery2: Remove unused renderscript class
+
+   * packages/apps/ThemeInterfacer/
+754b6ea restartService --> forceStopService
+
+   * vendor/cm/
+1e7c3f00 kernel: Fix broken C_INCLUDE_PATH for Darwin
+
+====================
+     04-11-2017
+====================
+
+
+   * frameworks/av/
+18a402d67 stagefright: Remove the HAL3 limitation from the video reference clock selection
+
+   * frameworks/base/
+22a3f0266b9 Revert "SystemUI: Add SlotId for MultiSim"
+
+   * hardware/qcom/display-caf/msm8660/
+09cce1b hwcomposer: Fix regression in hwc_sync
+
+   * hardware/qcom/display-caf/msm8960/
+09cce1b07 hwcomposer: Fix regression in hwc_sync
+
+   * hudson/
+00f12d0 Add lt02ltespr
+96e020e hudson: Kill D2
+
+   * lineage/jenkins/
+00f12d0 Add lt02ltespr
+96e020e hudson: Kill D2
+
+   * lineage/mirror/
+99f749e Add support for t0ltekor
+
+   * lineage/wiki/
+bb53cb4 wiki: Bump jalebi to 14.1
+6d26ab6 wiki: Fix wrong device information
+820dd11 wiki: Update "adding device" page
+2ebb536 wiki : Group pages in folders
+
+   * packages/apps/CarrierConfig/
+fd64a03 Consider O2 and E-Plus as non-roaming
+
+   * packages/apps/ThemeInterfacer/
+31b36ca Polish copyright
+
+   * packages/services/Telephony/
+33e790db9 VoicemailSettingsActivity: Fix NPE
+
+====================
+     04-10-2017
+====================
+
+
+   * device/samsung/qcom-common/
+538177d overlay: Remove animate screen lights
+
+   * lineage/mirror/
+471449d mirror: Updated to 10-Apr-17 06:30:00 UTC
+
+   * lineage/stats/
+bb7e276 Enable stats dumps to json
+
+   * lineage/wiki/
+eada6f2 devices: lettuce and tomato now on 14.1
 
    * packages/apps/Snap/
-9ee33a5 Automatic translation import
+5ebf49f09 Fix some inconsistencies of the HDR button
+2ecc334e4 CameraControls: Toggle the status of disabled views
+7e10f005f Never remove unsupported controls
+30ba55822 WideAnglePanoramaUI: Correctly position the progressbar
+f262e1a30 Snap: CaptureModule: set switcher index on resume
 
-   * packages/apps/Stk/
-3c27506 Automatic translation import
+====================
+     04-09-2017
+====================
 
-   * packages/apps/Terminal/
-5937cbf Automatic translation import
 
-   * packages/apps/ThemeChooser/
-993da14 Automatic translation import
+   * build/
+96efb2183 build: allow to disable recovery-two-step.img generation
 
-   * packages/apps/Trebuchet/
-a536931 Automatic translation import
+   * cmu-api/
+f8b124f celox: 04-08-17
 
-   * packages/apps/TvSettings/
-f58e1b2 Automatic translation import
+   * device/samsung/msm8660-common/
+9a4a593e9 msm8660RIL: bring back handleNitzTimeReceived
 
-   * packages/apps/UnifiedEmail/
-c2e4f01 Automatic translation import
+   * frameworks/av/
+9da10a080 Revert "Revert "mediacodec: minijail: Enable exporting of policy files""
 
-   * packages/apps/WallpaperPicker/
-cfbd067 Automatic translation import
+   * frameworks/base/
+b525bd0d94c PowerManager: Bring back the compatibility with AOSP
 
-   * packages/inputmethods/LatinIME/
-f59371a Automatic translation import
+   * frameworks/native/
+e7456d65c sensorservice: Register orientation sensor if HAL doesn't provide it
 
-   * packages/providers/BookmarkProvider/
-1b2cc77 Automatic translation import
+   * hudson/
+77d4492 Rebalance build targets
 
-   * packages/providers/CalendarProvider/
-a1aa622 Automatic translation import
+   * kernel/samsung/msm8660-common/
+932212a5cc47 defconfig: enable CONFIG_INET_DIAG_DESTROY
+e53afa4608d5 net: tcp: deal with listen sockets properly in tcp_abort.
+f4feb19b33ee net: diag: Support destroying TCP sockets.
+d441c9a873e4 net: diag: support v4mapped sockets in inet_diag_find_one_icsk()
+c471245ea23f net: diag: Support SOCK_DESTROY for inet sockets.
+e8baa06c1916 net: diag: split inet_diag_dump_one_icsk into two
+34931ade421d inet_diag: Rename inet_diag_req_compat into inet_diag_req
+294ca02eb410 inet_diag: Rename inet_diag_req into inet_diag_req_v2
+0c8336c3a7bf inet_diag: Add the SKMEMINFO extension
+8d200f830f66 sock_diag: Generalize requests cookies managements
+54c169dfd61f sock_diag: Fix module netlink aliases
+8e16d9576c9c inet_diag: Generalize inet_diag dump and get_exact calls
+1ba51ea08e2d inet_diag: Introduce the inet socket dumping routine
+c58b2f5080fb inet_diag: Introduce the byte-code run on an inet socket
+c7caf25910bd inet_diag: Split inet_diag_get_exact into parts
+c17078ff12d9 inet_diag: Split inet_diag_get_exact into parts
+d316d818cce1 inet_diag: Export inet diag cookie checking routine
+594de4c7a940 inet_diag: Reduce the number of args for bytecode run routine
+58f5a1652b8b inet_diag: Remove indirect sizeof from inet diag handlers
+ceb2a18fc173 sock_diag: Move the sock_ code to net/core/
+f9e74fabe4eb inet_diag: Cleanup type2proto last user
+901683ba8dc2 inet_diag: Introduce socket family checks
+7a81f3d13010 inet_diag: Switch the _dump to work with new header
+371378f27f82 inet_diag: Switch the _get_exact to work with new header
+af29826f05d2 inet_diag: Introduce new inet_diag_req header
+2fa5029f3e0c sock_diag: Initial skeleton
+5f4d3e0783fd inet_diag: Switch from _GETSOCK to IPPROTO_ numbers
+f563d4748bac inet_diag: Move byte-code finding up the call-stack
+f1cec4efe93a sock_diag: Introduce new message type
+fb3ba36c877b inet_diag: Partly rename inet_ to sock_
+ad13e5442dfb net-netlink: fix diag to export IPv4 tos for dual-stack IPv6 sockets
+febedab69e5f net-netlink: Add a new attribute to expose TCLASS values via netlink
+bf93b96b5e2a ipv6: do not clear pinet6 field
+4eb1eaa26a2d net-netlink: Add a new attribute to expose TOS values via netlink
+6134e23dbea5 [media] media-device: fix infoleak in ioctl media_enum_entities()
+4c0e1b1e68ff mac80211: fix AP powersave TX vs. wakeup race
+2bb8115b835e msm-camera: Addressing possible overflow conditions
+4cc171bd23d1 ALSA: control: Make sure that id->index does not overflow
+65a0397c0b91 udp: properly support MSG_PEEK with truncated buffers
+
+   * lineage/jenkins/
+77d4492 Rebalance build targets
+
+   * lineage/wiki/
+f28d3e9 Add costs page
+
+   * packages/apps/Bluetooth/
+dd3c70c9 Revert "Bluetooth: handle opening incoming APK files"
+
+   * packages/apps/CMParts/
+f9c8771 PerfProfileSettings: Update slider on powersave mode change
+
+   * packages/apps/CarrierConfig/
+14d3bb7 Consider Q-TELECOM Greece as non-roaming
+
+   * packages/apps/CellBroadcastReceiver/
+4c0252f CellBroadcastReceiver: fix channel 50 not disabling
+
+   * packages/apps/Snap/
+054040364 Snap: CaptureUI: fix ModuleSwitcher being invisible
 
    * packages/providers/ContactsProvider/
-e93ac19 Automatic translation import
-
-   * packages/providers/DownloadProvider/
-ae34e55 Automatic translation import
-
-   * packages/providers/MediaProvider/
-4d1a21f Automatic translation import
-
-   * packages/resources/devicesettings/
-b75c745 Automatic translation import
-
-   * packages/services/Telecomm/
-1d870ae Automatic translation import
+8546493e Merge tag 'android-7.1.2_r2' into cm-14.1
 
    * packages/services/Telephony/
-3e9e173 Automatic translation import
+9799368d9 telephony: fix crash when missing simcard
+
+   * vendor/cm/
+7fb9251d kernel: Include openssl headers and dylibs on darwin
+b7822100 Revert "YOLO"
+2f40cfa1 Revert "Br0Zip"
+c59cbe0c build: Update smali and baksmali to 2.2.0
 
    * vendor/cmsdk/
-c0378c8 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-a940996 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
-459f3db Automatic translation import
-
-====================
-     03-19-2017
-====================
-
-
-   * frameworks/base/
-ce561af SystemUI: enable NFC tile
-735eb59 SystemUI: Add NFC tile
-
-   * frameworks/opt/telephony/
-c31cf84 telephony: Fix rebase mismerge breaking SIM detection when encrypted
-
-   * hudson/
-61fa83a hudson: ship weeklies for A6020
-
-   * lineage/crowdin/
-1912961 config: cm-14.1: Add CustomTiles
-
-   * lineage/jenkins/
-61fa83a hudson: ship weeklies for A6020
-
-   * lineage/wiki/
-188e43a wiki: 13.0 weekly builds started for xt897
-
-   * packages/apps/Settings/
-d185ec4 Make Build Date and API Level unselectable
-
-   * vendor/cm/
-024efe7 apn: Updating TelkomSA from 8ta South Africa APN
-
-====================
-     03-18-2017
-====================
-
-
-   * frameworks/base/
-47a42bf Move wakelock option for flashlight to CameraManager.
-
-   * hardware/qcom/audio-caf/msm8996/
-57c808c Merge tag 'LA.UM.5.5.r1-03800-8x96.0' into cm-14.1-caf-8996
-
-   * hardware/qcom/media-caf/msm8996/
-c9d8726 Merge tag 'LA.UM.5.5.r1-03800-8x96.0' into cm-14.1-caf-8996
-
-   * hardware/samsung/
-81f714d power: Rework governor path abstraction
-
-   * lineage/crowdin/
-659a4ea config: cm-14.1: Remove CMFileManager
-
-====================
-     03-17-2017
-====================
-
-
-   * bionic/
-08aff0d linker: Allow devices to force shim libs
-
-   * frameworks/base/
-ad1ea62 SingleHandWindow: Allow locking the rotation to 180°
-
-   * lineage/updater/
-f3da51f updater: fix show all merged changes for device object
-80901a7 updater: properly handle pages with no device selected
-1c5c426 add optional special information url
-
-   * lineage/wiki/
-ea172e0 devices: G5 corrections
-719c624 devices: jfltexx corrections
-be32fb8 devices: Add Lg G5 to wiki (h859 & h830)
-bf0e787 devices: Add Samsung Galaxy S4 (International LTE) (jfltexx)
-b663b70 wiki: contributors: Add the 'Head Developers' group
-45b3b27 wiki: Drop mdmower participation
-4721fad css: remove icon after external links
-ee92cbe Turn devices list into table, add 'type' field
-883f7f5 build: Remove manual wrapping of packages
-4c3f424 build: Add openssl-dev as a requirement
-
-   * packages/apps/Bluetooth/
-d3c06ce Revert "Introduced Active device for volume updates and volume update in pause state"
-ff3d0d8 Bluetooth: AIRPLANE_MODE_ON has moved
-
-   * packages/apps/Dialer/
-019704c Dialer: AIRPLANE_MODE_ON has moved
-
-   * packages/apps/Settings/
-95c0f7d AppOpsDetails: Check app permissions safely
-
-   * packages/services/Telephony/
-f6c9974 Telephony: AIRPLANE_MODE_ON has moved
-
-====================
-     03-16-2017
-====================
-
-
-   * android/
-6d3e197 cm: add custom tiles    *
-
-   * frameworks/base/
-80dc171 Add tile information to ACTION_QS_TILE_PREFERENCES intent
-f7e1e16 PackageManager: Always let UID 0 start FallbackHome
-d17b69e SystemUI: Dismiss keyguard on boot if disabled by current profile
-
-   * lineage/cve/
-d04384a cve_tracker: No need for own pages to add kernels or cves
-
-   * lineage/mirror/
-3878b95 mirror: Add android_system_update_engine
-
-   * packages/apps/CMParts/
-ecf8514 CMParts: update contributors db
-
-   * packages/apps/CMUpdater/
-514bb45 Collapse header even when scrolling out of header
-0f26cd9 UpdateSettings: UI fixes when download completed
-
-   * packages/apps/Contacts/
-24227ad contacts: Add support for import contacts to local phone storage
-
-   * packages/apps/ContactsCommon/
-5297f88 AccountType: use a pretty phone account icon for local storage account
-f4b1156 SelectAccountActivity : Support local phone account
-49714bf Add local phone account as a writable AccountTypes.
-a6e03ca Store all local contacts in only one account.
-eef759c contacts-common: Add support for import contacts to local phone storage
-
-   * packages/apps/CustomTiles/
-d37eb8d CustomTiles: support direct boot
-98197a0 CustomTiles: remove compass tile
-
-   * packages/apps/LockClock/
-c34eae7 res: use selectableItemBackgroundBorderless for refresh button background
-
-   * system/core/
-0217ddd init: Don't update recovery on boot
-
-   * vendor/cm/
-d4ee2f6 repopick: encode commit subjects in utf-8 for printing
-bfaafb5 cm: build custom tiles app
-02cf7d8 overlay: Disable recovery updates
-
-====================
-     03-15-2017
-====================
-
-
-   * frameworks/base/
-667732f Automatic translation import
-
-   * hardware/qcom/fm/
-aa10afe Automatic translation import
-
-   * hardware/samsung/
-c9bdb4d Automatic translation import
-
-   * hudson/
-4cb4112 Add xt897 to cm-13.0 weekly builds
-
-   * lineage/jenkins/
-4cb4112 Add xt897 to cm-13.0 weekly builds
-
-   * lineage/updater/
-cf921ee extras: use correct md5sum
-2f46ee7 Regenerate device dependencies list
-3e19589 extras: include 13.0 su
-
-   * packages/apps/AudioFX/
-886a58b Automatic translation import
-
-   * packages/apps/Bluetooth/
-7e2fa3a Automatic translation import
-
-   * packages/apps/Browser/
-d7af013 Automatic translation import
-
-   * packages/apps/CMParts/
-3eb44d4 Automatic translation import
-
-   * packages/apps/CMUpdater/
-ff83548 Automatic translation import
-
-   * packages/apps/Calendar/
-3b9a669 Automatic translation import
-
-   * packages/apps/Camera2/
-3cdfa24 Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver/
-7017de6 Automatic translation import
-
-   * packages/apps/CertInstaller/
-80a7820 Automatic translation import
-
-   * packages/apps/Contacts/
-f6e6442 Automatic translation import
-
-   * packages/apps/ContactsCommon/
-a96155b Automatic translation import
-
-   * packages/apps/DeskClock/
-729ee00 Automatic translation import
-
-   * packages/apps/Dialer/
-4641f2e Automatic translation import
-
-   * packages/apps/Eleven/
-c0bf8fe Automatic translation import
-
-   * packages/apps/Email/
-4154e90 Automatic translation import
-
-   * packages/apps/EmergencyInfo/
-f228c4a Automatic translation import
-
-   * packages/apps/ExactCalculator/
-64af117 Automatic translation import
-
-   * packages/apps/FMRadio/
-f83a5d7 Automatic translation import
-
-   * packages/apps/FlipFlap/
-1a42acb Automatic translation import
-
-   * packages/apps/Gello/
-649f53d Automatic translation import
-
-   * packages/apps/LockClock/
-a0f028d Automatic translation import
-
-   * packages/apps/ManagedProvisioning/
-c858db8 Automatic translation import
-
-   * packages/apps/Messaging/
-9a9364f Automatic translation import
-
-   * packages/apps/Nfc/
-fce8ec8 Automatic translation import
-
-   * packages/apps/PackageInstaller/
-2e2f0b2 Automatic translation import
-
-   * packages/apps/PhoneCommon/
-27e0f78 Automatic translation import
-
-   * packages/apps/Recorder/
-3c64f0c Automatic translation import
-
-   * packages/apps/Settings/
-e48bc7d Automatic translation import
-
-   * packages/apps/SetupWizard/
-27662e2 Automatic translation import
-
-   * packages/apps/Snap/
-91d6eab Automatic translation import
-
-   * packages/apps/Stk/
-f91e479 Automatic translation import
-
-   * packages/apps/ThemeChooser/
-8542dd6 Automatic translation import
-
-   * packages/apps/Trebuchet/
-e97e772 Automatic translation import
-
-   * packages/apps/TvSettings/
-4b1d8f7 Automatic translation import
-
-   * packages/apps/UnifiedEmail/
-cb0495f Automatic translation import
-
-   * packages/inputmethods/LatinIME/
-65903e0 Automatic translation import
-
-   * packages/providers/DownloadProvider/
-e84d41d Automatic translation import
-
-   * packages/providers/MediaProvider/
-1261e19 Automatic translation import
-
-   * packages/providers/TelephonyProvider/
-04f4aad Automatic translation import
-
-   * packages/providers/WeatherProvider/
-558d3e5 Automatic translation import
-
-   * packages/resources/devicesettings/
-5a5b9c5 Automatic translation import
-
-   * packages/screensavers/Basic/
-a8e56f3 Automatic translation import
-
-   * packages/services/Telecomm/
-7a17066 Automatic translation import
-
-   * packages/services/Telephony/
-b79dedc Automatic translation import
-fa7bd0c Telephony: Fix "Redirect to roaming SIM network setting(Dual SIM)"
-
-   * packages/wallpapers/LivePicker/
-8a005bf Automatic translation import
-
-   * vendor/cm/
-3f0cb9b apns: Remove proxy for the "TIM WAP" APN
-
-   * vendor/cmsdk/
-b580686 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider/
-3aa2136 Automatic translation import
-
-   * vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider/
-d581a44 Automatic translation import
+4b14ba4 PerformanceManager: Don't override the user preference
+b19fe20 PerformanceManager: Don't force powersave mode with powersave profile
 
