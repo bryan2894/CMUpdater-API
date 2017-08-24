@@ -1,4 +1,15 @@
 ====================
+     08-24-2017
+====================
+
+
+   * device/samsung/celox/
+46079a1 celox: increase heapgrowthlimit to 192MB
+
+   * device/samsung/msm8660-common/
+283e433 msm8660: disable SDCLANG
+
+====================
      08-23-2017
 ====================
 
