@@ -1,10 +1,10 @@
 {
  "response": [
     {
-        "datetime": 1503938912,
-        "filename": "lineage-14.1-20170828-UNOFFICIAL-celox.zip",
+        "datetime": 1506055759,
+        "filename": "lineage-14.1-20170921-UNOFFICIAL-celox.zip",
         "romtype": "nightly",
-        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=26369&task=get",
+        "url": "http://forum.xda-developers.com/devdb/project/dl/?id=26749&task=get",
         "version": "14.1"
     }
   ]
