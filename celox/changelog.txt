@@ -8,6 +8,7 @@
 05c6a34 init: move location of module variant parameter
 
    * device/samsung/msm8660-common/
+c6ff77e msm8660: disable speaker dualmic
 24d9bde msm8660: remove lowram config again
 1411e11 msm8660: update audio configs
 2012689 msm8660: implement amplifier HAL for A2220 noise suppression driver
